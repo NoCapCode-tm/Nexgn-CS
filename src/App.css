@@ -1,0 +1,21 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #ffffff;
+  color: #1a0a0d;
+  -webkit-font-smoothing: antialiased;
+}
+
+input:focus {
+  border-color: #e8334a !important;
+  box-shadow: 0 0 0 3px rgba(232, 51, 74, 0.12);
+}
+
+button:active {
+  transform: scale(0.98);
+}
