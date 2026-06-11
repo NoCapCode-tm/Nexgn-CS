@@ -468,17 +468,18 @@ function DataSection() {
     {/* Right - icon cards */}
     <div style={{ display: "flex", gap: 16, flexShrink: 0 }}>
       {stats.map(s => (
-        <div key={s.title} style={{
-          width: 96, height: 92, background: "#fff", borderRadius: 20, padding: "12px 8px",
-          textAlign: "center",
-          boxShadow: "2px 5px 40.8px rgba(255,9,21,0.07)",
-          display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
-        }}>
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginBottom: 6 }}>{s.icon}</div>
-          <div style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: 11, color: "#1a0a0d" }}>{s.title}</div>
-          <div style={{ fontSize: 10, color: "#aaa", fontFamily: "'Inter', sans-serif", marginTop: 1 }}>{s.label}</div>
-        </div>
-      ))}
+  <div key={s.title} style={{ textAlign: "center" }}>
+    <div style={{
+      width: 80, height: 80, background: "#fff", borderRadius: 16,
+      boxShadow: "0 4px 20px rgba(0,0,0,0.08)", display: "flex",
+      alignItems: "center", justifyContent: "center", marginBottom: 8,
+    }}>
+      {s.icon}
+    </div>
+    <div style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: 14, color: "#1a0a0d" }}>{s.title}</div>
+    <div style={{ fontSize: 12, color: "#aaa", fontFamily: "'Inter', sans-serif", marginTop: 2 }}>{s.label}</div>
+  </div>
+))}
     </div>
   </div>
 </section>
