@@ -44,17 +44,6 @@ function Navbar() {
     <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: 11, color: "#888", marginTop: 2 }}>Smart Signing</span>
   </div>
 </div>
-
-      {/* Right side */}
-      <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-        <span style={{ fontSize: 14, color: "#555", fontFamily: "'Inter', sans-serif", fontWeight: 400 }}>Coming Soon</span>
-        <button style={{
-          background: "#FF2A2A", color: "#fff", border: "none", borderRadius: 8,
-          width: 136, height: 40, fontSize: 13, fontWeight: 600, cursor: "pointer",
-          fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.2px",
-          boxShadow: "0 4px 14px #ff2a2a33",
-        }}>Join Early Access</button>
-      </div>
     </nav>
   );
 }
@@ -79,8 +68,8 @@ function HeroSection() {
   objectPosition: "center right",
   pointerEvents: "none",
   userSelect: "none",
-  maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
-  WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+maskImage: "linear-gradient(to bottom, transparent 0%, black 15%, black 70%, transparent 100%)",
+WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 15%, black 70%, transparent 100%)",
 }}/>
       <div style={{ position: "relative", zIndex: 2, maxWidth: 580 }}>
         <span style={{
