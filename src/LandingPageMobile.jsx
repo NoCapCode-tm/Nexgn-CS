@@ -114,18 +114,20 @@ function HeroSection() {
       </p>
 
       {/* Lock image */}
-      <img
-        src={lockImg}
-        alt=""
-        style={{
-          display: "block",
-          width: "100%",
-          height: 200,
-          objectFit: "cover",
-          borderRadius: 12,
-          margin: "0 0 24px",
-        }}
-      />
+      <div style={{ margin: "0 0 24px", background: "#F9F5F7" }}>
+  <img
+    src={lockImg}
+    alt=""
+    style={{
+      display: "block",
+      width: "100%",
+      height: 320,
+      objectFit: "contain",
+      mixBlendMode: "multiply",
+      filter: "contrast(1.05) saturate(1.1)",
+    }}
+  />
+</div>
 
       {/* Form */}
       <div style={{
@@ -173,23 +175,23 @@ function HeroSection() {
 
 function WhatIsSection() {
   const features = [
-    {
-      icon: <svg width="48" height="54" viewBox="0 0 48 54" fill="none"><path d="M21.3333 46.4667V28.2L5.33333 18.9333V37.2L21.3333 46.4667ZM26.6667 46.4667L42.6667 37.2V18.9333L26.6667 28.2V46.4667ZM21.3333 52.6L2.66667 41.8667C1.82222 41.3778 1.16667 40.7333 0.7 39.9333C0.233333 39.1333 0 38.2444 0 37.2667V16.0667C0 15.0889 0.233333 14.2 0.7 13.4C1.16667 12.6 1.82222 11.9556 2.66667 11.4667L21.3333 0.733333C22.1778 0.244444 23.0667 0 24 0C24.9333 0 25.8222 0.244444 26.6667 0.733333L45.3333 11.4667C46.1778 11.9556 46.8333 12.6 47.3 13.4C47.7667 14.2 48 15.0889 48 16.0667V37.2667C48 38.2444 47.7667 39.1333 47.3 39.9333C46.8333 40.7333 46.1778 41.3778 45.3333 41.8667L26.6667 52.6C25.8222 53.0889 24.9333 53.3333 24 53.3333C23.0667 53.3333 22.1778 53.0889 21.3333 52.6ZM34.6667 17.4L39.8 14.4667L24 5.33333L18.8 8.33333L34.6667 17.4ZM24 23.6L29.2 20.6L13.4 11.4667L8.2 14.4667L24 23.6Z" fill="#FF0915"/></svg>,
-      title: "1.Build", desc: "Plugin to our powerful and tailored templates for easy documentation."
-    },
-    {
-      icon: <svg width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M9.6 21.3215L14.8 23.5215C15.4222 22.2771 16.0667 21.0771 16.7333 19.9215C17.4 18.7659 18.1333 17.6104 18.9333 16.4548L15.2 15.7215L9.6 21.3215ZM19.0667 26.8548L26.6667 34.3882C28.5333 33.6771 30.5333 32.5882 32.6667 31.1215C34.8 29.6548 36.8 27.9882 38.6667 26.1215C41.7778 23.0104 44.2111 19.5548 45.9667 15.7548C47.7222 11.9548 48.4889 8.45484 48.2667 5.25484C45.0667 5.03262 41.5556 5.79928 37.7333 7.55484C33.9111 9.31039 30.4444 11.7437 27.3333 14.8548C25.4667 16.7215 23.8 18.7215 22.3333 20.8548C20.8667 22.9882 19.7778 24.9882 19.0667 26.8548ZM29.4 18.7548C29.4 17.2659 29.9111 16.0104 30.9333 14.9882C31.9556 13.966 33.2222 13.4548 34.7333 13.4548C36.2444 13.4548 37.5111 13.966 38.5333 14.9882C39.5556 16.0104 40.0667 17.2659 40.0667 18.7548C40.0667 20.2437 39.5556 21.4993 38.5333 22.5215C37.5111 23.5437 36.2444 24.0548 34.7333 24.0548C33.2222 24.0548 31.9556 23.5437 30.9333 22.5215C29.9111 21.4993 29.4 20.2437 29.4 18.7548ZM32.2 43.9215L37.8 38.3215L37.0667 34.5882C35.9111 35.3882 34.7556 36.1104 33.6 36.7548C32.4444 37.3993 31.2444 38.0326 30 38.6548L32.2 43.9215ZM53.0667 0.388172C53.9111 5.76595 53.3889 10.9993 51.5 16.0882C49.6111 21.1771 46.3556 26.0326 41.7333 30.6548L43.0667 37.2548C43.2444 38.1437 43.2 39.0104 42.9333 39.8548C42.6667 40.6993 42.2222 41.4326 41.6 42.0548L30.4 53.2548L24.8 40.1215L13.4 28.7215L0.266667 23.1215L11.4 11.9215C12.0222 11.2993 12.7667 10.8548 13.6333 10.5882C14.5 10.3215 15.3778 10.2771 16.2667 10.4548L22.8667 11.7882C27.4889 7.16595 32.3333 3.89928 37.4 1.98817C42.4667 0.077061 47.6889 -0.456272 53.0667 0.388172ZM5 37.1882C6.55556 35.6326 8.45556 34.8437 10.7 34.8215C12.9444 34.7993 14.8444 35.5659 16.4 37.1215C17.9556 38.6771 18.7222 40.5771 18.7 42.8215C18.6778 45.0659 17.8889 46.9659 16.3333 48.5215C15.2222 49.6326 13.3667 50.5882 10.7667 51.3882C8.16667 52.1882 4.57778 52.8993 0 53.5215C0.622222 48.9437 1.33333 45.3548 2.13333 42.7548C2.93333 40.1548 3.88889 38.2993 5 37.1882ZM8.8 40.9215C8.35555 41.3659 7.91111 42.1771 7.46667 43.3548C7.02222 44.5326 6.71111 45.7215 6.53333 46.9215C7.73333 46.7437 8.92222 46.4437 10.1 46.0215C11.2778 45.5993 12.0889 45.1659 12.5333 44.7215C13.0667 44.1882 13.3556 43.5437 13.4 42.7882C13.4444 42.0326 13.2 41.3882 12.6667 40.8548C12.1333 40.3215 11.4889 40.0659 10.7333 40.0882C9.97778 40.1104 9.33333 40.3882 8.8 40.9215Z" fill="#FF0915"/></svg>,
-      title: "2.Deploy", desc: "Launch documents faster with pre build tools and scaleable services."
-    },
-    {
-      icon: <svg width="56" height="43" viewBox="0 0 56 43" fill="none"><path d="M0 42.6667V21.3333H8V42.6667H0ZM16 42.6667V14.6667H24V42.6667H16ZM32 42.6667V8H40V42.6667H32ZM48 42.6667V0H56V42.6667H48Z" fill="#FF0915"/></svg>,
-      title: "3.Scale", desc: "Scale seamlessly with reliable & high performance signing experience."
-    },
-    {
-      icon: <svg width="48" height="54" viewBox="0 0 48 54" fill="none"><path d="M21.3333 53.3333C15.1556 51.7778 10.0556 48.2333 6.03333 42.7C2.01111 37.1667 0 31.0222 0 24.2667V8L21.3333 0L42.6667 8V23.1333C41.8222 22.7778 40.9556 22.4556 40.0667 22.1667C39.1778 21.8778 38.2667 21.6667 37.3333 21.5333V11.7333L21.3333 5.73333L5.33333 11.7333V24.2667C5.33333 26.3556 5.61111 28.4444 6.16667 30.5333C6.72222 32.6222 7.5 34.6111 8.5 36.5C9.5 38.3889 10.7111 40.1333 12.1333 41.7333C13.5556 43.3333 15.1333 44.6667 16.8667 45.7333C17.3556 47.1556 18 48.5111 18.8 49.8C19.6 51.0889 20.5111 52.2444 21.5333 53.2667C21.4889 53.2667 21.4556 53.2778 21.4333 53.3C21.4111 53.3222 21.3778 53.3333 21.3333 53.3333ZM34.6667 53.3333C30.9778 53.3333 27.8333 52.0333 25.2333 49.4333C22.6333 46.8333 21.3333 43.6889 21.3333 40C21.3333 36.3111 22.6333 33.1667 25.2333 30.5667C27.8333 27.9667 30.9778 26.6667 34.6667 26.6667C38.3556 26.6667 41.5 27.9667 44.1 30.5667C46.7 33.1667 48 36.3111 48 40C48 43.6889 46.7 46.8333 44.1 49.4333C41.5 52.0333 38.3556 53.3333 34.6667 53.3333ZM33.3333 48H36V41.3333H42.6667V38.6667H36V32H33.3333V38.6667H26.6667V41.3333H33.3333V48Z" fill="#FF0915"/></svg>,
-      title: "4.Secure", desc: "Enterprise grade security and compliance built in from day one."
-    },
-  ];
+  {
+    icon: <svg width="41" height="51" viewBox="0 0 41 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.6562 33.15H24.3438L22.8703 24.9263C23.7245 24.5013 24.3971 23.885 24.8883 23.0775C25.3794 22.27 25.625 21.3775 25.625 20.4C25.625 18.9975 25.1232 17.7969 24.1195 16.7981C23.1159 15.7994 21.9094 15.3 20.5 15.3C19.0906 15.3 17.8841 15.7994 16.8805 16.7981C15.8768 17.7969 15.375 18.9975 15.375 20.4C15.375 21.3775 15.6206 22.27 16.1117 23.0775C16.6029 23.885 17.2755 24.5013 18.1297 24.9263L16.6562 33.15ZM20.5 51C14.5635 49.5125 9.66276 46.1231 5.79766 40.8319C1.93255 35.5406 0 29.665 0 23.205V7.65L20.5 0L41 7.65V23.205C41 29.665 39.0674 35.5406 35.2023 40.8319C31.3372 46.1231 26.4365 49.5125 20.5 51ZM20.5 45.645C24.9417 44.2425 28.6146 41.4375 31.5188 37.23C34.4229 33.0225 35.875 28.3475 35.875 23.205V11.1562L20.5 5.41875L5.125 11.1562V23.205C5.125 28.3475 6.57708 33.0225 9.48125 37.23C12.3854 41.4375 16.0583 44.2425 20.5 45.645Z" fill="#FF0915"/></svg>,
+    title: "Secure by Design", desc: "End-to-end encryption, robust access control and compliance at every level."
+  },
+  {
+    icon: <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.18023 25.1125L15.8561 39.77C16.2666 40.18 16.7284 40.4875 17.2416 40.6925C17.7547 40.8975 18.2678 41 18.781 41C19.2941 41 19.8073 40.8975 20.3204 40.6925C20.8335 40.4875 21.2954 40.18 21.7059 39.77L39.8198 21.6787C40.1961 21.3029 40.4869 20.8673 40.6921 20.3719C40.8974 19.8765 41 19.3554 41 18.8088V4.1C41 2.9725 40.598 2.00729 39.7941 1.20438C38.9902 0.401458 38.0238 0 36.8949 0H22.1677C21.6204 0 21.0901 0.111042 20.577 0.333125C20.0638 0.555208 19.6191 0.854167 19.2428 1.23L1.18023 19.3212C0.769714 19.7313 0.470383 20.1925 0.28223 20.705C0.0940781 21.2175 0 21.73 0 22.2425C0 22.755 0.0940781 23.259 0.28223 23.7544C0.470383 24.2498 0.769714 24.7025 1.18023 25.1125ZM18.781 36.9L4.10513 22.2425L22.219 4.1H36.8949V18.7575L18.781 36.9ZM31.7635 12.3C30.9082 12.3 30.1813 12.001 29.5826 11.4031C28.9839 10.8052 28.6846 10.0792 28.6846 9.225C28.6846 8.37083 28.9839 7.64479 29.5826 7.04688C30.1813 6.44896 30.9082 6.15 31.7635 6.15C32.6187 6.15 33.3456 6.44896 33.9443 7.04688C34.543 7.64479 34.8423 8.37083 34.8423 9.225C34.8423 10.0792 34.543 10.8052 33.9443 11.4031C33.3456 12.001 32.6187 12.3 31.7635 12.3Z" fill="#FF0915"/></svg>,
+    title: "Friendly Pricing", desc: "Transparent, affordable pricing built for early stage and growing businesses."
+  },
+  {
+    icon: <svg width="40" height="51" viewBox="0 0 40 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.375 41.31L29.3125 25.5H19.3125L21.125 11.0288L9.5625 28.05H18.25L16.375 41.31ZM10 51L12.5 33.15H0L22.5 0H27.5L25 20.4H40L15 51H10Z" fill="#FF0915"/></svg>,
+    title: "Fast Workflows", desc: "Beginner friendly tools to help you move at light speed."
+  },
+  {
+    icon: <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5562 38.425C10.0621 37.375 7.88396 35.9417 6.02187 34.125C4.15979 32.3083 2.69062 30.1833 1.61437 27.75C0.538125 25.3167 0 22.725 0 19.975C0 17.225 0.538125 14.6417 1.61437 12.225C2.69062 9.80833 4.15979 7.69167 6.02187 5.875C7.88396 4.05833 10.0621 2.625 12.5562 1.575C15.0504 0.525 17.7069 0 20.5256 0C23.3444 0 25.9923 0.525 28.4694 1.575C30.9465 2.625 33.116 4.05833 34.9781 5.875C36.8402 7.69167 38.3094 9.80833 39.3856 12.225C40.4619 14.6417 41 17.225 41 19.975C41 22.725 40.4619 25.3167 39.3856 27.75C38.3094 30.1833 36.8402 32.3083 34.9781 34.125C33.116 35.9417 30.9465 37.375 28.4694 38.425C25.9923 39.475 23.3444 40 20.5256 40C17.7069 40 15.0504 39.475 12.5562 38.425ZM20.5 35.9C21.3883 34.7 22.1571 33.45 22.8062 32.15C23.4554 30.85 23.985 29.4667 24.395 28H16.605C17.015 29.4667 17.5446 30.85 18.1938 32.15C18.8429 33.45 19.6117 34.7 20.5 35.9ZM15.17 35.1C14.555 34 14.0169 32.8583 13.5556 31.675C13.0944 30.4917 12.71 29.2667 12.4025 28H6.355C7.34583 29.6667 8.58437 31.1167 10.0706 32.35C11.5569 33.5833 13.2567 34.5 15.17 35.1ZM25.83 35.1C27.7433 34.5 29.4431 33.5833 30.9294 32.35C32.4156 31.1167 33.6542 29.6667 34.645 28H28.5975C28.29 29.2667 27.9056 30.4917 27.4444 31.675C26.9831 32.8583 26.445 34 25.83 35.1ZM4.6125 24H11.5825C11.48 23.3333 11.4031 22.675 11.3519 22.025C11.3006 21.375 11.275 20.7 11.275 20C11.275 19.3 11.3006 18.625 11.3519 17.975C11.4031 17.325 11.48 16.6667 11.5825 16H4.6125C4.44167 16.6667 4.31354 17.325 4.22813 17.975C4.14271 18.625 4.1 19.3 4.1 20C4.1 20.7 4.14271 21.375 4.22813 22.025C4.31354 22.675 4.44167 23.3333 4.6125 24ZM15.6825 24H25.3175C25.42 23.3333 25.4969 22.675 25.5481 22.025C25.5994 21.375 25.625 20.7 25.625 20C25.625 19.3 25.5994 18.625 25.5481 17.975C25.4969 17.325 25.42 16.6667 25.3175 16H15.6825C15.58 16.6667 15.5031 17.325 15.4519 17.975C15.4006 18.625 15.375 19.3 15.375 20C15.375 20.7 15.4006 21.375 15.4519 22.025C15.5031 22.675 15.58 23.3333 15.6825 24ZM29.4175 24H36.3875C36.5583 23.3333 36.6865 22.675 36.7719 22.025C36.8573 21.375 36.9 20.7 36.9 20C36.9 19.3 36.8573 18.625 36.7719 17.975C36.6865 17.325 36.5583 16.6667 36.3875 16H29.4175C29.52 16.6667 29.5969 17.325 29.6481 17.975C29.6994 18.625 29.725 19.3 29.725 20C29.725 20.7 29.6994 21.375 29.6481 22.025C29.5969 22.675 29.52 23.3333 29.4175 24ZM28.5975 12H34.645C33.6542 10.3333 32.4156 8.88333 30.9294 7.65C29.4431 6.41667 27.7433 5.5 25.83 4.9C26.445 6 26.9831 7.14167 27.4444 8.325C27.9056 9.50833 28.29 10.7333 28.5975 12ZM16.605 12H24.395C23.985 10.5333 23.4554 9.15 22.8062 7.85C22.1571 6.55 21.3883 5.3 20.5 4.1C19.6117 5.3 18.8429 6.55 18.1938 7.85C17.5446 9.15 17.015 10.5333 16.605 12ZM6.355 12H12.4025C12.71 10.7333 13.0944 9.50833 13.5556 8.325C14.0169 7.14167 14.555 6 15.17 4.9C13.2567 5.5 11.5569 6.41667 10.0706 7.65C8.58437 8.88333 7.34583 10.3333 6.355 12Z" fill="#FF0915"/></svg>,
+    title: "Global Infrastructure", desc: "Built and hosted for best performance, and secure local support."
+  },
+];
 
   return (
     <section style={{ padding: "48px 20px", background: "#F9F5F7", textAlign: "center" }}>
@@ -205,11 +207,11 @@ function WhatIsSection() {
             {/* Card row */}
             <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 16, textAlign: "left" }}>
               <div style={{
-                width: 82.95, height: 58.69, background: "#fff", borderRadius: 14,
-                boxShadow: "2px 5px 40.8px rgba(255,9,21,0.07)",
-                display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+                width: 80, height: 58, background: "#fff", borderRadius: 14,
+boxShadow: "2px 5px 40.8px rgba(255,9,21,0.07)",
+display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, overflow: "hidden",
               }}>
-                {f.icon}
+                <div style={{ transform: "scale(0.65)", transformOrigin: "center center", lineHeight: 0 }}>{f.icon}</div>
               </div>
               <div>
                 <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 15, color: "#000", marginBottom: 6 }}>{f.title}</h3>
@@ -219,12 +221,12 @@ function WhatIsSection() {
 
             {/* Connector between cards */}
             {i < features.length - 1 && (
-              <div style={{ width: 82.95, display: "flex", flexDirection: "column", alignItems: "center", margin: "0" }}>
+              <div style={{ width: 82.95, display: "flex", flexDirection: "column", alignItems: "center", margin: "-4px 0", justifyContent: "center" }}>  
                 <svg width="2" height="20" viewBox="0 0 2 20" fill="none">
                   <line x1="1" y1="0" x2="1" y2="20" stroke="#FF0915" strokeWidth="1.5" strokeDasharray="2 2"/>
                 </svg>
-                <svg width="7" height="7" viewBox="0 0 7 7" fill="none">
-                  <circle cx="3.5" cy="3.5" r="3.5" fill="#FF0915"/>
+                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2.5" cy="2.5" r="2.5" fill="#FF0915"/>
                 </svg>
                 <svg width="2" height="20" viewBox="0 0 2 20" fill="none">
                   <line x1="1" y1="0" x2="1" y2="20" stroke="#FF0915" strokeWidth="1.5" strokeDasharray="2 2"/>
@@ -259,7 +261,11 @@ function GlobalSection() {
             top: 0, left: 0,
             width: "100%", height: "100%",
             objectFit: "cover",
-            objectPosition: "70% center",
+            objectPosition: "right center",
+            left: "40%",
+top: "10%",
+width: "65%",
+height: "90%",
             pointerEvents: "none",
             userSelect: "none",
           }}
@@ -310,26 +316,28 @@ function EnterpriseFeaturesSection() {
 
       {/* 2×2 grid */}
       <div style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: 12,
-        margin: "32px 0 0",
+display: "grid",
+gridTemplateColumns: "173px 173px",
+gap: 12,
+margin: "32px auto 0",
+justifyContent: "center",
       }}>
         {features.map(f => (
           <div key={f.title} style={{
             borderRadius: 8,
-            padding: "16px 12px",
-            background: "rgba(249,245,247,0.20)",
-            border: "1px solid #E6E5E5",
-            textAlign: "center",
-            boxShadow: "0 4px 35.4px rgba(0,0,0,0.06)",
-            display: "flex", flexDirection: "column",
-            alignItems: "center", justifyContent: "flex-start",
-            boxSizing: "border-box",
+padding: "16px 12px",
+background: "rgba(249,245,247,0.20)",
+border: "1px solid #E6E5E5",
+textAlign: "center",
+boxShadow: "0 4px 35.4px rgba(0,0,0,0.06)",
+display: "flex", flexDirection: "column",
+alignItems: "center", justifyContent: "center",
+boxSizing: "border-box",
+width: 173, height: 162, padding: "20px 12px",
           }}>
-            <div style={{ marginBottom: 10, transform: "scale(0.6)", transformOrigin: "center top" }}>{f.icon}</div>
+            <div style={{ transform: "scale(0.7)", transformOrigin: "center center",}}>{f.icon}</div>
             <h3 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: 13, color: "#1a0a0d", marginBottom: 6 }}>{f.title}</h3>
-            <p style={{ fontSize: 11, color: "#777", lineHeight: 1.6, fontFamily: "'Inter', sans-serif" }}>{f.desc}</p>
+            <p style={{ fontSize: 11, color: "#000000", lineHeight: 1.6, fontFamily: "'Inter', sans-serif" }}>{f.desc}</p>
           </div>
         ))}
       </div>
@@ -398,34 +406,94 @@ function CountdownSection() {
 
   return (
     <section style={{ padding: "60px 20px", background: "#F9F5F7", textAlign: "center" }}>
-      <span style={{ display: "inline-block", color: BRAND, fontSize: 11, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", fontFamily: "'Inter', sans-serif", marginBottom: 32 }}>Launching In</span>
+      <span style={{
+        display: "inline-block", color: BRAND, fontSize: 11, fontWeight: 700,
+        letterSpacing: "1.5px", textTransform: "uppercase",
+        fontFamily: "'Inter', sans-serif", marginBottom: 32,
+      }}>Launching In</span>
 
-      {/* 2×2 grid on mobile */}
       <div style={{ display: "grid", gridTemplateColumns: "109px 109px", justifyContent: "center", gap: 10 }}>
         {units.map(([label, val]) => (
-          <div key={label} style={{ width: 109, height: 128, position: "relative", filter: "drop-shadow(0px 4px 13.1px rgba(255,9,21,0.16))" }}>
-            <div style={{ position: "absolute", inset: 0, borderRadius: 13, background: "rgba(255,222,222,0.12)" }}/>
-            <div style={{ position: "absolute", top: 5, left: 7, right: 7, height: 56, borderRadius: 10, background: "#FEF7F6", boxShadow: "0px 2px 9.8px rgba(255,157,166,0.25)", overflow: "hidden", display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
-              <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: 46, lineHeight: 1, color: BRAND, transform: "translateY(22px)" }}>{String(val).padStart(2, "0")}</span>
-            </div>
-            <div style={{ position: "absolute", top: 62, left: 7, right: 7, bottom: 5, borderRadius: 10, background: "#FEF7F6", boxShadow: "0px 0px 9.8px rgba(255,157,166,0.18)", overflow: "hidden", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start" }}>
-              <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: 46, lineHeight: 1, color: BRAND, transform: "translateY(-22px)" }}>{String(val).padStart(2, "0")}</span>
-              <span style={{ position: "absolute", bottom: 6, fontSize: 8, fontWeight: 500, letterSpacing: "2px", textTransform: "uppercase", color: "#aaa", fontFamily: "'Inter', sans-serif" }}>{label}</span>
-            </div>
-          </div>
-        ))}
+  <div key={label} style={{
+    position: "relative",
+    width: 109,
+    height: 128,
+    background: "rgba(255,222,222,0.12)",
+    boxShadow: "0px 4px 13.1px rgba(255,9,21,0.16)",
+    borderRadius: 13,
+  }}>
+    {/* Rectangle top */}
+    <div style={{
+      position: "absolute",
+      width: 109, height: 65,
+      left: 0, top: 0,
+      background: "#FEF7F6",
+      boxShadow: "0px 2px 9.8px rgba(255,157,166,0.25)",
+      borderRadius: 10,
+    }} />
+
+    {/* Rectangle bottom */}
+    <div style={{
+      position: "absolute",
+      width: 109, height: 65,
+      left: 0, top: 63,
+      background: "#FEF7F6",
+      boxShadow: "0px 0px 9.8px rgba(255,157,166,0.18)",
+      borderRadius: 10,
+    }} />
+
+    {/* Number — centered in full card */}
+<div style={{
+  position: "absolute",
+  top: 0, left: 0, width: 109, height: 128,
+  zIndex: 3,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingBottom: 28, 
+}}>
+  <span style={{
+    fontFamily: "'Inter', sans-serif",
+    fontWeight: 560,
+    fontSize: 64,
+    lineHeight: 1,
+    color: "#F8545E",
+  }}>
+    {String(val).padStart(2, "0")}
+  </span>
+</div>
+
+    {/* Label */}
+    <div style={{
+      position: "absolute",
+      top: 93, left: 0, right: 0,
+      display: "flex",
+      justifyContent: "center",
+      zIndex: 3,
+    }}>
+      <span style={{
+        fontFamily: "'Inter', sans-serif",
+        fontWeight: 500,
+        fontSize: 12,
+        lineHeight: "15px",
+        textTransform: "uppercase",
+        color: "#666666",
+      }}>{label}</span>
+    </div>
+  </div>
+))}
+
       </div>
     </section>
   );
 }
-
 // ─── Data / Trust ─────────────────────────────────────────────────────────────
 
 function DataSection() {
   const stats = [
   {
     icon: <svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 61C25.85 61 21.95 60.2004 18.3 58.6011C14.65 57.0019 11.475 54.8315 8.775 52.0899C6.075 49.3483 3.9375 46.1244 2.3625 42.4182C0.7875 38.712 0 34.752 0 30.5381C0 26.7303 0.725 22.9988 2.175 19.3433C3.625 15.6879 5.65 12.4259 8.25 9.55743C10.85 6.68893 13.975 4.3789 17.625 2.62734C21.275 0.87578 25.275 0 29.625 0C30.675 0 31.75 0.0507699 32.85 0.15231C33.95 0.253849 35.075 0.431544 36.225 0.685393C35.775 2.97004 35.925 5.12776 36.675 7.15855C37.425 9.18935 38.55 10.8774 40.05 12.2228C41.55 13.5682 43.3375 14.4948 45.4125 15.0025C47.4875 15.5102 49.625 15.3833 51.825 14.6217C50.525 17.6171 50.7125 20.4856 52.3875 23.2272C54.0625 25.9688 56.55 27.3903 59.85 27.4919C59.9 28.0504 59.9375 28.5707 59.9625 29.0531C59.9875 29.5354 60 30.0558 60 30.6142C60 34.7774 59.2125 38.6993 57.6375 42.3801C56.0625 46.061 53.925 49.2849 51.225 52.0518C48.525 54.8188 45.35 57.0019 41.7 58.6011C38.05 60.2004 34.15 61 30 61ZM25.5 24.4457C26.75 24.4457 27.8125 24.0015 28.6875 23.113C29.5625 22.2245 30 21.1457 30 19.8764C30 18.6072 29.5625 17.5283 28.6875 16.6398C27.8125 15.7514 26.75 15.3071 25.5 15.3071C24.25 15.3071 23.1875 15.7514 22.3125 16.6398C21.4375 17.5283 21 18.6072 21 19.8764C21 21.1457 21.4375 22.2245 22.3125 23.113C23.1875 24.0015 24.25 24.4457 25.5 24.4457ZM19.5 39.6767C20.75 39.6767 21.8125 39.2324 22.6875 38.3439C23.5625 37.4555 24 36.3766 24 35.1074C24 33.8381 23.5625 32.7593 22.6875 31.8708C21.8125 30.9823 20.75 30.5381 19.5 30.5381C18.25 30.5381 17.1875 30.9823 16.3125 31.8708C15.4375 32.7593 15 33.8381 15 35.1074C15 36.3766 15.4375 37.4555 16.3125 38.3439C17.1875 39.2324 18.25 39.6767 19.5 39.6767ZM39 42.7229C39.85 42.7229 40.5625 42.4309 41.1375 41.8471C41.7125 41.2632 42 40.5397 42 39.6767C42 38.8136 41.7125 38.0901 41.1375 37.5062C40.5625 36.9224 39.85 36.6305 39 36.6305C38.15 36.6305 37.4375 36.9224 36.8625 37.5062C36.2875 38.0901 36 38.8136 36 39.6767C36 40.5397 36.2875 41.2632 36.8625 41.8471C37.4375 42.4309 38.15 42.7229 39 42.7229ZM30 54.9076C36.1 54.9076 41.5125 52.7753 46.2375 48.5106C50.9625 44.2459 53.55 38.8136 54 32.2135C51.5 31.0965 49.5375 29.5735 48.1125 27.6442C46.6875 25.7149 45.725 23.5572 45.225 21.171C41.375 20.6126 38.075 18.9372 35.325 16.1448C32.575 13.3525 30.875 10.0017 30.225 6.09238C26.225 5.99085 22.7125 6.72701 19.6875 8.30087C16.6625 9.87474 14.1375 11.8928 12.1125 14.3552C10.0875 16.8175 8.5625 19.4956 7.5375 22.3895C6.5125 25.2834 6 27.9996 6 30.5381C6 37.2905 8.3375 43.0402 13.0125 47.7871C17.6875 52.5341 23.35 54.9076 30 54.9076Z" fill="#1C1B1F"/></svg>,
-    title: "Cookies", label: "idk what to write"
+    title: "Cookies", label: "filler text"
   },
   {
     icon: <svg width="65" height="60" viewBox="0 0 65 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.45739 25.9125C7.74337 25.1875 7.38636 24.3 7.38636 23.25C7.38636 22.2 7.74337 21.3125 8.45739 20.5875C9.1714 19.8625 10.0455 19.5 11.0795 19.5C12.1136 19.5 12.9877 19.8625 13.7017 20.5875C14.4157 21.3125 14.7727 22.2 14.7727 23.25C14.7727 24.3 14.4157 25.1875 13.7017 25.9125C12.9877 26.6375 12.1136 27 11.0795 27C10.0455 27 9.1714 26.6375 8.45739 25.9125ZM51.2983 25.9125C50.5843 25.1875 50.2273 24.3 50.2273 23.25C50.2273 22.2 50.5843 21.3125 51.2983 20.5875C52.0123 19.8625 52.8864 19.5 53.9205 19.5C54.9545 19.5 55.8286 19.8625 56.5426 20.5875C57.2566 21.3125 57.6136 22.2 57.6136 23.25C57.6136 24.3 57.2566 25.1875 56.5426 25.9125C55.8286 26.6375 54.9545 27 53.9205 27C52.8864 27 52.0123 26.6375 51.2983 25.9125ZM8.86364 60H2.95455V48H14.7727C11.5227 48 8.74053 46.825 6.42614 44.475C4.11174 42.125 2.95455 39.3 2.95455 36H8.86364C8.86364 37.65 9.44223 39.0625 10.5994 40.2375C11.7566 41.4125 13.1477 42 14.7727 42V33H22.75L19.9432 21.375C18.8106 16.775 16.3854 13.0625 12.6676 10.2375C8.94981 7.4125 4.72727 6 0 6V0C6.05682 0 11.4858 1.825 16.2869 5.475C21.0881 9.125 24.2027 13.925 25.6307 19.875L29.4716 35.25C29.7178 36.2 29.5455 37.0625 28.9545 37.8375C28.3636 38.6125 27.5758 39 26.5909 39H20.6818V48C20.6818 49.65 20.1032 51.0625 18.946 52.2375C17.7888 53.4125 16.3977 54 14.7727 54H8.86364V60ZM62.0455 60H56.1364V54H50.2273C48.6023 54 47.2112 53.4125 46.054 52.2375C44.8968 51.0625 44.3182 49.65 44.3182 48V39H38.4091C37.4242 39 36.6364 38.6 36.0455 37.8C35.4545 37 35.3068 36.1 35.6023 35.1L39.3693 19.875C40.9451 14.125 44.072 9.375 48.75 5.625C53.428 1.875 58.8447 0 65 0V6C60.322 6 56.1241 7.425 52.4063 10.275C48.6884 13.125 46.2633 16.825 45.1307 21.375L42.25 33H50.2273V42C51.8523 42 53.2434 41.4125 54.4006 40.2375C55.5578 39.0625 56.1364 37.65 56.1364 36H62.0455C62.0455 39.3 60.8883 42.125 58.5739 44.475C56.2595 46.825 53.4773 48 50.2273 48H62.0455V60Z" fill="#1C1B1F"/></svg>,
@@ -451,21 +519,34 @@ function DataSection() {
         <div>
           <span style={{ fontSize: 11, fontWeight: 700, color: BRAND, letterSpacing: "1.5px", textTransform: "uppercase", fontFamily: "'Inter', sans-serif" }}>Trust & Security</span>
           <h2 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: 20, color: "#1a0a0d", margin: "8px 0 8px" }}>Your Data, Always Protected.</h2>
-          <p style={{ color: "#555", fontSize: 13, fontFamily: "'Inter', sans-serif", lineHeight: 1.7 }}>
+          <p style={{ color: "#000000", fontSize: 13, fontFamily: "'Inter', sans-serif", lineHeight: 1.7 }}>
             We follow industry best practices to ensure your data and infrastructure are always secure and private.
           </p>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "130px 130px", gap: 16, justifyContent: "center" }}>
-          {stats.map(s => (
-            <div key={s.title} style={{ textAlign: "center" }}>
-              <div style={{ width: 130, height: 116, background: "#fff", borderRadius: 20, boxShadow: "2px 5px 40.8px rgba(255,9,21,0.07)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 8 }}>
-                {s.icon}
-              </div>
-              <div style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: 14, color: "#1a0a0d" }}>{s.title}</div>
-              <div style={{ fontSize: 12, color: "#aaa", fontFamily: "'Inter', sans-serif", marginTop: 2 }}>{s.label}</div>
-            </div>
-          ))}
+        <div style={{ display: "grid", gridTemplateColumns: "100px 100px", gap: 16, justifyContent: "center" }}>
+  {stats.map(s => (
+    <div key={s.title} style={{ textAlign: "center" }}>
+      <div style={{
+  width: 100,
+  height: 90,
+  background: "#fff",
+  borderRadius: 16,
+  boxShadow: "2px 5px 40.8px rgba(255,9,21,0.07)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: 8,
+  overflow: "hidden",
+}}>
+        <div style={{ transform: "scale(0.7)", transformOrigin: "center center", lineHeight: 0 }}>
+          {s.icon}
         </div>
+      </div>
+      <div style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: 14, color: "#1a0a0d" }}>{s.title}</div>
+      <div style={{ fontSize: 12, color: "#000000", fontFamily: "'Inter', sans-serif", marginTop: 2 }}>{s.label}</div>
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );
