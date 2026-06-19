@@ -81,7 +81,12 @@ function HeroSection({ dark, heroBgDark }) {
         </p>
 
         {/* Mobile lock image */}
-        <img src={dark ? lockImgDark : lockImg} alt="" className="hero__lock-img" />
+        <img
+          src={dark ? lockImgDark : lockImg}
+          alt=""
+          className="hero__lock-img"
+          onError={(e) => { e.currentTarget.style.display = "none"; }}
+        />
 
         {/* Form */}
         <div className="form-card">
@@ -327,7 +332,7 @@ function CountdownSection() {
 
   return (
     <section className="countdown">
-      
+      <span className="countdown__label">Launching In</span>
       <div className="countdown__units">
         {units.map(([label, val]) => (
           <div key={label} className="countdown__unit">
