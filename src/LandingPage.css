@@ -179,7 +179,7 @@
 }
 
 .form-card__privacy {
-  font-size: 11px;
+  font-size: 13px;
   color: #aaa;
   margin-top: 10px;
   font-family: 'DM Sans', sans-serif;
@@ -226,7 +226,8 @@
   max-width: 560px;
   margin: 0 auto 52px;
   font-family: 'DM Sans', sans-serif;
-  line-height: 1.7;
+  line-height: 2;
+  letter-spacing: 0.3px;
 }
 
 .whatis__row {
@@ -278,6 +279,7 @@
   color: #000;
   line-height: 1.6;
   font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.3px;
 }
 
 .whatis__list { display: none; }
@@ -397,6 +399,7 @@
   color: #777;
   line-height: 1.6;
   font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 
@@ -929,7 +932,7 @@ font-size: 16px;
   .whatis { padding: 64px 32px; }
   .whatis__desc { font-size: 14px; max-width: 620px; margin-bottom: 48px; }
   .whatis__row { max-width: 900px; gap: 16px; }
-  .whatis__icon-box { width: 72px; height: 72px; border-radius: 18px; }
+  .whatis__icon-box { width: 72px; height: 72px; border-radius: 18px; border: 1px solid rgba(87, 87, 87, 0.3); }
   .whatis__icon-inner { transform: scale(0.7); }
   .whatis__card-title { font-size: 14px; }
   .whatis__card-desc { font-size: 12px; }
@@ -1620,8 +1623,8 @@ font-size: 16px;
 [data-theme="dark"] .form-card__title { color: #fff; }
 [data-theme="dark"] .form-card__sub { color: #888; }
 [data-theme="dark"] .form-input { background: #111; border-color: #333; color: #fff; }
-[data-theme="dark"] .form-input::placeholder { color: #555; }
-[data-theme="dark"] .form-card__privacy { color: #666; }
+[data-theme="dark"] .form-input::placeholder { color: #FFFFFF; }
+[data-theme="dark"] .form-card__privacy { color: #FFFFFF; }
 
 /* Sections */
 [data-theme="dark"] .whatis {
@@ -1631,7 +1634,7 @@ font-size: 16px;
 [data-theme="dark"] .whatis__desc { color: #aaa; }
 [data-theme="dark"] .whatis__card-title { color: #fff; }
 [data-theme="dark"] .whatis__card-desc { color: #aaa; }
-[data-theme="dark"] .whatis__icon-box { background: #0E0E12; }
+[data-theme="dark"] .whatis__icon-box { background: #0E0E12; border: 1px solid rgba(87, 87, 87, 0.3); }
 [data-theme="dark"] .whatis__icon-box svg path { stroke: #EA293A; }
 
 [data-theme="dark"] .global { background: #0a0a0a; }
