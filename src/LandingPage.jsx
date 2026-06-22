@@ -292,11 +292,12 @@ function WhyEarlySection() {
   <circle cx="16" cy="16" r="16" fill="#F90000"/>
 </svg>
   <div className="whyearly__badge-icon" style={{ position: "absolute", zIndex: 1, transformOrigin: "center" }}>
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <span className="badge-icon--default"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M10.5 3L8 9L12 22L16 9L13.5 3" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M17.0003 3C17.3108 3 17.617 3.07229 17.8948 3.21115C18.1725 3.35 18.414 3.55161 18.6003 3.8L21.6003 7.8C21.8576 8.14316 21.9978 8.55995 22.0001 8.98885C22.0025 9.41776 21.8669 9.83605 21.6133 10.182L13.6233 21.168C13.4381 21.4255 13.1943 21.6352 12.912 21.7799C12.6297 21.9245 12.317 22 11.9998 22C11.6826 22 11.37 21.9245 11.0877 21.7799C10.8054 21.6352 10.5616 21.4255 10.3763 21.168L2.38633 10.182C2.13294 9.83594 1.99751 9.41759 2.00003 8.98869C2.00256 8.55979 2.14289 8.14306 2.40033 7.8L5.39833 3.803C5.58451 3.55379 5.82626 3.35144 6.10437 3.21204C6.38247 3.07264 6.68925 3.00004 7.00033 3H17.0003Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M2 9H22" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
+  </svg></span>
+  <span className="badge-icon--tablet"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clipPath="url(#clip0_2_3551)"><path d="M6.64535 1.90234L5.0625 5.70118L7.59506 13.932L10.1276 5.70118L8.54477 1.90234" stroke="white" strokeWidth="1.26628" strokeLinecap="round" strokeLinejoin="round"/><path d="M10.7551 1.90234C10.9517 1.90234 11.1456 1.94811 11.3214 2.03603C11.4972 2.12394 11.6502 2.25159 11.7681 2.40886L13.6675 4.94141C13.8305 5.15868 13.9192 5.42257 13.9207 5.69412C13.9222 5.96568 13.8363 6.23051 13.6758 6.44955L8.617 13.4052C8.49971 13.5682 8.34533 13.701 8.16661 13.7926C7.98788 13.8842 7.78993 13.932 7.5891 13.932C7.38827 13.932 7.19032 13.8842 7.01159 13.7926C6.83286 13.701 6.67848 13.5682 6.5612 13.4052L1.50241 6.44955C1.34198 6.23045 1.25624 5.96557 1.25783 5.69402C1.25943 5.42246 1.34828 5.15861 1.51128 4.94141L3.40943 2.41075C3.52731 2.25297 3.68037 2.12485 3.85645 2.03659C4.03252 1.94834 4.22676 1.90237 4.42372 1.90234H10.7551Z" stroke="white" strokeWidth="1.26628" strokeLinecap="round" strokeLinejoin="round"/><path d="M1.25781 5.69922H13.9206" stroke="white" strokeWidth="1.26628" strokeLinecap="round" strokeLinejoin="round"/></g><defs><clipPath id="clip0_2_3551"><rect width="15.1953" height="15.1953" rx="7.59767" fill="white"/></clipPath></defs></svg></span>
 </div>
 </div>
         </div>
@@ -326,7 +327,13 @@ function WhyEarlySection() {
 }
 
 function CountdownSection() {
-  const target = Date.now() + (12 * 86400000) + (7 * 3600000) + (34 * 60000) + 56000;
+  const target = (() => {
+    const stored = localStorage.getItem("nexgn_launch_target");
+    if (stored) return Number(stored);
+    const t = Date.now() + 180 * 86400000;
+    localStorage.setItem("nexgn_launch_target", t);
+    return t;
+  })();
   const { days, hours, mins, secs } = useCountdown(target);
   const units = [["DAYS", days], ["HOURS", hours], ["MINUTES", mins], ["SECONDS", secs]];
 
