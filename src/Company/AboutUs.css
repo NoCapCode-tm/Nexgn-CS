@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --nexgn-red: #e6362b;
+  --nexgn-red-dark: #c4271d;
+  --nexgn-red-light: #fdeceb;
+  --nexgn-dark: #16181c;
+  --nexgn-grey-500: #6b7280;
+  --nexgn-border: #e8e9eb;
+  --nexgn-white: #ffffff;
+  --nexgn-max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* ── NAVBAR ── */
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 80px; background: linear-gradient(to bottom, rgba(249,245,247,0.85) 0%, rgba(249,245,247,0) 100%); }
+.navbar__brand { display: flex; align-items: center; gap: 8px; }
+.navbar__logo-text { display: flex; flex-direction: column; line-height: 1; }
+.navbar__logo-name { font-family: 'MuseoModerno', sans-serif; font-weight: 400; font-size: 32px; color: #1a0a0d; line-height: 1; }
+.navbar__logo-sub { font-family: 'MuseoModerno', sans-serif; font-weight: 350; font-size: 9px; color: #000000; margin-top: 2px; }
+.navbar__links { display: flex; align-items: center; gap: 40px; position: absolute; left: 50%; transform: translateX(-50%); }
+.navbar__link { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; line-height: 17px; color: #000000; text-decoration: none; }
+.navbar__link:hover { color: #D70506; }
+.navbar__actions { display: flex; align-items: center; gap: 28px; }
+.navbar__login { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; line-height: 17px; color: #000000; text-decoration: none; }
+.navbar__login:hover { color: #D70506; }
+.navbar__headset { cursor: pointer; }
+.navbar__cta { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 9px; gap: 9px; width: 116px; height: 40px; background: linear-gradient(234.21deg, #960101 2.19%, #FF0915 100.02%); border-radius: 7.21805px; border: none; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 13px; line-height: 16px; color: #FFFFFF; }
+.navbar__cta:hover { opacity: 0.9; }
+
+/* ── RIBBON ── */
+.nexgn-hero-ribbon {
+  position: absolute;
+  width: 1100px;
+  height: 1120px;
+  left: -250px;
+  top: -180px;
+  opacity: 0.77;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── ABOUT NEXGN LABEL ── */
+.nexgn-about-label {
+  position: absolute;
+  width: 129px;
+  height: 19px;
+  left: 89px;
+  top: 146.92px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #DC2626;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.aboutus-hero-title { position: absolute; width: 711px; height: 122px; left: 89px; top: 199.92px; font-family: 'Inter', sans-serif; font-style: normal; font-weight: 600; font-size: 50px; line-height: 61px; color: #000000; z-index: 2; margin: 0; overflow: hidden; }
+
+.nexgn-hero-body { position: absolute; width: 563px; height: 116px; left: 89px; top: 390px; font-family: 'Inter', sans-serif; font-style: normal; font-weight: 500; font-size: 16px; line-height: 29px; color: #000000; z-index: 2; margin: 0; }
+
+.nexgn-hero-tagline { position: absolute; width: 265px; height: 22px; left: 89px; top: 520px; font-family: 'Inter', sans-serif; font-style: normal; font-weight: 500; font-size: 16px; line-height: 22px; color: #000000; z-index: 2; margin: 0; white-space: nowrap; }
+
+.nexgn-hero-description { position: absolute; width: 555px; height: 203px; left: 89px; top: 590px; font-family: 'Inter', sans-serif; font-style: normal; font-weight: 500; font-size: 16px; line-height: 160.6%; color: #000000; z-index: 2; margin: 0; }
+
+/* ── HERO SUBTEXT ── */
+.nexgn-hero-subtext {
+  position: absolute;
+  width: 550px;
+  height: 116px;
+  left: 89px;
+  top: 785px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160.6%;
+  color: #000000;
+  z-index: 2;
+  margin: 0;
+}
+
+/* ── CORE VALUES CARD ── */
+.nexgn-core-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 24px;
+  position: absolute;
+  width: 389px;
+  height: 435px;
+  top: 1084.92px;
+  z-index: 2;
+  overflow: visible;
+}
+
+.nexgn-core-card--1 {
+  left: 95px;
+}
+
+.nexgn-core-card--2 {
+  left: 526px;
+}
+
+.nexgn-core-card--3 {
+  left: 957px;
+}
+
+.nexgn-core-card-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  width: 100px;
+  height: 100px;
+}
+
+.nexgn-core-card-title {
+  width: 349px;
+  height: 31px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+}
+
+.nexgn-core-card-divider {
+  width: 53px;
+  height: 5px;
+  background: #E70D12;
+  border-radius: 12px;
+}
+
+.nexgn-core-card-text {
+  width: 349px;
+  height: 120px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+}
+
+/* ── CORE VALUES SECTION ── */
+.nexgn-core-values-label {
+  position: absolute;
+  width: 400px;
+  height: 19px;
+  left: calc(50% - 400px / 2 - 3px);
+  top: 951.92px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #DC2626;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.nexgn-core-values-title {
+  position: absolute;
+  width: 900px;
+  height: 48px;
+  left: calc(50% - 900px / 2 + 0.5px);
+  top: 986.92px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #000000;
+  z-index: 2;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ── HERO GLOBE IMAGE ── */
+.nexgn-hero-globe {
+  position: absolute;
+  width: 622px;
+  height: 622px;
+  left: 818px;
+  top: 213px;
+  z-index: 2;
+  object-fit: contain;
+}
+/* ── OUR PROMISE BANNER ── */
+.nexgn-promise-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  gap: 99px;
+  position: absolute;
+  width: 1251px;
+  height: 272px;
+  left: 95px;
+  top: 1569.92px;
+  background: #FFF8F7;
+  border: 1px solid #FCC9CE;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.nexgn-promise-image {
+  width: 312px;
+  height: 248px;
+  object-fit: contain;
+  flex: none;
+}
+
+.nexgn-promise-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  width: 529px;
+  flex: none;
+}
+
+.nexgn-promise-title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 39px;
+  color: #000000;
+  margin: 0;
+}
+
+.nexgn-promise-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 31px;
+  color: #000000;
+  margin: 0;
+}
+/* ── PAGE WRAPPER ── */
+.nexgn-page-wrapper {
+  position: relative;
+  min-height: 2500px;
+}

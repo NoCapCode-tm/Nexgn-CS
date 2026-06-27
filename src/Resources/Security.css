@@ -1,0 +1,625 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&display=swap");
+
+:root {
+  --nexgn-red: #e6362b;
+  --nexgn-red-dark: #c4271d;
+  --nexgn-red-light: #fdeceb;
+  --nexgn-dark: #16181c;
+  --nexgn-grey-500: #6b7280;
+  --nexgn-border: #e8e9eb;
+  --nexgn-white: #ffffff;
+  --nexgn-max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ── HEADER ── */
+.nexgn-header-inner {
+  max-width: var(--nexgn-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  gap: 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.nexgn-header-inner--svg {
+  display: block;
+  padding: 12px 32px 20px 32px;
+  overflow: visible;
+  position: relative;
+}
+
+.nexgn-header {
+  position: relative;
+  padding-top: 20px;
+}
+
+.nexgn-header-svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+  min-height: 80px;
+}
+
+.nexgn-logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
+.nexgn-smart-signing {
+  font-family: 'MuseoModerno', sans-serif;
+  font-weight: 200;
+  font-size: 7.64px;
+  line-height: 12px;
+  color: #000000;
+  padding-left:52px;
+  margin-top: -10px;
+}
+
+/* ── RIBBON ── */
+.nexgn-hero-ribbon {
+  position: absolute;
+  width: 1100px;
+  height: 1120px;
+  left: -250px;
+  top: -180px;
+  opacity: 0.77;
+  pointer-events: none;
+  z-index: 1;
+}
+.trust-hero-image {
+  position: absolute;
+  width: 784px;
+  height: 563px;
+  right: 0px;
+  top: 173px;
+  z-index: 2;
+  object-fit: cover;
+}
+
+.trust-commitment-card {
+  position: absolute;
+  width: 1276px;
+  left: calc(50% - 1276px/2 + 7px);
+  top: 2600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 35px 40px;
+  gap: 40px;
+  background: #FFF8FA;
+  border: 1px solid #FBD1D2;
+  border-radius: 7px;
+  box-sizing: border-box;
+  z-index: 2;
+  min-height: 286px;
+}
+
+.trust-commitment-left {
+  width: 378px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.trust-commitment-left {
+  width: 378px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 14px;
+  justify-content: center;
+}
+
+.trust-commitment-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trust-commitment-icon-box {
+  width: 44px;
+  height: 44px;
+  background: #FEF5F5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trust-commitment-title {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0;
+}
+
+.trust-commitment-body {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666666;
+  margin: 0;
+}
+
+.trust-commitment-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  flex: 1;
+  align-items: center;
+}
+
+.trust-commitment-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  text-align: center;
+}
+
+.trust-commitment-col-title {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin: 0;
+}
+
+.trust-commitment-col-body {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #666666;
+  margin: 0;
+}
+
+.trust-privacy-title {
+  position: absolute;
+  width: auto;
+  white-space: nowrap;
+  height: 24px;
+  left: 108px;
+  top: 3000px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0;
+  z-index: 2;
+}
+
+.trust-privacy-desc {
+  position: absolute;
+  width: 839px;
+  height: 19px;
+  left: 108px;
+  top: 3050px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666666;
+  margin: 0;
+  z-index: 2;
+}
+
+.trust-contacts-table {
+  position: absolute;
+  width: 1110px;
+  left: 165px;
+  top: 3200px;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.trust-contacts-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+
+.trust-contacts-header {
+  background: #FEF8F9;
+  padding: 17px 0;
+  align-items: center;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.trust-contacts-col {
+  box-sizing: border-box;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  padding: 0 20px 0 30px;
+}
+
+.trust-contacts-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #CCCCCC;
+}
+
+.trust-contacts-divider-1 {
+  left: 290px;
+}
+
+.trust-contacts-divider-2 {
+  left: 671px;
+}
+
+.trust-contacts-col-1 {
+  width: 290px;
+  flex-shrink: 0;
+}
+
+.trust-contacts-col-2 {
+  width: 381px;
+  flex-shrink: 0;
+}
+
+.trust-contacts-col-3 {
+  width: 439px;
+  flex-shrink: 0;
+  border-right: none;
+}
+
+.trust-contacts-header .trust-contacts-col {
+  font-weight: 600;
+}
+
+.trust-contacts-email {
+  font-weight: 500;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.trust-vdp-reporting-card {
+  position: absolute;
+  width: 589px;
+  left: 751px;
+  top: 2300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 30px;
+  gap: 20px;
+  background: #FEF4F5;
+  border: 1px solid #FBD1D2;
+  border-radius: 7px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.trust-vdp-card-icon {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+}
+
+.trust-vdp-card-content {
+  width: 474px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.trust-vdp-card-title {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  margin: 0 0 8px 0;
+}
+
+.trust-vdp-card-body {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #666666;
+  margin: 0 0 8px 0;
+}
+
+.trust-vdp-card-email {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #D70506;
+  margin: 0 0 8px 0;
+  text-decoration: underline;
+}
+
+.trust-vdp-card-note {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #666666;
+  margin: 0;
+}
+
+.trust-vdp-group {
+  position: absolute;
+  width: 536px;
+  left: 108px;
+  top: 2300px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  z-index: 2;
+}
+
+.trust-app-security-group {
+  position: absolute;
+  width: 523px;
+  left: 108px;
+  top: 1900px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  z-index: 2;
+}
+
+.trust-doc-integrity-group {
+  position: absolute;
+  width: 523px;
+  left: 108px;
+  top: 1349px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  z-index: 2;
+}
+
+.trust-icon-box {
+  width: 64px;
+  height: 64px;
+  background: #FEF5F5;
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 403px;
+}
+
+.trust-section-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0;
+}
+
+.trust-section-desc {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666666;
+  margin: 0;
+  width: 368px;
+}
+
+.trust-infra-card-group {
+  position: absolute;
+  width: 520px;
+  left: 793px;
+  top: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+}
+
+.trust-app-card-group {
+  position: absolute;
+  width: 520px;
+  left: 793px;
+  top: 1900px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+}
+
+.trust-doc-card-group {
+  position: absolute;
+  width: 520px;
+  left: 793px;
+  top: 1349px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+}
+
+.trust-card-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.trust-card-dot {
+  width: 8.74px;
+  height: 8px;
+  background: #D70506;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.trust-card-text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin: 0;
+}
+
+.trust-card-bold {
+  font-weight: 600;
+}
+
+.trust-infra-group {
+  position: absolute;
+  width: 536px;
+  height: 136px;
+  left: 108px;
+  top: 800px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  z-index: 2;
+}
+
+.trust-infra-icon-box {
+  width: 64px;
+  height: 64px;
+  background: #FEF5F5;
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-infra-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trust-infra-title {
+  width: 348px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0;
+}
+
+.trust-infra-desc {
+  width: 416px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666666;
+  margin: 0;
+}
+
+.trust-body-text {
+  position: absolute;
+  width: 547px;
+  height: 320px;
+  left: 122px;
+  top: 440px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #000000;
+  margin: 0;
+  z-index: 2;
+}
+
+.trust-main-heading {
+  position: absolute;
+  width: 529px;
+  height: 154px;
+  left: 122px;
+  top: 280px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 68px;
+  color: #000000;
+  margin: 0;
+  z-index: 2;
+}
+
+.trust-page-wrapper {
+  position: relative;
+  min-height: 3800px;
+}
+.trust-help-center-label {
+  position: absolute;
+  width: auto;
+  white-space: nowrap;
+  height: 19px;
+  left: 122px;
+  top: 250px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #DC2626;
+  z-index: 2;
+}

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=MuseoModerno:wght@400;500;600&display=swap");
 :root {
   --nexgn-red: #e6362b;
   --nexgn-red-dark: #c4271d;
@@ -17,6 +17,22 @@
 * {
   box-sizing: border-box;
 }
+
+/* ── NAVBAR ── */
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 80px; background: linear-gradient(to bottom, rgba(249,245,247,0.85) 0%, rgba(249,245,247,0) 100%); }
+.navbar__brand { display: flex; align-items: center; gap: 8px; }
+.navbar__logo-text { display: flex; flex-direction: column; line-height: 1; }
+.navbar__logo-name { font-family: 'MuseoModerno', sans-serif; font-weight: 400; font-size: 32px; color: #1a0a0d; line-height: 1; }
+.navbar__logo-sub { font-family: 'MuseoModerno', sans-serif; font-weight: 350; font-size: 9px; color: #000000; margin-top: 2px; }
+.navbar__links { display: flex; align-items: center; gap: 40px; position: absolute; left: 50%; transform: translateX(-50%); }
+.navbar__link { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; line-height: 17px; color: #000000; text-decoration: none; }
+.navbar__link:hover { color: #D70506; }
+.navbar__actions { display: flex; align-items: center; gap: 28px; }
+.navbar__login { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 14px; line-height: 17px; color: #000000; text-decoration: none; }
+.navbar__login:hover { color: #D70506; }
+.navbar__headset { cursor: pointer; }
+.navbar__cta { display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 9px; gap: 9px; width: 116px; height: 40px; background: linear-gradient(234.21deg, #960101 2.19%, #FF0915 100.02%); border-radius: 7.21805px; border: none; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 13px; line-height: 16px; color: #FFFFFF; }
+.navbar__cta:hover { opacity: 0.9; }
 
 .nexgn-page {
   font-family: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -43,29 +59,7 @@
   margin: 0;
 }
 
-/* ── HEADER ── */
-.nexgn-header-inner {
-  max-width: var(--nexgn-max-width);
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 32px;
-  gap: 24px;
-  position: relative;
-  z-index: 10;
-}
 
-.nexgn-header-inner--svg {
-  display: block;
-  padding: 12px 32px;
-}
-
-.nexgn-header-svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 /* ── HERO SECTION ── */
 .nexgn-hero-ribbon {
@@ -76,36 +70,63 @@
   top: -180px;
   opacity: 0.77;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* ── HERO SECTION ── */
 .nexgn-hero {
   width: 100%;
   background: var(--nexgn-white);
-  overflow: hidden;
+  overflow: visible;
   position: relative;
-  min-height: 521px;
+  min-height: 668px;
 }
 
 .nexgn-hero-inner {
-  max-width: var(--nexgn-max-width);
-  margin: 0 auto;
-  padding: 64px 32px 0;
+  width: 100%;
+  padding: 150px 80px 60px;
   display: flex;
   align-items: center;
-  min-height: 521px;
+  gap: 0;
+  min-height: 668px;
+  position: relative;
+}
+
+
+/* Right illustration */
+.nexgn-hero-illustration {
+  position: absolute;
+  left: 420px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nexgn-hero-img {
+  width: 100%;
+  max-width: 660px;
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
+ -webkit-mask-image: radial-gradient(ellipse 85% 85% at center, black 30%, transparent 70%);
+mask-image: radial-gradient(ellipse 85% 85% at center, black 30%, transparent 70%);
 }
 
 /* Left column */
 .nexgn-hero-text {
   flex: 0 0 auto;
-  width: 500px;
+  width: 460px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  overflow: visible;
 }
 
 .nexgn-hero-eyebrow {
@@ -124,38 +145,33 @@
   color: #000000;
   letter-spacing: normal;
   white-space: nowrap;
+  margin: 0 !important;
 }
 
-.nexgn-hero-subtext {
-  font-size: 18px;
+.nexgn-hero-subtitle {
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
+  font-size: 18px;
   line-height: 22px;
   color: #000000;
+  margin: 0;
 }
 
-/* Right column */
-.nexgn-hero-illustration {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 788px;
-  height: 521px;
-  pointer-events: none;
-}
 
-.nexgn-hero-img {
+
+.nexgn-hero-eyebrow-svg {
   display: block;
-  width: 788px;
-  height: 521px;
-  object-fit: cover;
-  object-position: center center;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 35%),
-    linear-gradient(to bottom, transparent 0%, black 15%, black 75%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 35%),
-    linear-gradient(to bottom, transparent 0%, black 15%, black 75%, transparent 100%);
-  -webkit-mask-composite: intersect;
-  mask-composite: intersect;
+  width: 114px;
+  height: 12px;
 }
+
+.nexgn-hero-heading-svg {
+  display: block;
+  width: 371px;
+  height: 140px;
+  margin-top: 12px;
+}
+
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
