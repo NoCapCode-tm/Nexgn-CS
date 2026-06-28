@@ -175,6 +175,12 @@
   min-height: 100vh;
 }
 
+@media (max-width: 768px) {
+  .nexgn-root {
+    min-height: auto;
+  }
+}
+
 /* ── RIBBON ── */
 .nexgn-hero-ribbon {
   position: absolute;
@@ -255,6 +261,14 @@
 }
 
 /* ── HERO SEARCH ── */
+.nexgn-search-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nexgn-filter-btn {
+  display: none;
+}
 .nexgn-hero-search {
   display: flex;
   flex-direction: row;
@@ -755,4 +769,580 @@
 }
 [data-theme="dark"] .nexgn-help-btn--secondary:hover {
   background: #1a1a1a;
+}
+
+/* TABLET RESPONSIVE (769px - 1179px) */
+
+@media (min-width: 769px) and (max-width: 1179px) {
+  /* Navbar */
+  .navbar {
+    padding: 0 5vw;
+    height: 6.25vw;
+  }
+  .navbar__logo-name {
+    font-size: 3.1vw;
+  }
+  .navbar__logo-sub {
+    font-size: 0.88vw;
+    margin-top: 0.2vw;
+  }
+  .navbar__links {
+    gap: 3.9vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navbar__link {
+    font-size: 1.36vw;
+    line-height: 1.66vw;
+  }
+  .navbar__actions {
+    gap: 2.7vw;
+  }
+  .navbar__login {
+    font-size: 1.36vw;
+    line-height: 1.66vw;
+  }
+  .navbar__cta {
+    width: 11.3vw;
+    height: 3.9vw;
+    font-size: 1.27vw;
+    line-height: 1.56vw;
+    padding: 0.88vw;
+    border-radius: 0.7vw;
+  }
+
+  /* Hero Section */
+  .nexgn-hero-section {
+    padding: 0 5vw;
+    min-height: 54.7vw;
+  }
+  .nexgn-hero-label {
+    margin-top: 11.7vw;
+    font-size: 1.17vw;
+  }
+  .nexgn-hero-title {
+    font-size: 5.07vw;
+    line-height: 6.1vw;
+    width: 40vw;
+    margin-top: 3.9vw;
+  }
+  .nexgn-hero-subtitle {
+    font-size: 1.75vw;
+    line-height: 2.8vw;
+    width: 48vw;
+    margin-top: 3.9vw;
+  }
+  .nexgn-hero-search {
+    width: 46vw;
+    height: 5.07vw;
+    padding: 0.98vw 1.46vw;
+    gap: 0.98vw;
+    border-radius: 1.17vw;
+    margin-top: 3.1vw;
+  }
+  .nexgn-hero-search__text {
+    font-size: 1.56vw;
+  }
+  .nexgn-hero-banner {
+    width: 58vw;
+    height: auto;
+    top: 3.9vw;
+  }
+  .nexgn-hero-ribbon {
+    display: none;
+  }
+
+  /* FAQ Section */
+  .nexgn-faq {
+    padding: 0 5vw;
+    margin-top: 5.8vw;
+    margin-bottom: 3.5vw;
+    gap: 2.34vw;
+  }
+  .nexgn-faq__sidebar {
+    width: 25.4vw;
+    border-radius: 1.17vw;
+    padding: 0.78vw 0;
+  }
+  .nexgn-faq__sidebar-label {
+    font-size: 1.56vw;
+    padding: 2.34vw 2.34vw 1.56vw;
+  }
+  .nexgn-cat-item {
+    gap: 2vw;
+    padding: 0.98vw 1.95vw;
+    min-height: 6.9vw;
+  }
+  .nexgn-cat-name {
+    display: block;
+    max-width: 13vw;
+    font-size: 1.36vw;
+    line-height: 1.25;
+  }
+  .nexgn-faq__content {
+    gap: 2.34vw;
+  }
+  .nexgn-acc-title {
+    font-size: 1.66vw;
+    font-weight: 600;
+  }
+  .nexgn-acc-header {
+    padding: 2.34vw 2.9vw;
+    gap: 1.5vw;
+    border-radius: 1.36vw;
+  }
+  .nexgn-acc-num {
+    width: 2.73vw;
+    height: 2.73vw;
+    font-size: 1.17vw;
+    border-radius: 0.48vw;
+  }
+  .nexgn-acc-chevron {
+    width: 1.75vw;
+    height: 1.75vw;
+    transform: rotate(180deg); /* Initial state points down */
+    transition: transform 0.2s ease;
+  }
+  .nexgn-acc-section--open .nexgn-acc-chevron {
+    transform: rotate(0deg); /* Open state points up */
+  }
+  .nexgn-acc-body {
+    padding: 0 2.9vw 2.9vw 5vw;
+  }
+  .nexgn-acc-qa {
+    border-top: none !important;
+  }
+  .nexgn-acc-q {
+    padding: 1.5vw 0 1vw;
+    gap: 1vw;
+  }
+  .nexgn-acc-q-text {
+    font-size: 1.36vw;
+    font-weight: 600;
+  }
+  .nexgn-acc-q svg {
+    width: 1.36vw;
+    height: 1.36vw;
+    margin-top: 0.2vw;
+  }
+  .nexgn-acc-answer {
+    font-size: 1.27vw;
+    line-height: 1.65;
+    padding: 0 0 2vw 2vw;
+  }
+
+  /* Help Banner */
+  .nexgn-help-banner {
+    width: calc(100% - 15.6vw);
+    height: auto;
+    padding: 3.5vw 4.68vw;
+    gap: 4.68vw;
+    border-radius: 1.17vw;
+    margin-bottom: 7.8vw;
+  }
+  .nexgn-help-banner__image {
+    width: 23.4vw;
+  }
+  .nexgn-help-banner__image img {
+    width: 21.8vw;
+  }
+  .nexgn-help-banner__body {
+    gap: 1.17vw;
+  }
+  .nexgn-help-banner__title {
+    font-size: 2.73vw;
+  }
+  .nexgn-help-banner__desc {
+    font-size: 1.46vw;
+    max-width: 33vw;
+  }
+  .nexgn-help-banner__actions {
+    gap: 1.17vw;
+    margin-top: 0.78vw;
+  }
+  .nexgn-help-btn {
+    padding: 1.17vw 2.34vw;
+    font-size: 1.46vw;
+    border-radius: 0.78vw;
+    gap: 0.78vw;
+  }
+  .nexgn-help-btn--primary {
+    width: 20.5vw;
+    height: 5.07vw;
+    font-size: 1.46vw;
+    border-radius: 0.78vw;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 4.68vw 7.81vw 0;
+  }
+  .footer__top {
+    gap: 3.9vw;
+    padding-bottom: 0;
+  }
+  .footer__brand {
+    gap: 1.17vw;
+  }
+  .footer__brand-name {
+    font-size: 2.73vw;
+  }
+  .footer__brand-desc {
+    font-size: 1.56vw;
+  }
+  .footer__email {
+    font-size: 1.27vw;
+  }
+  .footer__socials {
+    gap: 1.36vw;
+  }
+  .footer__links {
+    gap: 6.25vw;
+  }
+  .footer__col h4 {
+    font-size: 1.27vw;
+    margin-bottom: 1.36vw;
+  }
+  .footer__col a {
+    font-size: 1.27vw;
+    margin-bottom: 0.98vw;
+  }
+  .footer__copyright {
+    padding: 0.5vw 0;
+    font-size: 1.17vw;
+  }
+  .footer__wordmark {
+    height: 22.2vw;
+  }
+  .footer__wordmark svg {
+    height: 22.2vw;
+  }
+}
+
+/* MOBILE RESPONSIVE (0px - 768px) */
+/* All values are vw-based relative to 390px Figma artboard baseline */
+/* Formula: vw = (px / 390) * 100 */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 0 4.1vw;
+    height: 14.36vw;
+  }
+  .navbar__logo-name {
+    font-size: 6.15vw;
+  }
+  .navbar__logo-sub {
+    font-size: 2.05vw;
+    margin-top: 0.26vw;
+  }
+  .navbar__links,
+  .navbar__actions {
+    display: none !important;
+  }
+
+  .nexgn-root {
+    padding-top: 14.36vw;
+  }
+
+  /* Hero Section */
+  .nexgn-hero-section {
+    flex-direction: column;
+    padding: 0 6.15vw 0;
+    align-items: flex-start;
+    min-height: auto;
+    position: relative;
+    background: #fff;
+  }
+  /* Text column: label, title, subtitle — order 1 (first) */
+  .nexgn-hero-left {
+    order: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Banner image — order 2 (middle) */
+  .nexgn-hero-banner {
+    order: 2;
+    position: relative;
+    width: calc(100% + 12.3vw);
+    height: auto;
+    right: auto;
+    top: auto;
+    margin-top: 5.13vw;
+    margin-left: -6.15vw;
+  }
+  .nexgn-hero-label {
+    /* 36px / 390px = 9.23vw top gap; 11px label */
+    margin-top: 9.23vw;
+    font-size: 2.82vw;
+    letter-spacing: 0.08em;
+  }
+  .nexgn-hero-title {
+    /* 30px / 390px = 7.69vw — matches Figma title size */
+    font-size: 7.69vw;
+    line-height: 1.15;
+    width: 100%;
+    margin-top: 3.08vw;
+    font-weight: 700;
+  }
+  .nexgn-hero-subtitle {
+    /* 14px / 390px = 3.59vw */
+    font-size: 3.59vw;
+    line-height: 1.55;
+    width: 100%;
+    margin-top: 2.56vw;
+    color: var(--nexgn-text);
+  }
+  .nexgn-hero-ribbon {
+    display: none;
+  }
+
+  /* Search Container — order 3 (last, below banner) */
+  .nexgn-search-container {
+    order: 3;
+    width: 100%;
+    /* 20px top gap after banner */
+    margin-top: 5.13vw;
+    margin-bottom: 3.59vw;
+    display: flex;
+    gap: 2.56vw;
+    align-items: center;
+  }
+  .nexgn-hero-search {
+    flex: 1;
+    width: auto;
+    height: 12.31vw;
+    padding: 2.56vw 3.59vw;
+    margin-top: 0;
+    border-radius: 3.08vw;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  .nexgn-hero-search__text {
+    font-size: 3.59vw;
+  }
+  .nexgn-filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12.31vw;
+    height: 12.31vw;
+    background: #ffffff;
+    border: 1px solid var(--nexgn-border);
+    border-radius: 3.08vw;
+    color: #000000;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 0;
+    flex-shrink: 0;
+  }
+  .nexgn-filter-btn svg {
+    width: 6.15vw;
+    height: 6.15vw;
+  }
+  [data-theme="dark"] .nexgn-filter-btn {
+    background: rgba(0, 0, 0, 0.25);
+    border-color: rgba(87, 87, 87, 0.3);
+    color: #ffffff;
+  }
+
+  /* FAQ Section */
+  .nexgn-faq {
+    flex-direction: column;
+    padding: 0 4.1vw;
+    margin-top: 3.59vw;
+    margin-bottom: 10.26vw;
+    gap: 4.1vw;
+    min-height: auto;
+  }
+  .nexgn-faq__sidebar {
+    display: none !important;
+  }
+  .nexgn-faq__content {
+    width: 100%;
+    gap: 4.1vw;
+  }
+  .nexgn-acc-title {
+    /* 12px / 390px = 3.08vw — fits 'Sustainability & Environmental Impact (ESG)' on one line */
+    font-size: 3.08vw;
+    line-height: 1.3;
+  }
+  .nexgn-acc-header {
+    /* 14px / 390px = 3.59vw each side, tighter than desktop */
+    padding: 3.59vw;
+    gap: 2.56vw;
+    border-radius: 2.56vw;
+  }
+  .nexgn-acc-num {
+    /* 20px / 390px = 5.13vw — smaller badge matches Figma */
+    width: 5.13vw;
+    height: 5.13vw;
+    font-size: 2.31vw;
+    border-radius: 0.77vw;
+    flex-shrink: 0;
+  }
+  .nexgn-acc-chevron {
+    /* 14px / 390px = 3.59vw */
+    width: 3.59vw;
+    height: 3.59vw;
+    flex-shrink: 0;
+  }
+  .nexgn-acc-body {
+    /* Left indent: just num width (5.13) + gap (2.56) = 7.69vw to align with title start */
+    padding: 0 3.59vw 3.59vw 7.69vw;
+  }
+  .nexgn-acc-qa {
+    border-top: none !important;
+  }
+  .nexgn-acc-q {
+    padding: 2.56vw 0 1.54vw;
+    gap: 1.54vw;
+    align-items: flex-start;
+  }
+  .nexgn-acc-q-text {
+    /* 11px / 390px = 2.82vw — fits all FAQ questions on one line */
+    font-size: 2.82vw;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .nexgn-acc-q svg {
+    /* 11px / 390px = 2.82vw */
+    width: 2.82vw;
+    height: 2.82vw;
+    margin-top: 0.26vw;
+    flex-shrink: 0;
+  }
+  .nexgn-acc-answer {
+    /* 11px / 390px = 2.82vw */
+    font-size: 2.82vw;
+    line-height: 1.55;
+    padding: 0 0 2.05vw 4.36vw;
+  }
+
+  /* Help Banner — horizontal layout matching Figma (image left, content right) */
+  .nexgn-help-banner {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    width: calc(100% - 8.21vw);
+    height: auto;
+    padding: 4.1vw;
+    gap: 3.59vw;
+    margin-bottom: 10.26vw;
+    border-radius: 3.08vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nexgn-help-banner__image {
+    width: 25.64vw;
+    flex-shrink: 0;
+    margin: 0;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 70%);
+  }
+  .nexgn-help-banner__image img {
+    width: 100%;
+    mix-blend-mode: multiply;
+  }
+  .nexgn-help-banner__body {
+    flex: 1;
+    gap: 1.54vw;
+    align-items: flex-start;
+  }
+  .nexgn-help-banner__title {
+    font-size: 4.36vw;
+    text-align: left;
+    line-height: 1.2;
+    margin: 0;
+  }
+  .nexgn-help-banner__desc {
+    font-size: 3.33vw;
+    max-width: 100%;
+    text-align: left;
+    line-height: 1.45;
+    margin: 0;
+  }
+  .nexgn-help-banner__actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 2.05vw;
+    margin-top: 1.03vw;
+  }
+  .nexgn-help-btn,
+  .nexgn-help-btn--primary {
+    width: 100% !important;
+    height: 8.72vw !important;
+    padding: 1.54vw;
+    font-size: 3.33vw;
+    border-radius: 1.54vw;
+    justify-content: center;
+  }
+
+  /* Footer — mobile overrides to prevent link text wrapping */
+  .footer {
+    padding: 7.69vw 4.1vw 0;
+  }
+  .footer__top {
+    flex-direction: column;
+    gap: 5.13vw;
+    padding-bottom: 5.13vw;
+  }
+  .footer__brand {
+    gap: 1.54vw;
+  }
+  .footer__brand-name {
+    font-size: 5.64vw;
+  }
+  .footer__brand-desc {
+    font-size: 3.08vw;
+  }
+  .footer__email {
+    font-size: 3.08vw;
+    margin-top: 1.54vw;
+  }
+  .footer__socials {
+    gap: 3.59vw;
+    margin-top: 3.08vw;
+  }
+  .footer__links {
+    /* Three columns with auto widths to prevent wrapping */
+    gap: 0;
+    justify-content: space-between;
+  }
+  .footer__col {
+    flex: 1;
+    min-width: 0;
+  }
+  .footer__col h4 {
+    font-size: 2.56vw;
+    margin-bottom: 2.56vw;
+    white-space: nowrap;
+  }
+  .footer__col a {
+    font-size: 2.56vw;
+    margin-bottom: 2.05vw;
+    white-space: nowrap;
+  }
+  .footer__copyright {
+    padding: 4.1vw 0;
+    font-size: 2.56vw;
+    flex-direction: column;
+    gap: 3.08vw;
+    align-items: flex-start;
+  }
+  .footer__copyright > span {
+    order: 2;
+  }
+  .footer__copyright .footer__socials {
+    order: 1;
+    margin-top: 0;
+  }
+  .footer__wordmark {
+    height: 38.46vw;
+    display: flex;
+    align-items: flex-end;
+  }
+  .footer__wordmark svg {
+    height: 38.46vw;
+    display: block;
+  }
 }
