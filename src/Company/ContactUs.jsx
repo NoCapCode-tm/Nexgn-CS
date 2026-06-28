@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./ContactUs.css";
 import ribbonBg from "../assets/privacy-bg-ribbon.png";
+import ribbonBgDark from "../assets/helpcenter-dark-ribbon.png";
 import heroIllustration from "../assets/nexgn-hero-illustration.png";
 import bgBlob from "../assets/nexgn-contact-bg.png";
+import darkBgImg from "../assets/dark-bg-helpcenter.jpg";
 import footerBg from "../assets/footer-wordmark-bg.png";
 import footerBgDark from "../assets/footer-wordmark-bg-dark.png";
 
-function Navbar() {
-  const [dark, setDark] = useState(false);
+function Navbar({ dark, setDark }) {
   return (
     <nav className="navbar">
       <div className="navbar__brand">
@@ -24,8 +25,31 @@ function Navbar() {
         <a href="#" className="navbar__link">Product</a>
         <a href="#" className="navbar__link">Pricing</a>
       </div>
-      <div className="navbar__actions">
-      <a href="#" className="navbar__login">Log in</a>
+   <div className="navbar__actions">
+        <a href="#" className="navbar__login">Log in</a>
+        <button
+          className="navbar__theme-toggle"
+          onClick={() => setDark(!dark)}
+          aria-label="Toggle dark mode"
+        >
+          {dark ? (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+          ) : (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          )}
+        </button>
         <button className="navbar__cta">Get Started</button>
       </div>
     </nav>
@@ -105,14 +129,18 @@ function FooterSection({ dark }) {
 }
 
 export default function ContactUs() {
+  const [dark, setDark] = useState(
+    () => window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
+
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }, []);
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+  }, [dark]);
 
  return (
     <div className="nexgn-page">
 
-      <Navbar />
+    <Navbar dark={dark} setDark={setDark} />
 
      {/* ── HERO SECTION ── */}
       <section className="nexgn-hero">
@@ -276,9 +304,16 @@ export default function ContactUs() {
         </section>
      </div> {/* end nexgn-sections-bg */}
 
+     {/* ── DARK BG ── */}
+      {dark && (
+        <div className="nexgn-contact-dark-bg">
+          <img src={darkBgImg} alt="" aria-hidden="true" />
+        </div>
+      )}
+
       {/* ── RIBBON ── */}
       <img
-        src={ribbonBg}
+        src={dark ? ribbonBgDark : ribbonBg}
         alt=""
         className="nexgn-hero-ribbon"
         aria-hidden="true"
@@ -286,7 +321,7 @@ export default function ContactUs() {
 
       {/* ── FOOTER ── */}
       <div style={{ position: 'relative', zIndex: 2 }}>
-        <FooterSection dark={false} />
+        <FooterSection dark={dark} />
       </div>
     </div>
   );
