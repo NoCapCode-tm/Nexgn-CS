@@ -94,7 +94,7 @@ export default function Blog() {
       </div>
 
       {/* ── FEATURED + POPULAR ── */}
-      <div className="blog-featured-section">
+     <div className="blog-featured-section">
         <div className="blog-featured-row">
           <div className="blog-featured-card">
             <span className="blog-featured__label">FEATURED</span>
@@ -106,34 +106,43 @@ export default function Blog() {
               <span>May 18, 2026</span>
             </div>
           </div>
-          <div className="blog-popular-card">
-            <span className="blog-popular__label">POPULAR ARTICLES</span>
-            {[
-              { title: "Zero-Trust Architecture for E-Signature Platforms", date: "May 20, 2026" },
-              { title: "Zero-Trust Architecture for E-Signature Platforms", date: "May 20, 2026" },
-              { title: "Zero-Trust Architecture for E-Signature Platforms", date: "May 20, 2026" },
-            ].map((item, i) => (
-              <div className="blog-popular__item" key={i}>
-                <div className="blog-popular__thumb"></div>
-                <div className="blog-popular__info">
-                  <h3 className="blog-popular__title">{item.title}</h3>
-                  <p className="blog-popular__date">{item.date}</p>
+<div className="blog-popular-and-newsletter">
+            <div className="blog-popular-card">
+              <span className="blog-popular__label">POPULAR ARTICLES</span>
+              {[
+                { title: "Zero-Trust Architecture for E-Signature Platforms", date: "May 20, 2026" },
+                { title: "Zero-Trust Architecture for E-Signature Platforms", date: "May 20, 2026" },
+                { title: "Zero-Trust Architecture for E-Signature Platforms", date: "May 20, 2026" },
+              ].map((item, i) => (
+                <div className="blog-popular__item" key={i}>
+                  <div className="blog-popular__thumb"></div>
+                  <div className="blog-popular__info">
+                    <h3 className="blog-popular__title">{item.title}</h3>
+                    <p className="blog-popular__date">{item.date}</p>
+                  </div>
                 </div>
+              ))}
+            </div>
+            <div className="blog-newsletter-wrapper">
+              <div className="blog-newsletter-card">
+                <h3 className="blog-newsletter__title">Stay ahead with the latest insights</h3>
+                <p className="blog-newsletter__sub">Get updates on security, engineering best practice and product news</p>
+                <input className="blog-newsletter__input" type="email" placeholder="Enter your email" />
+                <button className="blog-newsletter__btn">Subscribe</button>
+                <p className="blog-newsletter__privacy">We respect your privacy. Unsubscribe anytime</p>
               </div>
-            ))}
+            </div>
+          </div>
+      </div>
+        <div className="blog-newsletter-full">
+          <div className="blog-newsletter-card">
+            <h3 className="blog-newsletter__title">Stay ahead with the latest insights</h3>
+            <p className="blog-newsletter__sub">Get updates on security, engineering best practice and product news</p>
+            <input className="blog-newsletter__input" type="email" placeholder="Enter your email" />
+            <button className="blog-newsletter__btn">Subscribe</button>
+            <p className="blog-newsletter__privacy">We respect your privacy. Unsubscribe anytime</p>
           </div>
         </div>
-      </div>
-
-     {/* ── NEWSLETTER ── */}
-      <div className="blog-newsletter-wrapper">
-      <div className="blog-newsletter-card">
-        <h3 className="blog-newsletter__title">Stay ahead with the latest insights</h3>
-        <p className="blog-newsletter__sub">Get updates on security, engineering best practice and product news</p>
-        <input className="blog-newsletter__input" type="email" placeholder="Enter your email" />
-        <button className="blog-newsletter__btn">Subscribe</button>
-        <p className="blog-newsletter__privacy">We respect your privacy. Unsubscribe anytime</p>
-      </div>
       </div>
 
       {/* ── RIBBON ── */}
