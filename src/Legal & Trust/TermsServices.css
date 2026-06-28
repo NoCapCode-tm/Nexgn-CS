@@ -1,0 +1,548 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* ── PAGE WRAPPER ── */
+.terms-page-wrapper {
+  position: relative;
+  min-height: 3950px;
+}
+
+:root {
+  --nexgn-red: #e6362b;
+  --nexgn-red-dark: #c4271d;
+  --nexgn-red-light: #fdeceb;
+  --nexgn-dark: #16181c;
+  --nexgn-grey-500: #6b7280;
+  --nexgn-border: #e8e9eb;
+  --nexgn-white: #ffffff;
+  --nexgn-max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ── RIBBON ── */
+.nexgn-hero-ribbon {
+  position: absolute;
+  width: 1100px;
+  height: 1120px;
+  left: -250px;
+  top: -180px;
+  opacity: 0.77;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── TERMS OF SERVICE HEADING ── */
+.nexgn-terms-heading {
+  position: absolute;
+  width: 220px;
+  height: 19px;
+  left: calc(50% - 140px / 2 - 512px);
+  top: 200px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #dc2626;
+  z-index: 2;
+}
+
+/* ── TERMS HEADING SVG ── */
+.nexgn-terms-title {
+  position: absolute;
+  width: 509.77px;
+  height: 130px;
+  left: 123px;
+  top: 280px;
+  z-index: 2;
+}
+
+.nexgn-terms-subtitle {
+  position: absolute;
+  width: 464px;
+  height: 66px;
+  left: 140px;
+  top: 470px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  margin: 0;
+  z-index: 2;
+}
+
+/* ── TERMS SECTION ITEM ── */
+.nexgn-terms-section-item {
+  position: absolute;
+  width: 355px;
+  height: 64px;
+  left: 130px;
+  top: 650px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 2;
+}
+
+.nexgn-terms-section-icon {
+  width: 64px;
+  height: 64px;
+  background: #fef5f5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nexgn-terms-section-label {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+/* ── DEFINITIONS SECTION ITEM ── */
+.nexgn-terms-section-item--definitions {
+  top: 900px;
+}
+
+/* ── ACCOUNT REGISTRATION SECTION ITEM ── */
+.nexgn-terms-section-item--account-reg {
+  top: 1150px;
+  width: auto;
+  white-space: nowrap;
+}
+/* ── ACCEPTABLE USE POLICY SECTION ITEM ── */
+.nexgn-terms-section-item--aup {
+  top: 1450px;
+  width: auto;
+  white-space: nowrap;
+}
+/* ── SERVICE AVAILABILITY SECTION ITEM ── */
+.nexgn-terms-section-item--sla {
+  top: 2125.92px;
+  width: auto;
+  white-space: nowrap;
+}
+
+/* ── SERVICE AVAILABILITY CONTENT BLOCK ── */
+.nexgn-terms-sla-block {
+  position: absolute;
+  width: 491px;
+  left: 720px;
+  top: 2125.92px;
+  z-index: 2;
+}
+
+.nexgn-terms-sla-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  color: #000000;
+  margin: 0;
+}
+
+/* ── DISCLAIMER OF WARRANTIES SECTION ITEM ── */
+.nexgn-terms-section-item--disclaimer {
+  top: 2265.92px;
+  width: auto;
+  white-space: nowrap;
+}
+
+/* ── DISCLAIMER OF WARRANTIES CONTENT BLOCK ── */
+.nexgn-terms-disclaimer-block {
+  position: absolute;
+  width: 491px;
+  left: 720px;
+  top: 2265.92px;
+  z-index: 2;
+}
+
+.nexgn-terms-disclaimer-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  color: #000000;
+  margin: 0;
+}
+
+/* ── LIMITATION OF LIABILITY SECTION ITEM ── */
+.nexgn-terms-section-item--liability {
+  top: 2421.92px;
+  width: auto;
+  white-space: nowrap;
+}
+
+/* ── LIMITATION OF LIABILITY CONTENT BLOCK ── */
+.nexgn-terms-liability-block {
+  position: absolute;
+  width: 514px;
+  left: 710px;
+  top: 2421.92px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+
+.nexgn-terms-liability-block .nexgn-terms-content-text {
+  font-size: 15px;
+}
+
+/* ── SUSPENSION AND TERMINATION SECTION ITEM ── */
+.nexgn-terms-section-item--suspension {
+  top: 2750px;
+  width: auto;
+  white-space: nowrap;
+}
+
+/* ── SUSPENSION AND TERMINATION CONTENT BLOCK ── */
+.nexgn-terms-suspension-block {
+  position: absolute;
+  width: 514px;
+  left: 710px;
+  top: 2750px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+
+.nexgn-terms-suspension-block .nexgn-terms-content-text {
+  font-size: 15px;
+}
+
+/* ── MODIFICATIONS TO THE TERMS SECTION ITEM ── */
+.nexgn-terms-section-item--modifications {
+  top: 2950px;
+  width: auto;
+  white-space: nowrap;
+}
+
+/* ── MODIFICATIONS TO THE TERMS CONTENT BLOCK ── */
+.nexgn-terms-modifications-block {
+  position: absolute;
+  width: 514px;
+  left: 710px;
+  top: 2950px;
+  z-index: 2;
+}
+
+.nexgn-terms-modifications-block .nexgn-terms-content-text {
+  font-size: 15px;
+}
+
+/* ── CONTACT INFORMATION SECTION ITEM ── */
+.nexgn-terms-section-item--contact {
+  top: 3100px;
+  width: auto;
+  white-space: nowrap;
+}
+
+/* ── CONTACT INFORMATION CONTENT BLOCK ── */
+.nexgn-terms-contact-block {
+  position: absolute;
+  width: 514px;
+  left: 710px;
+  top: 3100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+
+.nexgn-terms-contact-block .nexgn-terms-content-text {
+  font-size: 15px;
+}
+
+.nexgn-terms-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.nexgn-terms-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.nexgn-terms-contact-label {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  margin: 0 0 4px 0;
+}
+
+.nexgn-terms-contact-link {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #d70506;
+  text-decoration: underline;
+}
+
+/* ── INTELLECTUAL PROPERTY SECTION ITEM ── */
+.nexgn-terms-section-item--ip {
+  top: 1920px;
+  width: auto;
+  white-space: nowrap;
+}
+/* ── INTELLECTUAL PROPERTY CONTENT BLOCK ── */
+.nexgn-terms-ip-block {
+  position: absolute;
+  width: 514px;
+  left: 710px;
+  top: 1920px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+
+.nexgn-terms-ip-block .nexgn-terms-content-text {
+  font-size: 15px;
+}
+
+/* ── AUP WARNING BANNER ── */
+.nexgn-terms-aup-warning {
+  position: absolute;
+  width: 547px;
+  left: 710px;
+  top: 1802.92px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 10px;
+  background: #fef4f5;
+  border: 1px solid #fbd1d2;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.nexgn-terms-aup-warning-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #d70506;
+  margin: 0;
+}
+
+/* ── AUP CONTENT BLOCK ── */
+.nexgn-terms-aup-block {
+  position: absolute;
+  width: 532.47px;
+  left: 710px;
+  top: 1450px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+
+.nexgn-terms-aup-block .nexgn-terms-content-text {
+  font-size: 15px;
+}
+
+/* ── ACCOUNT REGISTRATION CONTENT BLOCK ── */
+.nexgn-terms-account-block {
+  position: absolute;
+  width: 523px;
+  left: 710px;
+  top: 1150px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+
+.nexgn-terms-account-block .nexgn-terms-content-text {
+  font-size: 15px;
+}
+
+/* ── TERMS CONTENT BLOCK ── */
+.nexgn-terms-content-block {
+  position: absolute;
+  width: 506px;
+  height: 170px;
+  left: 710px;
+  top: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+
+/* ── DEFINITIONS CONTENT BLOCK ── */
+.nexgn-terms-definitions-block {
+  position: absolute;
+  width: 514px;
+  left: 710px;
+  top: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+
+.nexgn-terms-definitions-block .nexgn-terms-content-text {
+  font-size: 15px;
+}
+
+.nexgn-terms-content-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.nexgn-terms-bullet {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  background: #d70506;
+  margin-top: 4px;
+}
+
+.nexgn-terms-content-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  color: #000000;
+  margin: 0;
+}
+
+/* ── TERMS HERO IMAGE ── */
+.nexgn-terms-hero-img {
+  position: absolute;
+  width: 480px;
+  height: 420px;
+  left: 791px;
+  top: 156.92px;
+  z-index: 2;
+  object-fit: contain;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 80px;
+  background: linear-gradient(
+    to bottom,
+    rgba(249, 245, 247, 0.85) 0%,
+    rgba(249, 245, 247, 0) 100%
+  );
+}
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navbar__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.navbar__logo-name {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: #1a0a0d;
+  line-height: 1;
+}
+.navbar__logo-sub {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: 350;
+  font-size: 9px;
+  color: #000000;
+  margin-top: 2px;
+}
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navbar__link {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  text-decoration: none;
+}
+.navbar__link:hover {
+  color: #d70506;
+}
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.navbar__login {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  text-decoration: none;
+}
+.navbar__login:hover {
+  color: #d70506;
+}
+.navbar__cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px;
+  gap: 9px;
+  width: 116px;
+  height: 40px;
+  background: linear-gradient(234.21deg, #960101 2.19%, #ff0915 100.02%);
+  border-radius: 7.21805px;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+}
+.navbar__cta:hover {
+  opacity: 0.9;
+}
