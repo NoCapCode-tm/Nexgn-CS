@@ -340,3 +340,477 @@
   position: relative;
   min-height: 2500px;
 }
+
+/* ── TABLET: 769px – 1179px ── */
+@media (min-width: 769px) and (max-width: 1179px) {
+
+  .navbar {
+    padding: 0 32px;
+    height: 72px;
+  }
+
+  .navbar__logo-name {
+    font-size: 23px;
+  }
+
+  .navbar__logo-sub {
+    font-size: 6.6px;
+  }
+
+  .navbar__link {
+    font-size: 12px;
+  }
+
+  .navbar__links {
+    gap: 20px;
+  }
+
+  .navbar__login {
+    font-size: 12px;
+  }
+
+  .navbar__cta {
+    width: 90px;
+    height: 34px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
+
+  /* ── RIBBON ── */
+  .nexgn-hero-ribbon {
+    width: 750px;
+    height: 800px;
+    left: -100px;
+    top: -100px;
+  }
+
+/* ── ABOUT LABEL ── */
+  .nexgn-about-label {
+    left: 32px;
+    top: 115px;
+    font-size: 10px;
+    line-height: 12px;
+    width: 81px;
+    height: 12px;
+  }
+
+  /* ── HERO TITLE ── */
+  .aboutus-hero-title {
+    left: 32px;
+    top: 135px;
+    width: 48%;
+    height: auto;
+    font-size: 26px;
+    line-height: 31px;
+  }
+
+/* ── HERO BODY ── */
+  .nexgn-hero-body {
+    left: 32px;
+    top: 199px;
+    width: 331px;
+    height: auto;
+    font-size: 11px;
+    line-height: 18px;
+  }
+
+  /* ── HERO TAGLINE ── */
+  .nexgn-hero-tagline {
+    left: 32px;
+    top: 291px;
+    width: 162px;
+    height: 13px;
+    font-size: 11px;
+    line-height: 13px;
+    white-space: nowrap;
+  }
+
+  /* ── HERO DESCRIPTION ── */
+  .nexgn-hero-description {
+    left: 32px;
+    top: 314px;
+    width: 332px;
+    height: auto;
+    font-size: 11px;
+    line-height: 160.6%;
+  }
+
+/* ── HERO SUBTEXT ── */
+  .nexgn-hero-subtext {
+    left: 32px;
+    top: 460px;
+    width: 332px;
+    height: auto;
+    font-size: 11px;
+    line-height: 160.6%;
+  }
+
+  /* ── GLOBE ── */
+  .nexgn-hero-globe {
+    width: 430px;
+    height: 474px;
+    left: 580px;
+    top: 101px;
+  }
+
+/* ── CORE VALUES LABEL ── */
+  .nexgn-core-values-label {
+    top: 544px;
+    font-size: 9px;
+    line-height: 11px;
+    width: 100%;
+    left: 0;
+    height: 11px;
+    text-align: center;
+  }
+
+  /* ── CORE VALUES TITLE ── */
+  .nexgn-core-values-title {
+    top: 563px;
+    font-size: 21.5px;
+    line-height: 26px;
+    width: 100%;
+    height: 26px;
+    left: 0;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+/* ── CORE CARDS ── */
+  .nexgn-core-card {
+    padding: 21px 10.5px;
+    gap: 21px;
+    width: 28%;
+    height: auto;
+    top: 600px;
+  }
+
+.nexgn-core-card--1 {
+    left: 2%;
+  }
+
+  .nexgn-core-card--2 {
+    left: calc(50% - 105px);
+  }
+
+  .nexgn-core-card--3 {
+    left: unset;
+    right: 2%;
+  }
+
+.nexgn-core-card-icon {
+    width: 56px;
+    height: 56px;
+    padding: 10px;
+  }
+
+  .nexgn-core-card-icon svg {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .nexgn-core-card-title {
+    font-size: 18px;
+    line-height: 22px;
+    width: 184px;
+    height: auto;
+  }
+
+  .nexgn-core-card-divider {
+    width: 36px;
+    height: 3px;
+  }
+
+.nexgn-core-card-text {
+    font-size: 13px;
+    line-height: 167%;
+    width: 100%;
+    height: auto;
+  }
+/* ── PROMISE BANNER ── */
+  .nexgn-promise-banner {
+    width: calc(100% - 36px);
+    height: auto;
+    left: 18px;
+    top: 1000px;
+    gap: 52px;
+    padding: 12px 0;
+    border-radius: 5.3px;
+    border-width: 0.53px;
+  }
+
+  .nexgn-promise-image {
+    width: 163px;
+    height: 128px;
+  }
+
+  .nexgn-promise-content {
+    width: 282px;
+    gap: 8px;
+  }
+
+  .nexgn-promise-title {
+    font-size: 17.9px;
+    line-height: 22px;
+  }
+
+  .nexgn-promise-text {
+    font-size: 10.7px;
+    line-height: 157%;
+    width: 279px;
+  }
+
+ /* ── PAGE WRAPPER ── */
+  .nexgn-page-wrapper {
+    min-height: 1750px;
+  }
+ .footer {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 40px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40px);
+  }
+}
+
+/* ── MOBILE: 0 – 768px ── */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 14px;
+    height: 64px;
+    background: linear-gradient(to bottom, rgba(249,245,247,0.95) 0%, rgba(249,245,247,0.95) 100%);
+  }
+
+  .navbar__links {
+    display: none !important;
+  }
+
+  .navbar__actions {
+    display: flex !important;
+    gap: 0;
+  }
+
+  .navbar__login {
+    display: none !important;
+  }
+
+  .navbar__cta {
+    display: none !important;
+  }
+
+  .navbar__logo-name {
+    font-size: 32px;
+  }
+
+  .navbar__logo-sub {
+    font-size: 9px;
+  }
+
+  /* ── RIBBON ── */
+  .nexgn-hero-ribbon {
+    display: none;
+  }
+
+  /* ── ABOUT LABEL ── */
+  .nexgn-about-label {
+    left: 16px;
+    top: 80px;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.15em;
+    width: calc(100% - 32px);
+    height: auto;
+  }
+
+  /* ── HERO TITLE ── */
+  .aboutus-hero-title {
+    left: 16px;
+    top: 104px;
+    width: calc(100% - 32px);
+    height: auto;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    overflow: visible;
+  }
+
+  /* ── HERO BODY ── */
+  .nexgn-hero-body {
+    left: 16px;
+    top: 168px;
+    width: calc(100% - 32px);
+    height: auto;
+    font-size: 11px;
+    line-height: 18px;
+    color: #666666;
+  }
+
+  /* ── GLOBE ── */
+  .nexgn-hero-globe {
+    width: calc(100% - 32px);
+    height: 260px;
+    left: 16px;
+    top: 240px;
+    object-fit: contain;
+  }
+
+  /* ── HERO TAGLINE ── */
+  .nexgn-hero-tagline {
+    left: 16px;
+    top: 514px;
+    width: calc(100% - 32px);
+    height: auto;
+    font-size: 11px;
+    line-height: 13px;
+    color: #666666;
+    white-space: normal;
+  }
+
+  /* ── HERO DESCRIPTION ── */
+  .nexgn-hero-description {
+    left: 16px;
+    top: 540px;
+    width: calc(100% - 32px);
+    height: auto;
+    font-size: 11px;
+    line-height: 160.6%;
+    color: #666666;
+  }
+
+  /* ── HERO SUBTEXT ── */
+  .nexgn-hero-subtext {
+    left: 16px;
+    top: 700px;
+    width: calc(100% - 32px);
+    height: auto;
+    font-size: 11px;
+    line-height: 160.6%;
+    color: #666666;
+  }
+
+  /* ── CORE VALUES LABEL ── */
+  .nexgn-core-values-label {
+    top: 860px;
+    left: 0;
+    width: 100%;
+    font-size: 11px;
+    line-height: 13px;
+    height: auto;
+    text-align: center;
+  }
+
+  /* ── CORE VALUES TITLE ── */
+  .nexgn-core-values-title {
+    top: 882px;
+    left: 16px;
+    width: calc(100% - 32px);
+    font-size: 18px;
+    line-height: 24px;
+    height: auto;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* ── CORE CARDS ── */
+  .nexgn-core-card {
+    position: relative !important;
+    top: unset !important;
+    left: unset !important;
+    right: unset !important;
+    width: calc(100% - 32px) !important;
+    height: auto !important;
+    margin: 0 16px;
+    padding: 20px 16px;
+    gap: 12px;
+  }
+
+  .nexgn-core-card--1 {
+    position: absolute !important;
+    top: 940px !important;
+    left: 0 !important;
+  }
+
+  .nexgn-core-card--2 {
+    position: absolute !important;
+    top: 1160px !important;
+    left: 0 !important;
+  }
+
+  .nexgn-core-card--3 {
+    position: absolute !important;
+    top: 1380px !important;
+    left: 0 !important;
+    right: unset !important;
+  }
+
+  .nexgn-core-card-icon {
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+  }
+
+  .nexgn-core-card-icon svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .nexgn-core-card-title {
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .nexgn-core-card-divider {
+    width: 32px;
+    height: 3px;
+  }
+
+  .nexgn-core-card-text {
+    font-size: 12px;
+    line-height: 160%;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ── PROMISE BANNER ── */
+  .nexgn-promise-banner {
+    width: calc(100% - 32px) !important;
+    height: auto !important;
+    left: 16px !important;
+    top: 1600px !important;
+    gap: 16px !important;
+    padding: 16px !important;
+    flex-direction: row;
+  }
+
+  .nexgn-promise-image {
+    width: 100px;
+    height: 80px;
+  }
+
+  .nexgn-promise-content {
+    width: auto;
+    flex: 1;
+    gap: 8px;
+  }
+
+  .nexgn-promise-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .nexgn-promise-text {
+    font-size: 11px;
+    line-height: 160%;
+    width: 100%;
+  }
+
+  /* ── PAGE WRAPPER ── */a
+  .nexgn-page-wrapper {
+    min-height: 2300px;
+  }
+
+  .footer {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 40px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40px);
+  }
+}

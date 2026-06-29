@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./TermsServices.css";
 import ribbonBg from "../assets/privacy-bg-ribbon.png";
+import ribbonBgDark from "../assets/helpcenter-dark-ribbon.png";
 import termsHero from "../assets/terms-hero.png";
+import termsHeroDark from "../assets/terms-dark.png";
+import darkBgImg from "../assets/dark-bg-helpcenter.jpg";
 import FooterSection from "../FooterSection";
 
-function Navbar() {
-  const [dark, setDark] = useState(false);
+function Navbar({ dark, setDark }) {
   return (
     <nav className="navbar">
       <div className="navbar__brand">
@@ -31,23 +33,73 @@ function Navbar() {
           Pricing
         </a>
       </div>
-      <div className="navbar__actions">
+  <div className="navbar__actions">
         <a href="#" className="navbar__login">
           Log in
         </a>
+        <button
+          className="navbar__theme-toggle"
+          onClick={() => setDark(!dark)}
+          aria-label="Toggle dark mode"
+        >
+          {dark ? (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+          ) : (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          )}
+        </button>
         <button className="navbar__cta">Get Started</button>
       </div>
     </nav>
   );
 }
 export default function TermsServices() {
+  const [dark, setDark] = useState(
+    () => window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+  }, [dark]);
+
   return (
     <div className="terms-page-wrapper">
-      <Navbar />
+      <Navbar dark={dark} setDark={setDark} />
+
+     {/* ── DARK BG ── */}
+      {dark && (
+      <div style={{
+          position: "absolute",
+          width: "1441px",
+          height: "2389px",
+          right: "0px",
+          top: "938.02px",
+          pointerEvents: "none",
+          zIndex: 0,
+          overflow: "hidden",
+          transform: "rotate(180deg)",
+          borderRadius: "0px",
+          opacity: 0.2,
+        }}>
+       <img src={darkBgImg} alt="" aria-hidden="true" style={{ width: "100%", height: "100%", objectFit: "cover", maskImage: "radial-gradient(ellipse 80% 80% at center, black 30%, transparent 70%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at center, black 20%, transparent 55%)" }} />
+       </div>
+      )}
 
       {/* ── RIBBON ── */}
       <img
-        src={ribbonBg}
+        src={dark ? ribbonBgDark : ribbonBg}
         alt=""
         className="nexgn-hero-ribbon"
         aria-hidden="true"
@@ -70,8 +122,8 @@ export default function TermsServices() {
         Our Terms of Service outline the rules and guidelines for using Nexgn's
         platform, APIs, edge networks, and cloud infrastructure.
       </p>
-      <img
-        src={termsHero}
+    <img
+        src={dark ? termsHeroDark : termsHero}
         alt="Terms of Service illustration"
         className="nexgn-terms-hero-img"
       />
@@ -796,16 +848,17 @@ export default function TermsServices() {
       </div>
 
       {/* ── FOOTER ── */}
-      <div
+<div
         style={{
           position: "absolute",
           bottom: 0,
-          left: 0,
-          right: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "100vw",
           zIndex: 2,
         }}
       >
-        <FooterSection dark={false} />
+        <FooterSection dark={dark} />
       </div>
     </div>
   );
