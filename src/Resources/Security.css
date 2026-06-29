@@ -16,6 +16,73 @@
   box-sizing: border-box;
 }
 
+/* ── NAVBAR ── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 80px;
+  background: linear-gradient(to bottom, rgba(249, 245, 247, 0.85) 0%, rgba(249, 245, 247, 0) 100%);
+}
+.navbar__brand { display: flex; align-items: center; gap: 8px; }
+.navbar__logo-text { display: flex; flex-direction: column; line-height: 1; }
+.navbar__logo-name { font-family: "MuseoModerno", sans-serif; font-weight: 400; font-size: 32px; color: #1a0a0d; line-height: 1; }
+.navbar__logo-sub { font-family: "MuseoModerno", sans-serif; font-weight: 350; font-size: 9px; color: #000; margin-top: 2px; }
+.navbar__links { display: flex; align-items: center; gap: 40px; position: absolute; left: 50%; transform: translateX(-50%); }
+.navbar__link { font-family: "Inter", sans-serif; font-weight: 400; font-size: 14px; color: #000; text-decoration: none; }
+.navbar__link:hover { color: #d70506; }
+.navbar__actions { display: flex; align-items: center; gap: 28px; }
+.navbar__login { font-family: "Inter", sans-serif; font-weight: 400; font-size: 14px; color: #000; text-decoration: none; }
+.navbar__login:hover { color: #d70506; }
+.navbar__cta { display: flex; justify-content: center; align-items: center; padding: 9px; gap: 9px; width: 116px; height: 40px; background: linear-gradient(234.21deg, #960101 2.19%, #ff0915 100.02%); border-radius: 7.21805px; border: none; cursor: pointer; font-family: "Inter", sans-serif; font-size: 13px; color: #fff; }
+.navbar__cta:hover { opacity: 0.9; }
+.navbar__theme-toggle { background: none; border: none; cursor: pointer; color: #000; display: flex; align-items: center; padding: 8px; border-radius: 8px; transition: background 0.2s; }
+.navbar__theme-toggle:hover { background: rgba(0,0,0,0.06); }
+[data-theme="dark"] .navbar { background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); }
+[data-theme="dark"] .navbar__logo-name { color: #fff; }
+[data-theme="dark"] .navbar__logo-sub { color: #aaa; }
+[data-theme="dark"] .navbar__link { color: #ccc; }
+[data-theme="dark"] .navbar__link:hover { color: #e8334a; }
+[data-theme="dark"] .navbar__login { color: #ccc; }
+
+[data-theme="dark"] .navbar__theme-toggle { color: #fff; }
+[data-theme="dark"] .navbar__theme-toggle:hover { background: rgba(255,255,255,0.1); }
+[data-theme="dark"] .trust-page-wrapper { background: #000; }
+[data-theme="dark"] .trust-main-heading { color: #fff; }
+[data-theme="dark"] .trust-body-text { color: #aaa; }
+[data-theme="dark"] .trust-help-center-label { color: #e8334a; }
+[data-theme="dark"] .trust-section-title { color: #fff; }
+[data-theme="dark"] .trust-section-desc { color: #888; }
+[data-theme="dark"] .trust-infra-title { color: #fff; }
+[data-theme="dark"] .trust-infra-desc { color: #888; }
+[data-theme="dark"] .trust-card-text { color: #ccc; }
+[data-theme="dark"] .trust-icon-box { background: #1a0a0a; }
+[data-theme="dark"] .trust-infra-icon-box { background: #1a0a0a; }
+[data-theme="dark"] .trust-commitment-icon-box { background: rgba(255, 255, 255, 0.12); border-radius: 8px; }
+[data-theme="dark"] .trust-commitment-card { background: rgba(255, 255, 255, 0.02); border-color: rgba(87,87,87,0.3); }
+[data-theme="dark"] .trust-commitment-title { color: #fff; }
+[data-theme="dark"] .trust-commitment-body { color: #888; }
+[data-theme="dark"] .trust-commitment-col-title { color: #fff; }
+[data-theme="dark"] .trust-commitment-col-body { color: #888; }
+[data-theme="dark"] .trust-privacy-title { color: #fff; }
+[data-theme="dark"] .trust-privacy-desc { color: #888; }
+[data-theme="dark"] .trust-contacts-table { background: #0e0e12; border-color: rgba(87,87,87,0.3); }
+[data-theme="dark"] .trust-contacts-header { background: #1a1a1a; }
+[data-theme="dark"] .trust-contacts-col { color: #ccc; }
+[data-theme="dark"] .trust-contacts-divider { background: rgba(87,87,87,0.3); }
+[data-theme="dark"] .trust-contacts-email { color: #ffffff; }
+[data-theme="dark"] .trust-vdp-reporting-card { background: #0e0e12; border-color: rgba(87,87,87,0.3); }
+[data-theme="dark"] .trust-vdp-card-title { color: #fff; }
+[data-theme="dark"] .trust-vdp-card-body { color: #888; }
+[data-theme="dark"] .trust-vdp-card-note { color: #888; }
+[data-theme="dark"] .nexgn-hero-ribbon { opacity: 1; z-index: 0; top: -64px; left: -100px; }
+
 /* ── HEADER ── */
 .nexgn-header-inner {
   max-width: var(--nexgn-max-width);
@@ -88,6 +155,11 @@
   top: 173px;
   z-index: 2;
   object-fit: cover;
+}
+
+[data-theme="dark"] .trust-hero-image {
+  mask-image: radial-gradient(ellipse at center, black 51%, transparent 74%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 51%, transparent 74%);
 }
 
 .trust-commitment-card {
@@ -600,6 +672,26 @@
   color: #000000;
   margin: 0;
   z-index: 2;
+}
+
+.trust-dark-lower-bg {
+  position: absolute;
+  right: 0;
+  top: 560px;
+  width: 600px;
+  height: 1200px;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.trust-dark-lower-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  mask-image: linear-gradient(to left, black 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 0%, transparent 100%);
 }
 
 .trust-page-wrapper {

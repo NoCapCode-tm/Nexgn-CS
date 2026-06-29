@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Blog.css";
 import ribbonBg from "../assets/privacy-bg-ribbon.png";
+import ribbonBgDark from "../assets/helpcenter-dark-ribbon.png";
+import darkBgImg from "../assets/dark-bg-helpcenter.jpg";
 import blogIllustration from "../assets/Blog.png";
 import blogFeatured from "../assets/Blog-featured.png";
+import blogFeaturedDark from "../assets/dark-featured-blog.png";
+import blogIllustrationDark from "../assets/dark-blog.png";
 import FooterSection from "../FooterSection";
 
-function Navbar() {
-  const [dark, setDark] = useState(false);
+function Navbar({ dark, setDark }) {
   return (
     <nav className="navbar">
       <div className="navbar__brand">
@@ -25,8 +28,31 @@ function Navbar() {
       </div>
       <div className="navbar__actions">
       <a href="#" className="navbar__login">Log in</a>
-        <svg className="navbar__headset"width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <mask id="mask0_492_18490" style={{maskType:"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="29" height="29">
+        <button
+          className="navbar__theme-toggle"
+          onClick={() => setDark(!dark)}
+          aria-label="Toggle dark mode"
+        >
+          {dark ? (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+          ) : (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          )}
+        </button>
+       <svg className="navbar__headset" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <mask id="mask0_492_18490" style={{maskType:"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="29" height="29">
             <rect width="29" height="29" fill="#D9D9D9"/>
           </mask>
           <g mask="url(#mask0_492_18490)">
@@ -40,9 +66,45 @@ function Navbar() {
 }
 
 export default function Blog() {
-  return (
-    <>
-      <Navbar />
+  const [dark, setDark] = useState(
+    () => window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+  }, [dark]);
+
+return (
+ <>
+      <div className="blog-page-wrapper">
+      <Navbar dark={dark} setDark={setDark} />
+
+      {/* ── RIBBON ── */}
+      <img
+        src={dark ? ribbonBgDark : ribbonBg}
+        alt=""
+        className="nexgn-hero-ribbon"
+        aria-hidden="true"
+      />
+
+      {/* ── DARK BG ── */}
+      {dark && (
+        <div style={{
+          position: "absolute",
+          width: "1441px",
+          height: "2389px",
+          right: "0px",
+          top: "938.02px",
+          pointerEvents: "none",
+          zIndex: 0,
+          overflow: "hidden",
+          transform: "rotate(180deg)",
+          borderRadius: "0px",
+          opacity: 0.2,
+        }}>
+          <img src={darkBgImg} alt="" aria-hidden="true" style={{ width: "100%", height: "100%", objectFit: "cover", maskImage: "radial-gradient(ellipse 60% 60% at center, black 20%, transparent 55%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at center, black 20%, transparent 55%)" }} />
+        </div>
+      )}
 
       {/* ── HERO ── */}
       <div className="blog-hero-wrapper">
@@ -51,10 +113,10 @@ export default function Blog() {
           <h1 className="blog-hero__title">Nexgn Blog</h1>
           <p className="blog-hero__sub">Insights on digital trust, secure infrastructure, and the future of document automation.</p>
         </div>
-        <img src={blogIllustration} alt="Blog illustration" className="blog-hero__illustration" />
-      </div>
+     <img src={dark ? blogIllustrationDark : blogIllustration} alt="Blog illustration" className="blog-hero__illustration" /></div>
 
-      {/* ── FILTER TABS ── */}
+    {/* ── FILTER TABS ── */}
+      <div className="blog-page-body">
       <div className="blog-filters">
         <button className="blog-filter blog-filter--active">All</button>
         <button className="blog-filter">Security</button>
@@ -81,7 +143,7 @@ export default function Blog() {
               <div className="blog-card__img">
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M7.5 28.5C6.675 28.5 6 27.825 6 27V9C6 8.175 6.675 7.5 7.5 7.5H28.5C29.325 7.5 30 8.175 30 9V27C30 27.825 29.325 28.5 28.5 28.5H7.5ZM7.5 27H28.5V9H7.5V27ZM9 25.5H27L21.75 18.75L17.25 24.375L14.25 20.625L9 25.5Z" fill="#C5C5C5"/></svg>
               </div>
-              <span className="blog-card__tag" style={{ color: card.color, background: card.bg }}>{card.category}</span>
+              <span className="blog-card__tag" style={{ color: card.color, background: card.bg }} data-category={card.category}>{card.category}</span>
               <h3 className="blog-card__title">{card.title}</h3>
               <div className="blog-card__meta">
                 <span className="blog-card__time">⏱ {card.time}</span>
@@ -98,7 +160,7 @@ export default function Blog() {
         <div className="blog-featured-row">
           <div className="blog-featured-card">
             <span className="blog-featured__label">FEATURED</span>
-            <img src={blogFeatured} alt="Featured" className="blog-featured__img" />
+            <img src={dark ? blogFeaturedDark : blogFeatured} alt="Featured" className="blog-featured__img" />
             <span className="blog-featured__tag">Security</span>
             <h2 className="blog-featured__title">Building Trust at Scale: The Arcitecture Behind Secure Document Signing</h2>
             <div className="blog-featured__meta">
@@ -144,18 +206,13 @@ export default function Blog() {
           </div>
         </div>
       </div>
+ </div>
+     {/* ── FOOTER ── */}
 
-      {/* ── RIBBON ── */}
-      <img
-        src={ribbonBg}
-        alt=""
-        className="nexgn-hero-ribbon"
-        aria-hidden="true"
-      />
-
+      </div>{/* end blog-page-wrapper */}
       {/* ── FOOTER ── */}
       <div style={{ position: 'relative', zIndex: 2 }}>
-        <FooterSection dark={false} />
+        <FooterSection dark={dark} />
       </div>
     </>
   );
