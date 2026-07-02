@@ -28,27 +28,16 @@ body {
   }
 }
 
-/* ── PAGE WRAPPER ── */
 .privacy-page-wrapper {
   position: relative;
-  min-height: 3480px;
+  min-height: 2900px;
+  height: auto;
   margin: 0 auto;
   overflow: visible;
+  padding-bottom: 1px;
 }
 
-@media (min-width: 1180px) {
-  .privacy-page-wrapper {
-    min-width: 1440px;
-    width: 1440px;
-  }
-}
 
-@media (min-width: 1180px) {
-  .privacy-page-wrapper {
-    min-width: 1440px;
-    width: 1440px;
-  }
-}
 
 /* ── HEADER ── */
 .nexgn-header-inner {
@@ -615,220 +604,53 @@ body {
   color: #dc2626;
 }
 
-.footer {
-    mask-image: linear-gradient(to bottom, transparent 0%, black 40px);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40px);
-  }
+
 
 @media (min-width: 769px) and (max-width: 1179px) {
- html, body {
+  html, body {
     min-width: 769px;
     background: white;
+    overflow-x: hidden;
   }
 
-  body {
-    min-width: 769px;
-  }
-
-.privacy-page-wrapper {
-    width: 832px;
-    min-width: 832px;
-    min-height: 2900px;
+  .privacy-page-wrapper {
+    width: 1440px;
+    min-width: 1440px;
     margin: 0 auto;
     background: white;
     box-shadow: none;
+    overflow: hidden;
+    zoom: var(--page-zoom, 1);
   }
 
-  /* ── NAVBAR ── */
-  .navbar {
-    padding: 0 40px;
-    height: 56px;
-  }
-  .navbar__logo-name {
-    font-size: 24px;
-  }
-  .navbar__logo-sub {
-    font-size: 7px;
-  }
-  .navbar__brand svg {
-    width: 32px;
-    height: 32px;
-  }
-  .navbar__cta {
-    width: 100px;
-    height: 36px;
-    font-size: 12px;
-  }
-
-/* ── HERO ── */
-.nexgn-eyebrow {
-    left: calc(50% - 93px/2 - 291.18px) !important;
-    top: 154.4px !important;
-    font-size: 10px !important;
-    width: 93px !important;
-    line-height: 12px !important;
-  }
-
-  .privacy-hero-title {
-    left: 34.32px !important;
-    top: 178.58px !important;
-    font-size: 26px !important;
-    line-height: 31px !important;
-    width: 275.25px !important;
-    height: auto !important;
-  }
-
-  .nexgn-body-text {
-    left: 33.78px !important;
-    top: 256.49px !important;
-    width: 354.66px !important;
-    font-size: 11px !important;
-    line-height: 13px !important;
-  }
-.nexgn-hero-illustration {
-    width: 380px !important;
-    height: 340px !important;
-    left: 440px !important;
-    right: unset !important;
-    top: 80px !important;
-  }
-
-/* ── INFORMATION WE COLLECT ── */
-  .nexgn-info-section {
-    left: 40px;
-    top: 440px;
-    width: 280px;
-  }
-
-  .nexgn-info-content {
-    left: 80px;
-    width: 200px;
-  }
-
-.nexgn-data-list {
-    left: 340px;
-    top: 420px;
-    width: 470px;
-  }
-
-  .nexgn-data-text {
-    font-size: 12px;
-    line-height: 16px;
-  }
-
-  /* ── HOW WE USE ── */
-.nexgn-info-section--how-we-use {
-    top: 800px;
-    left: 40px;
-    width: 280px;
-  }
-
-  .nexgn-usage-list {
-    left: 340px;
-    top: 800px;
-    width: 460px;
-  }
-
-  /* ── DATA SHARING ── */
-  .nexgn-info-section--data-sharing {
-    top: 1200px;
-    left: 40px;
-    width: 280px;
-  }
-
-  .nexgn-sharing-list {
-    left: 340px;
-    top: 1200px;
-    width: 460px;
-  }
-
-  .nexgn-sharing-desc {
-    width: 100%;
-  }
-
-  /* ── DATA RETENTION ── */
-  .nexgn-info-section--data-retention {
-    top: 1700px;
-    left: 40px;
-    width: 280px;
-  }
-
-  .nexgn-retention-body {
-    left: 340px;
-    top: 1700px;
-    width: 460px;
-  }
-
-  .nexgn-retention-text {
-    font-size: 13px;
-    line-height: 18px;
-  }
-
-  /* ── YOUR PRIVACY RIGHTS ── */
-  .nexgn-privacy-rights-section {
-    left: 40px;
-    top: 2050px;
-    width: 280px;
-  }
-
-  /* ── RIGHT CARDS ── */
-.nexgn-right-card {
-    width: 148px;
-    height: 220px;
-    min-height: 220px;
-    left: 340px;
-    top: 2000px;
-    padding: 20px 12px;
-  }
-
-  .nexgn-right-card--erasure {
-    left: 500px;
-    top: 2000px;
-  }
-
-  .nexgn-right-card--rectification {
-    left: 660px;
-    top: 2000px;
-  }
-
-  .nexgn-right-card-title {
-    font-size: 13px;
-    line-height: 16px;
-    width: 100%;
-  }
-
-  .nexgn-right-card-desc {
-    font-size: 11px;
-    line-height: 14px;
-    width: 100%;
-  }
-
-  /* ── CONTACT BANNER ── */
-  .nexgn-contact-banner {
-    left: 40px;
-    top: 2300px;
-    width: 752px;
-    height: 80px;
-    gap: 24px;
-  }
-
-.nexgn-contact-email {
-    font-size: 16px;
+  .nexgn-hero-ribbon {
+    zoom: var(--page-zoom, 1);
+    transform-origin: top left;
   }
 }
+
+
+
 
 @media (max-width: 767px) {
  html, body {
     background: white;
     min-width: unset;
+    overflow-x: hidden;
   }
 
-  .privacy-page-wrapper {
-    width: 100%;
-    min-width: unset;
-    min-height: 4000px;
+.privacy-page-wrapper {
+    width: 390px;
+    min-width: 390px;
+    min-height: unset;
+    height: auto;
     margin: 0 auto;
     background: white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    overflow: hidden;
+    zoom: var(--page-zoom, 1);
   }
 
 .navbar {
@@ -864,68 +686,249 @@ body {
 
   /* ── HERO ── */
  .nexgn-eyebrow {
-    left: 22px !important;
-    top: 67px !important;
+    position: static !important;
     font-size: 11px !important;
     line-height: 13px !important;
     letter-spacing: 0.15em !important;
-    width: 200px !important;
+    width: auto !important;
     white-space: nowrap !important;
+    margin: 90px 22px 0 !important;
+    order: -4;
   }
 
  .privacy-hero-title {
-    left: 22px !important;
-    top: 92px !important;
+    position: static !important;
     font-size: 20px !important;
-    line-height: 17px !important;
+    line-height: 24px !important;
     font-weight: 700 !important;
-    width: 344px !important;
+    width: calc(100% - 44px) !important;
     height: auto !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
+    margin: 8px 22px 0 !important;
+    order: -3;
   }
- .nexgn-body-text {
-    left: 22px !important;
-    top: 128px !important;
-    width: 344px !important;
-    font-size: 11px !important;
-    line-height: 13px !important;
-    font-weight: 500 !important;
-    color: #666666 !important;
-    overflow: hidden !important;
-    height: 26px !important;
+
+  .nexgn-body-text {
+    display: none !important;
+  }
+
+  .nexgn-hero-illustration {
+    position: static !important;
+    width: calc(100% - 32px) !important;
+    height: 245px !important;
+    object-fit: contain !important;
+    z-index: 10 !important;
+    margin: 16px 16px 0 !important;
+    order: -2;
   }
 
   .nexgn-body-text-mobile-below {
     display: block !important;
-    position: absolute !important;
-    left: 22px !important;
-    top: 440px !important;
-    width: 344px !important;
+    position: static !important;
+    width: calc(100% - 44px) !important;
+    margin: 16px 22px 0 !important;
     font-size: 11px !important;
     line-height: 13px !important;
     font-weight: 500 !important;
     color: #666666 !important;
+    order: -1;
   }
 
-.nexgn-hero-illustration {
-    width: calc(100% - 32px) !important;
-    height: 245px !important;
-    left: 16px !important;
-    right: unset !important;
-    top: 179px !important;
-    object-fit: contain !important;
-    z-index: 10 !important;
-  }
-
-  .nexgn-hero-ribbon {
+.nexgn-hero-ribbon {
     display: none !important;
   }
 
-  .footer {
-    padding: 48px 14px 0;
-    mask-image: linear-gradient(to bottom, transparent 0%, black 40px);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40px);
+  /* ══ MOBILE FLUID FLOW — order controls visual sequence, not DOM order ══ */
+
+  .nexgn-info-section,
+  .nexgn-privacy-rights-section,
+  .nexgn-data-list,
+  .nexgn-usage-list,
+  .nexgn-sharing-list,
+  .nexgn-retention-body,
+  .nexgn-right-card,
+  .nexgn-right-card--erasure,
+  .nexgn-right-card--rectification,
+  .nexgn-contact-banner {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
   }
+
+  .nexgn-info-section,
+  .nexgn-privacy-rights-section {
+    width: 345px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 22px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+  }
+
+  .nexgn-info-icon-wrap {
+    position: static !important;
+    width: 41.19px !important;
+    height: 40px !important;
+    flex-shrink: 0 !important;
+    border-radius: 5.15625px !important;
+  }
+
+  .nexgn-info-icon-wrap svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .nexgn-info-content {
+    position: static !important;
+    width: auto !important;
+    flex: 1 !important;
+  }
+
+  .nexgn-info-title,
+  .nexgn-privacy-rights-title {
+    width: auto !important;
+    font-size: 14px !important;
+    line-height: 17px !important;
+  }
+
+  .nexgn-info-desc,
+  .nexgn-privacy-rights-desc {
+    width: 100% !important;
+    font-size: 12px !important;
+    line-height: 15px !important;
+    font-weight: 500 !important;
+    margin-top: 4px !important;
+  }
+  .nexgn-info-section .nexgn-info-desc {
+    font-size: 11px !important;
+    line-height: 13px !important;
+  }
+
+  .nexgn-data-list,
+  .nexgn-usage-list,
+  .nexgn-sharing-list,
+  .nexgn-retention-body {
+    width: calc(100% - 44px) !important;
+    max-width: 309px !important;
+    margin: 12px 22px 0 78px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .nexgn-data-list .nexgn-data-text,
+  .nexgn-usage-list .nexgn-data-text {
+    width: 100% !important;
+    font-size: 10px !important;
+    line-height: 14px !important;
+  }
+  .nexgn-data-list .nexgn-data-text {
+    font-weight: 600 !important;
+  }
+  .nexgn-usage-list .nexgn-data-text {
+    font-weight: 500 !important;
+  }
+
+  .nexgn-sharing-list {
+    margin: 12px 22px 0 78px !important;
+    gap: 16px !important;
+  }
+  .nexgn-sharing-list .nexgn-sharing-item svg {
+    width: 16.12px !important;
+    height: 16.12px !important;
+    min-width: 16.12px !important;
+  }
+  .nexgn-sharing-list .nexgn-sharing-title {
+    font-size: 11px !important;
+    line-height: 13px !important;
+  }
+  .nexgn-sharing-list .nexgn-sharing-desc {
+    width: 100% !important;
+    font-size: 10px !important;
+    line-height: 14px !important;
+    font-weight: 500 !important;
+  }
+
+  .nexgn-retention-body .nexgn-retention-text {
+    width: 100% !important;
+    margin-left: 0 !important;
+    font-size: 10px !important;
+    line-height: 14px !important;
+    font-weight: 500 !important;
+  }
+
+  .nexgn-right-card,
+  .nexgn-right-card--erasure,
+  .nexgn-right-card--rectification {
+    width: calc(100% - 44px) !important;
+    max-width: 345px !important;
+    height: auto !important;
+    margin: 0 auto 12px !important;
+    padding: 14px !important;
+    gap: 10px !important;
+    border-radius: 10px !important;
+  }
+  .nexgn-right-card svg,
+  .nexgn-right-card--erasure svg,
+  .nexgn-right-card--rectification svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .nexgn-right-card-title {
+    width: 100% !important;
+    font-size: 13px !important;
+    line-height: 16px !important;
+  }
+  .nexgn-right-card-desc {
+    width: 100% !important;
+    font-size: 11px !important;
+    line-height: 14px !important;
+    color: #666666 !important;
+  }
+
+  .nexgn-contact-banner {
+    width: calc(100% - 44px) !important;
+    max-width: 345px !important;
+    height: auto !important;
+    margin: 12px auto 0 !important;
+    padding: 14px !important;
+    gap: 12px !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+
+  .nexgn-contact-banner svg {
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .nexgn-contact-label {
+    font-size: 10px !important;
+    line-height: 13px !important;
+  }
+
+  .nexgn-contact-email {
+    font-size: 13px !important;
+    line-height: 16px !important;
+  }
+
+  /* ── VISUAL ORDER (overrides DOM order, since this is now flex flow) ── */
+  .nexgn-info-section            { order: 1; margin-top: 32px !important; }
+  .nexgn-data-list                { order: 2; }
+  .nexgn-info-section--how-we-use { order: 3; margin-top: 32px !important; }
+  .nexgn-usage-list               { order: 4; }
+  .nexgn-info-section--data-sharing { order: 5; margin-top: 32px !important; }
+  .nexgn-sharing-list             { order: 6; }
+  .nexgn-info-section--data-retention { order: 7; margin-top: 32px !important; }
+  .nexgn-retention-body           { order: 8; }
+  .nexgn-privacy-rights-section   { order: 9; margin-top: 32px !important; }
+  .nexgn-right-card               { order: 10; margin-top: 16px !important; }
+  .nexgn-right-card--erasure      { order: 11; }
+  .nexgn-right-card--rectification { order: 12; }
+  .nexgn-contact-banner           { order: 13; }
 }
 
 .navbar__theme-toggle { background: none; border: none; cursor: pointer; color: #000; display: flex; align-items: center; padding: 8px; border-radius: 8px; transition: background 0.2s; }
@@ -939,7 +942,6 @@ body {
 [data-theme="dark"] .navbar__theme-toggle:hover { background: rgba(255,255,255,0.1); }
 [data-theme="dark"] .privacy-page-wrapper { background: #000; }
 [data-theme="dark"] body { background: #000 !important; }
-[data-theme="dark"] .footer__wordmark { background: #000000 !important; }
 
 [data-theme="dark"] .nexgn-hero-ribbon {
   opacity: 1;
@@ -998,9 +1000,16 @@ body {
 [data-theme="dark"] .nexgn-sharing-item svg circle {
   stroke: #D70506;
 }
+
+.nexgn-info-icon-wrap svg path {
+  stroke: #000000 !important;
+}
+[data-theme="dark"] .nexgn-info-icon-wrap svg path {
+  stroke: #FFFFFF !important;
+}
 [data-theme="dark"] .nexgn-info-icon-wrap {
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(185, 39, 39, 0.08);
 }
 
 [data-theme="dark"] .nexgn-right-card {
@@ -1022,3 +1031,4 @@ body {
 [data-theme="dark"] .nexgn-contact-banner svg path {
   stroke: #ffffff;
 }
+

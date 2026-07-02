@@ -142,10 +142,10 @@
   left: 957px;
 }
 
-.nexgn-core-card-icon svg path,
-.nexgn-core-card-icon svg circle,
-.nexgn-core-card-icon svg line {
-  stroke: #ffffff;
+[data-theme="dark"] .nexgn-core-card-icon svg path,
+[data-theme="dark"] .nexgn-core-card-icon svg circle,
+[data-theme="dark"] .nexgn-core-card-icon svg line {
+  stroke: #E00209;
 }
 
 [data-theme="light"] .nexgn-core-card-icon svg path,
@@ -255,26 +255,7 @@
   mask-image: radial-gradient(ellipse 75% 75% at 50% 47%, black 35%, transparent 85%);
   -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 47%, black 35%, transparent 85%);
 }
-/* ── CORE VALUES BG SECTION ── */
-.nexgn-core-values-bg-section {
-  position: absolute;
-  right: 0;
-  top: 560px;
-  width: 600px;
-  height: 1200px;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
 
-.nexgn-core-values-bg-section img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.6;
-  mask-image: linear-gradient(to left, black 0%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to left, black 0%, transparent 100%);
-}
 
 /* ── OUR PROMISE BANNER ── */
 .nexgn-promise-banner {
@@ -338,7 +319,12 @@
 /* ── PAGE WRAPPER ── */
 .nexgn-page-wrapper {
   position: relative;
-  min-height: 2500px;
+  overflow: hidden;
+}
+
+/* ── CONTENT SPACER ── */
+.nexgn-content-spacer {
+  height: 1900px;
 }
 
 /* ── TABLET: 769px – 1179px ── */
@@ -560,9 +546,9 @@
     width: 279px;
   }
 
- /* ── PAGE WRAPPER ── */
-  .nexgn-page-wrapper {
-    min-height: 1750px;
+ /* ── CONTENT SPACER ── */
+  .nexgn-content-spacer {
+    height: 1330px;
   }
  .footer {
     mask-image: linear-gradient(to bottom, transparent 0%, black 40px);
@@ -643,13 +629,26 @@
     color: #666666;
   }
 
-  /* ── GLOBE ── */
+/* ── GLOBE ── */
   .nexgn-hero-globe {
     width: calc(100% - 32px);
     height: 260px;
     left: 16px;
     top: 240px;
     object-fit: contain;
+  }
+
+[data-theme="dark"] .nexgn-hero-globe {
+    mask-image:
+      linear-gradient(to right, transparent 0%, black 30%, black 70%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%),
+      radial-gradient(ellipse 50% 50% at 50% 50%, black 20%, transparent 65%);
+    -webkit-mask-image:
+      linear-gradient(to right, transparent 0%, black 30%, black 70%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%),
+      radial-gradient(ellipse 50% 50% at 50% 50%, black 20%, transparent 65%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
   }
 
   /* ── HERO TAGLINE ── */
@@ -804,9 +803,9 @@
     width: 100%;
   }
 
-  /* ── PAGE WRAPPER ── */a
-  .nexgn-page-wrapper {
-    min-height: 2300px;
+  /* ── CONTENT SPACER ── */
+  .nexgn-content-spacer {
+    height: 1720px;
   }
 
   .footer {

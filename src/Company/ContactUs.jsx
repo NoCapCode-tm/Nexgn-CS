@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./ContactUs.css";
-import ribbonBg from "../assets/privacy-bg-ribbon.png";
-import ribbonBgDark from "../assets/helpcenter-dark-ribbon.png";
 import heroIllustration from "../assets/contact.png";
 import heroIllustrationDark from "../assets/dark-contact.png";
 import darkBgImg from "../assets/dark-bg-helpcenter.jpg";
+import ribbonBg from "../assets/privacy-bg-ribbon.png";
+import ribbonBgDark from "../assets/helpcenter-dark-ribbon.png";
 import bgBlob from "../assets/nexgn-contact-bg.png";
 import FooterSection from "../FooterSection";
 
@@ -77,10 +77,29 @@ export default function ContactUs() {
   }, [dark]);
 
   return (
-    <div className="nexgn-page">
+    <div className="nexgn-page" lang="en">
       <Navbar dark={dark} setDark={setDark} />
+
       {/* ── HERO SECTION ── */}
-      <section className="nexgn-hero">
+      <section className="nexgn-hero" style={{ overflow: "hidden" }}>
+        {/* ── RIBBON ── */}
+        <img
+          src={dark ? ribbonBgDark : ribbonBg}
+          alt=""
+          aria-hidden="true"
+          className="nexgn-hero-ribbon-img"
+          style={{
+            position: "absolute",
+            width: "1500px",
+            height: "1120px",
+            left: "-200px",
+            top: "-1px",
+            opacity: 0.77,
+            pointerEvents: "none",
+            zIndex: 1,
+            objectFit: "contain",
+          }}
+        />
         <div className="nexgn-hero-inner">
           <div className="nexgn-hero-text" style={{ flexShrink: 0, zIndex: 3 }}>
             <svg
@@ -538,13 +557,13 @@ export default function ContactUs() {
       {/* end nexgn-sections-bg */}
      
       {/* ── DARK BG ── */}
-      {dark && (
+  {dark && (
         <div style={{
           position: "absolute",
           width: "1441px",
-          height: "2389px",
+          height: "900px",
           right: "0px",
-          top: "938.02px",
+          bottom: "0px",
           pointerEvents: "none",
           zIndex: 0,
           overflow: "hidden",
@@ -556,13 +575,7 @@ export default function ContactUs() {
         </div>
       )}
 
-      {/* ── RIBBON ── */}
-      <img
-        src={dark ? ribbonBgDark : ribbonBg}
-        alt=""
-        className="nexgn-hero-ribbon"
-        aria-hidden="true"
-      />
+    
       {/* ── FOOTER ── */}
       <div style={{ position: "relative", zIndex: 2 }}>
         <FooterSection dark={dark} />
