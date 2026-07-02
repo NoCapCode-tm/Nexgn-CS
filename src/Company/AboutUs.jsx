@@ -126,10 +126,22 @@ export default function AboutUs() {
         className="nexgn-hero-globe"
       />
 
-  {/* ── CORE VALUES BG ── */}
+  {/* ── DARK BG ── */}
       {dark && (
-        <div className="nexgn-core-values-bg-section">
-          <img src={darkBgImg} alt="" aria-hidden="true" />
+       <div style={{
+          position: "absolute",
+          width: "1441px",
+          height: "1600px",
+          right: "0px",
+          top: "80px",
+          pointerEvents: "none",
+          zIndex: 0,
+          overflow: "hidden",
+          transform: "rotate(180deg)",
+          borderRadius: "0px",
+          opacity: 0.2,
+        }}>
+          <img src={darkBgImg} alt="" aria-hidden="true" style={{ width: "100%", height: "100%", objectFit: "cover", maskImage: "radial-gradient(ellipse 60% 60% at center, black 20%, transparent 55%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at center, black 20%, transparent 55%)" }} />
         </div>
       )}
 
@@ -305,16 +317,11 @@ export default function AboutUs() {
           your business takes you.
         </p>
       </div>
+   {/* ── CONTENT HEIGHT SPACER ── */}
+      <div className="nexgn-content-spacer" />
+
       {/* ── FOOTER ── */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          zIndex: 2,
-        }}
-      >
+      <div style={{ position: "relative", zIndex: 2 }}>
         <FooterSection dark={dark} />
       </div>
     </div>

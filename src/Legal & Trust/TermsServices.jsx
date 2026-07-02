@@ -70,17 +70,36 @@ export default function TermsServices() {
     () => window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
   );
 
-  useEffect(() => {
+useEffect(() => {
     document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
   }, [dark]);
 
-  return (
+  useEffect(() => {
+    function updateZoom() {
+      const w = window.innerWidth;
+      let z = 1;
+      if (w >= 1440) {
+        z = w / 1440;
+      } else if (w >= 769 && w < 1180) {
+        z = w / 832;
+      }
+      document.documentElement.style.setProperty("--page-zoom", z);
+    }
+    updateZoom();
+    window.addEventListener("resize", updateZoom);
+    return () => window.removeEventListener("resize", updateZoom);
+  }, []);
+
+
+
+return (
+    <>
     <div className="terms-page-wrapper">
       <Navbar dark={dark} setDark={setDark} />
 
      {/* ── DARK BG ── */}
       {dark && (
-      <div style={{
+    <div className="nexgn-dark-bg-glow" style={{
           position: "absolute",
           width: "1441px",
           height: "2389px",
@@ -97,14 +116,17 @@ export default function TermsServices() {
        </div>
       )}
 
-      {/* ── RIBBON ── */}
-      <img
-        src={dark ? ribbonBgDark : ribbonBg}
-        alt=""
-        className="nexgn-hero-ribbon"
-        aria-hidden="true"
-      />
+     {/* ── RIBBON ── */}
+      <div className="nexgn-hero-ribbon-clip">
+        <img
+          src={dark ? ribbonBgDark : ribbonBg}
+          alt=""
+          className="nexgn-hero-ribbon"
+          aria-hidden="true"
+        />
+      </div>
       <span className="nexgn-terms-heading">Terms of Service</span>
+      <h1 className="nexgn-terms-title-text">Terms that keep things clear</h1>
       <svg
         className="nexgn-terms-title"
         width="451"
@@ -847,19 +869,19 @@ export default function TermsServices() {
         </div>
       </div>
 
-      {/* ── FOOTER ── */}
-<div
+</div>
+
+     {/* ── FOOTER ── */}
+      <div
         style={{
-          position: "absolute",
-          bottom: 0,
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "100vw",
+          position: "relative",
+          width: "100%",
+          overflowX: "hidden",
           zIndex: 2,
         }}
       >
         <FooterSection dark={dark} />
       </div>
-    </div>
+    </>
   );
 }

@@ -75,6 +75,22 @@ export default function PrivacyPolicy() {
     document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
   }, [dark]);
 
+  useEffect(() => {
+    function updateZoom() {
+      const w = window.innerWidth;
+      let z = 1;
+      if (w < 768) {
+        z = w / 390;
+      } else if (w >= 769 && w < 1180) {
+        z = w / 1440;
+      }
+      document.documentElement.style.setProperty("--page-zoom", z);
+    }
+    updateZoom();
+    window.addEventListener("resize", updateZoom);
+    return () => window.removeEventListener("resize", updateZoom);
+  }, []);
+
   return (
  <>
 <img
@@ -87,13 +103,13 @@ export default function PrivacyPolicy() {
   <Navbar dark={dark} setDark={setDark} />
 
 {/* ── DARK BG ── */}
-      {dark && (
+   {dark && (
         <div style={{
           position: "absolute",
-          width: "1441px",
-          height: "2389px",
+          width: window.innerWidth <= 767 ? "100%" : "1441px",
+          height: window.innerWidth <= 767 ? "900px" : "2389px",
           right: "0px",
-          top: "938.02px",
+          top: window.innerWidth <= 767 ? "400px" : "938.02px",
           pointerEvents: "none",
           zIndex: 0,
           overflow: "hidden",
@@ -702,20 +718,20 @@ export default function PrivacyPolicy() {
       <p className="nexgn-body-text-mobile-below">
   This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit nexgn.cloud, use our services, or interact with our platform. We design our systems to comply with global privacy frameworks, including GDPR and CCPA, and we follow strict data minimization principles, collecting only what is necessary to operate securely and effectively.
 </p>
-      {/* ── FOOTER ── */}
-     <div
+
+    </div>
+
+     {/* ── FOOTER ── */}
+      <div
         style={{
-          position: "absolute",
-          bottom: 0,
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "100vw",
+          position: "relative",
+          width: "100%",
+          overflowX: "hidden",
           zIndex: 2,
         }}
       >
         <FooterSection dark={dark} />
       </div>
-</div>
-</>
+    </>
   );
 }
