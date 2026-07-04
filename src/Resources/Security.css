@@ -28,60 +28,225 @@
   justify-content: space-between;
   height: 64px;
   padding: 0 80px;
-  background: linear-gradient(to bottom, rgba(249, 245, 247, 0.85) 0%, rgba(249, 245, 247, 0) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(249, 245, 247, 0.85) 0%,
+    rgba(249, 245, 247, 0) 100%
+  );
 }
-.navbar__brand { display: flex; align-items: center; gap: 8px; }
-.navbar__logo-text { display: flex; flex-direction: column; line-height: 1; }
-.navbar__logo-name { font-family: "MuseoModerno", sans-serif; font-weight: 400; font-size: 32px; color: #1a0a0d; line-height: 1; }
-.navbar__logo-sub { font-family: "MuseoModerno", sans-serif; font-weight: 350; font-size: 9px; color: #000; margin-top: 2px; }
-.navbar__links { display: flex; align-items: center; gap: 40px; position: absolute; left: 50%; transform: translateX(-50%); }
-.navbar__link { font-family: "Inter", sans-serif; font-weight: 400; font-size: 14px; color: #000; text-decoration: none; }
-.navbar__link:hover { color: #d70506; }
-.navbar__actions { display: flex; align-items: center; gap: 28px; }
-.navbar__login { font-family: "Inter", sans-serif; font-weight: 400; font-size: 14px; color: #000; text-decoration: none; }
-.navbar__login:hover { color: #d70506; }
-.navbar__cta { display: flex; justify-content: center; align-items: center; padding: 9px; gap: 9px; width: 116px; height: 40px; background: linear-gradient(234.21deg, #960101 2.19%, #ff0915 100.02%); border-radius: 7.21805px; border: none; cursor: pointer; font-family: "Inter", sans-serif; font-size: 13px; color: #fff; }
-.navbar__cta:hover { opacity: 0.9; }
-.navbar__theme-toggle { background: none; border: none; cursor: pointer; color: #000; display: flex; align-items: center; padding: 8px; border-radius: 8px; transition: background 0.2s; }
-.navbar__theme-toggle:hover { background: rgba(0,0,0,0.06); }
-[data-theme="dark"] .navbar { background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); }
-[data-theme="dark"] .navbar__logo-name { color: #fff; }
-[data-theme="dark"] .navbar__logo-sub { color: #aaa; }
-[data-theme="dark"] .navbar__link { color: #ccc; }
-[data-theme="dark"] .navbar__link:hover { color: #e8334a; }
-[data-theme="dark"] .navbar__login { color: #ccc; }
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navbar__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.navbar__logo-name {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: #1a0a0d;
+  line-height: 1;
+}
+.navbar__logo-sub {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: 350;
+  font-size: 9px;
+  color: #000;
+  margin-top: 2px;
+}
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navbar__link {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+}
+.navbar__link:hover {
+  color: #d70506;
+}
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.navbar__login {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+}
+.navbar__login:hover {
+  color: #d70506;
+}
+.navbar__cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px;
+  gap: 9px;
+  width: 116px;
+  height: 40px;
+  background: linear-gradient(234.21deg, #960101 2.19%, #ff0915 100.02%);
+  border-radius: 7.21805px;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: #fff;
+}
+.navbar__cta:hover {
+  opacity: 0.9;
+}
+.navbar__theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.navbar__theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+[data-theme="dark"] .navbar {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+[data-theme="dark"] .navbar__logo-name {
+  color: #fff;
+}
+[data-theme="dark"] .navbar__logo-sub {
+  color: #aaa;
+}
+[data-theme="dark"] .navbar__link {
+  color: #ccc;
+}
+[data-theme="dark"] .navbar__link:hover {
+  color: #e8334a;
+}
+[data-theme="dark"] .navbar__login {
+  color: #ccc;
+}
 
-[data-theme="dark"] .navbar__theme-toggle { color: #fff; }
-[data-theme="dark"] .navbar__theme-toggle:hover { background: rgba(255,255,255,0.1); }
-[data-theme="dark"] .trust-page-wrapper { background: #000; }
-[data-theme="dark"] .trust-main-heading { color: #fff; }
-[data-theme="dark"] .trust-body-text { color: #aaa; }
-[data-theme="dark"] .trust-help-center-label { color: #e8334a; }
-[data-theme="dark"] .trust-section-title { color: #fff; }
-[data-theme="dark"] .trust-section-desc { color: #888; }
-[data-theme="dark"] .trust-infra-title { color: #fff; }
-[data-theme="dark"] .trust-infra-desc { color: #888; }
-[data-theme="dark"] .trust-card-text { color: #ccc; }
-[data-theme="dark"] .trust-icon-box { background: #1a0a0a; }
-[data-theme="dark"] .trust-infra-icon-box { background: #1a0a0a; }
-[data-theme="dark"] .trust-commitment-icon-box { background: rgba(255, 255, 255, 0.12); border-radius: 8px; }
-[data-theme="dark"] .trust-commitment-card { background: rgba(255, 255, 255, 0.02); border-color: rgba(87,87,87,0.3); }
-[data-theme="dark"] .trust-commitment-title { color: #fff; }
-[data-theme="dark"] .trust-commitment-body { color: #888; }
-[data-theme="dark"] .trust-commitment-col-title { color: #fff; }
-[data-theme="dark"] .trust-commitment-col-body { color: #888; }
-[data-theme="dark"] .trust-privacy-title { color: #fff; }
-[data-theme="dark"] .trust-privacy-desc { color: #888; }
-[data-theme="dark"] .trust-contacts-table { background: #0e0e12; border-color: rgba(87,87,87,0.3); }
-[data-theme="dark"] .trust-contacts-header { background: #1a1a1a; }
-[data-theme="dark"] .trust-contacts-col { color: #ccc; }
-[data-theme="dark"] .trust-contacts-divider { background: rgba(87,87,87,0.3); }
-[data-theme="dark"] .trust-contacts-email { color: #ffffff; }
-[data-theme="dark"] .trust-vdp-reporting-card { background: #0e0e12; border-color: rgba(87,87,87,0.3); }
-[data-theme="dark"] .trust-vdp-card-title { color: #fff; }
-[data-theme="dark"] .trust-vdp-card-body { color: #888; }
-[data-theme="dark"] .trust-vdp-card-note { color: #888; }
-[data-theme="dark"] .nexgn-hero-ribbon { opacity: 1; z-index: 0; top: -64px; left: -100px; }
+[data-theme="dark"] .navbar__theme-toggle {
+  color: #fff;
+}
+[data-theme="dark"] .navbar__theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+[data-theme="dark"] .trust-page-wrapper {
+  background: #000;
+}
+[data-theme="dark"] .trust-main-heading {
+  color: #fff;
+}
+[data-theme="dark"] .trust-body-text {
+  color: #aaa;
+}
+[data-theme="dark"] .trust-help-center-label {
+  color: #e8334a;
+}
+[data-theme="dark"] .trust-section-title {
+  color: #fff;
+}
+[data-theme="dark"] .trust-section-desc {
+  color: #888;
+}
+[data-theme="dark"] .trust-infra-title {
+  color: #fff;
+}
+[data-theme="dark"] .trust-infra-desc {
+  color: #888;
+}
+[data-theme="dark"] .trust-card-text {
+  color: #ccc;
+}
+[data-theme="dark"] .trust-icon-box {
+  background: #1a0a0a;
+}
+[data-theme="dark"] .trust-infra-icon-box {
+  background: #1a0a0a;
+}
+[data-theme="dark"] .trust-commitment-icon-box {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+}
+[data-theme="dark"] .trust-commitment-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(87, 87, 87, 0.3);
+}
+[data-theme="dark"] .trust-commitment-title {
+  color: #fff;
+}
+[data-theme="dark"] .trust-commitment-body {
+  color: #888;
+}
+[data-theme="dark"] .trust-commitment-col-title {
+  color: #fff;
+}
+[data-theme="dark"] .trust-commitment-col-body {
+  color: #888;
+}
+[data-theme="dark"] .trust-privacy-title {
+  color: #fff;
+}
+[data-theme="dark"] .trust-privacy-desc {
+  color: #888;
+}
+[data-theme="dark"] .trust-contacts-table {
+  background: #0e0e12;
+  border-color: rgba(87, 87, 87, 0.3);
+}
+[data-theme="dark"] .trust-contacts-header {
+  background: #1a1a1a;
+}
+[data-theme="dark"] .trust-contacts-col {
+  color: #ccc;
+}
+[data-theme="dark"] .trust-contacts-divider {
+  background: rgba(87, 87, 87, 0.3);
+}
+[data-theme="dark"] .trust-contacts-email {
+  color: #ffffff;
+}
+[data-theme="dark"] .trust-vdp-reporting-card {
+  background: #0e0e12;
+  border-color: rgba(87, 87, 87, 0.3);
+}
+[data-theme="dark"] .trust-vdp-card-title {
+  color: #fff;
+}
+[data-theme="dark"] .trust-vdp-card-body {
+  color: #888;
+}
+[data-theme="dark"] .trust-vdp-card-note {
+  color: #888;
+}
+[data-theme="dark"] .nexgn-hero-ribbon {
+  opacity: 1;
+  z-index: 0;
+  top: -64px;
+  left: -100px;
+}
 
 /* ── HEADER ── */
 .nexgn-header-inner {
@@ -127,12 +292,12 @@
 }
 
 .nexgn-smart-signing {
-  font-family: 'MuseoModerno', sans-serif;
+  font-family: "MuseoModerno", sans-serif;
   font-weight: 200;
   font-size: 7.64px;
   line-height: 12px;
   color: #000000;
-  padding-left:52px;
+  padding-left: 52px;
   margin-top: -10px;
 }
 
@@ -159,21 +324,25 @@
 
 [data-theme="dark"] .trust-hero-image {
   mask-image: radial-gradient(ellipse at center, black 51%, transparent 74%);
-  -webkit-mask-image: radial-gradient(ellipse at center, black 51%, transparent 74%);
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 51%,
+    transparent 74%
+  );
 }
 
 .trust-commitment-card {
   position: absolute;
   width: 1276px;
-  left: calc(50% - 1276px/2 + 7px);
+  left: calc(50% - 1276px / 2 + 7px);
   top: 2600px;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 35px 40px;
   gap: 40px;
-  background: #FFF8FA;
-  border: 1px solid #FBD1D2;
+  background: #fff8fa;
+  border: 1px solid #fbd1d2;
   border-radius: 7px;
   box-sizing: border-box;
   z-index: 2;
@@ -208,7 +377,7 @@
 .trust-commitment-icon-box {
   width: 44px;
   height: 44px;
-  background: #FEF5F5;
+  background: #fef5f5;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -217,7 +386,7 @@
 }
 
 .trust-commitment-title {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
@@ -226,7 +395,7 @@
 }
 
 .trust-commitment-body {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -253,7 +422,7 @@
 }
 
 .trust-commitment-col-title {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
@@ -262,7 +431,7 @@
 }
 
 .trust-commitment-col-body {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
@@ -277,7 +446,7 @@
   height: 24px;
   left: 108px;
   top: 3000px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -293,7 +462,7 @@
   height: 19px;
   left: 108px;
   top: 3050px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -310,8 +479,8 @@
   top: 3200px;
   display: flex;
   flex-direction: column;
-  background: #FFFFFF;
-  border: 1px solid #CCCCCC;
+  background: #ffffff;
+  border: 1px solid #cccccc;
   border-radius: 16px;
   box-sizing: border-box;
   overflow: hidden;
@@ -325,17 +494,16 @@
   padding: 20px 0;
 }
 
-
 .trust-contacts-header {
-  background: #FEF8F9;
+  background: #fef8f9;
   padding: 17px 0;
   align-items: center;
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid #cccccc;
 }
 
 .trust-contacts-col {
   box-sizing: border-box;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -349,7 +517,7 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #CCCCCC;
+  background: #cccccc;
 }
 
 .trust-contacts-divider-1 {
@@ -396,8 +564,8 @@
   align-items: center;
   padding: 10px 30px;
   gap: 20px;
-  background: #FEF4F5;
-  border: 1px solid #FBD1D2;
+  background: #fef4f5;
+  border: 1px solid #fbd1d2;
   border-radius: 7px;
   box-sizing: border-box;
   z-index: 2;
@@ -416,7 +584,7 @@
 }
 
 .trust-vdp-card-title {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -425,7 +593,7 @@
 }
 
 .trust-vdp-card-body {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 11px;
   line-height: 13px;
@@ -434,17 +602,17 @@
 }
 
 .trust-vdp-card-email {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: #D70506;
+  color: #d70506;
   margin: 0 0 8px 0;
   text-decoration: underline;
 }
 
 .trust-vdp-card-note {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 11px;
   line-height: 13px;
@@ -491,7 +659,7 @@
 .trust-icon-box {
   width: 64px;
   height: 64px;
-  background: #FEF5F5;
+  background: #fef5f5;
   border-radius: 10px;
   flex-shrink: 0;
   display: flex;
@@ -507,7 +675,7 @@
 }
 
 .trust-section-title {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -517,7 +685,7 @@
 }
 
 .trust-section-desc {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -570,14 +738,14 @@
 .trust-card-dot {
   width: 8.74px;
   height: 8px;
-  background: #D70506;
+  background: #d70506;
   border-radius: 50%;
   flex-shrink: 0;
   margin-top: 5px;
 }
 
 .trust-card-text {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -606,7 +774,7 @@
 .trust-infra-icon-box {
   width: 64px;
   height: 64px;
-  background: #FEF5F5;
+  background: #fef5f5;
   border-radius: 10px;
   flex-shrink: 0;
   display: flex;
@@ -622,7 +790,7 @@
 
 .trust-infra-title {
   width: 348px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -633,7 +801,7 @@
 
 .trust-infra-desc {
   width: 416px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -648,7 +816,7 @@
   height: 320px;
   left: 122px;
   top: 440px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -658,13 +826,17 @@
   z-index: 2;
 }
 
+.trust-body-text-2 {
+  display: none;
+}
+
 .trust-main-heading {
   position: absolute;
   width: 529px;
   height: 154px;
   left: 122px;
   top: 280px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 56px;
@@ -674,29 +846,14 @@
   z-index: 2;
 }
 
-.trust-dark-lower-bg {
-  position: absolute;
-  right: 0;
-  top: 560px;
-  width: 600px;
-  height: 1200px;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.trust-dark-lower-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.6;
-  mask-image: linear-gradient(to left, black 0%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to left, black 0%, transparent 100%);
-}
-
 .trust-page-wrapper {
   position: relative;
   min-height: 3800px;
+  display: flow-root;
+}
+
+.trust-footer-wrapper {
+  margin-top: 3750px;
 }
 .trust-help-center-label {
   position: absolute;
@@ -705,13 +862,582 @@
   height: 19px;
   left: 122px;
   top: 250px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: #DC2626;
+  color: #dc2626;
   z-index: 2;
+}
+
+.footer {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 60px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 60px);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MEDIA QUERIES (all responsive overrides below)
+   ══════════════════════════════════════════════════════════════ */
+
+/* ============================================
+   MOBILE VIEW (0 – 768px)
+   Rebuilt as normal flow, sections stack top to bottom
+   ============================================ */
+@media (max-width: 768px) {
+  .trust-page-wrapper {
+    position: relative;
+    min-height: unset;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 16px 0;
+  }
+
+  .navbar {
+    padding: 0 14px;
+    height: 54px;
+  }
+
+  .trust-help-center-label {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    order: 1;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.15em;
+    color: #ea293a;
+  }
+
+  .trust-main-heading {
+    position: static;
+    width: 100%;
+    max-width: 301px;
+    height: auto;
+    order: 2;
+    margin: 8px 0 0;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  [data-theme="dark"] .trust-main-heading {
+    color: #ffffff;
+  }
+
+  .trust-body-text {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    order: 3;
+    margin: 12px 0 0;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12.6628px;
+    line-height: 15px;
+    color: #000000;
+  }
+
+  [data-theme="dark"] .trust-body-text {
+    color: #ffffff;
+  }
+
+  .trust-hero-image {
+    position: static;
+    width: 306px;
+    height: 220px;
+    max-width: 100%;
+    order: 4;
+    margin: 24px auto 0;
+    display: block;
+    right: auto;
+    top: auto;
+    object-fit: cover;
+  }
+
+  .trust-body-text-2 {
+    position: static;
+    width: 100%;
+    max-width: 296.94px;
+    height: auto;
+    order: 5;
+    margin: 24px 0 0;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12.6628px;
+    line-height: 15px;
+    color: #000000;
+  }
+
+  [data-theme="dark"] .trust-body-text-2 {
+    color: #ffffff;
+  }
+
+  /* ── INFRASTRUCTURE SECTION ── */
+  .trust-infra-group {
+    position: static;
+    width: 100%;
+    height: auto;
+    order: 6;
+    margin: 24px 0 0;
+    gap: 16px;
+  }
+
+  .trust-infra-icon-box {
+    width: 41.07px;
+    height: 40px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  [data-theme="dark"] .trust-infra-icon-box {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .trust-infra-icon-box svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .trust-infra-title {
+    width: auto;
+    max-width: 244px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .trust-infra-desc {
+    width: 100%;
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  [data-theme="dark"] .trust-infra-desc {
+    color: #ffffff;
+  }
+
+  .trust-infra-card-group {
+    position: static;
+    width: 100%;
+    height: auto;
+    order: 7;
+    margin: 12px 0 0;
+    gap: 12px;
+  }
+
+  .trust-card-row {
+    gap: 10px;
+  }
+
+  .trust-card-text {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 12px;
+  }
+
+  [data-theme="dark"] .trust-card-text {
+    color: #ffffff;
+  }
+
+  /* ── DOCUMENT INTEGRITY SECTION ── */
+  .trust-doc-integrity-group {
+    position: static;
+    width: 100%;
+    height: auto;
+    order: 8;
+    margin: 32px 0 0;
+    gap: 16px;
+  }
+
+  .trust-icon-box {
+    width: 41.19px;
+    height: 40px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  [data-theme="dark"] .trust-icon-box {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .trust-icon-box svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .trust-section-title {
+    width: auto;
+    max-width: 288px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .trust-section-desc {
+    width: 100%;
+    max-width: 288.36px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  [data-theme="dark"] .trust-section-desc {
+    color: #ffffff;
+  }
+
+  .trust-doc-card-group {
+    position: static;
+    width: 100%;
+    height: auto;
+    order: 9;
+    margin: 12px 0 0;
+    gap: 12px;
+  }
+
+  /* ── APPLICATION AND PRODUCT SECURITY SECTION ── */
+  .trust-app-security-group {
+    position: static;
+    width: 100%;
+    height: auto;
+    order: 10;
+    margin: 32px 0 0;
+    gap: 16px;
+  }
+
+  .trust-app-card-group {
+    position: static;
+    width: 100%;
+    height: auto;
+    order: 11;
+    margin: 12px 0 0;
+    gap: 12px;
+  }
+
+  /* ── VULNERABILITY DISCLOSURE POLICY (VDP) SECTION ── */
+  .trust-vdp-group {
+    position: static;
+    width: 100%;
+    height: auto;
+    order: 12;
+    margin: 32px 0 0;
+    gap: 16px;
+  }
+
+  /* ── VDP REPORTING CARD ── */
+  .trust-vdp-reporting-card {
+    position: static;
+    width: 100%;
+    height: auto;
+    order: 13;
+    margin: 24px 0 0;
+    padding: 10px 20px;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: none;
+    border-radius: 8px;
+    align-items: flex-start;
+  }
+
+  .trust-vdp-card-icon {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    margin-top: 12.5px;
+  }
+
+  .trust-vdp-card-content {
+    width: 100%;
+    max-width: 254px;
+  }
+
+  .trust-vdp-card-title {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 8px 0;
+  }
+
+  [data-theme="dark"] .trust-vdp-card-title {
+    color: #ffffff;
+  }
+
+  .trust-vdp-card-body {
+    font-size: 10px;
+    line-height: 12px;
+    color: #999999;
+    margin: 0 0 8px 0;
+  }
+
+  .trust-vdp-card-email {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    color: #d70506;
+    margin: 0 0 8px 0;
+  }
+
+  .trust-vdp-card-note {
+    font-size: 10px;
+    line-height: 12px;
+    color: #999999;
+    margin: 0;
+  }
+
+  /* ── OUR COMMITMENT TO YOU CARD ── */
+  .trust-commitment-card {
+    position: static;
+    width: 100%;
+    height: auto;
+    left: auto;
+    order: 14;
+    margin: 32px 0 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    min-height: unset;
+  }
+
+  .trust-commitment-left {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .trust-commitment-icon-box {
+    width: 43.1px;
+    height: 40px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  [data-theme="dark"] .trust-commitment-icon-box {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .trust-commitment-icon-box svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .trust-commitment-title {
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+  }
+
+  [data-theme="dark"] .trust-commitment-title {
+    color: #ffffff;
+  }
+
+  .trust-commitment-body {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  [data-theme="dark"] .trust-commitment-body {
+    color: #ffffff;
+  }
+
+  .trust-commitment-columns {
+    width: 100%;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 24px;
+    align-items: stretch;
+  }
+
+  .trust-commitment-col {
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 10px;
+    gap: 10px;
+    background: transparent;
+    border-radius: 8px;
+    min-width: 0;
+  }
+
+  [data-theme="dark"] .trust-commitment-col {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .trust-commitment-col svg {
+    width: 12.28px;
+    height: 12.28px;
+  }
+
+  .trust-commitment-col-title {
+    font-size: 8.18547px;
+    line-height: 10px;
+    font-weight: 600;
+    text-align: center;
+    color: #000000;
+  }
+
+  [data-theme="dark"] .trust-commitment-col-title {
+    color: #ffffff;
+  }
+
+  .trust-commitment-col-body {
+    font-size: 7.16229px;
+    line-height: 9px;
+    font-weight: 500;
+    text-align: center;
+    color: #999999;
+  }
+
+  /* ── PRIVACY, COMPLIANCE & TECHNICAL CONTACTS ── */
+  .trust-privacy-title {
+    position: static;
+    width: 100%;
+    max-width: 304px;
+    height: auto;
+    order: 15;
+    margin: 32px 0 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+  }
+
+  [data-theme="dark"] .trust-privacy-title {
+    color: #ffffff;
+  }
+
+  .trust-privacy-desc {
+    position: static;
+    width: 100%;
+    max-width: 361px;
+    height: auto;
+    order: 16;
+    margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  [data-theme="dark"] .trust-privacy-desc {
+    color: #ffffff;
+  }
+
+  .trust-contacts-table {
+    position: static;
+    width: 100%;
+    left: auto;
+    order: 17;
+    margin: 24px 0 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    gap: 24px;
+  }
+
+  .trust-contacts-header {
+    display: none;
+  }
+
+  .trust-contacts-divider {
+    display: none;
+  }
+
+  .trust-contacts-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 4px;
+  }
+
+  .trust-contacts-col {
+    padding: 0;
+    width: 100%;
+  }
+
+  .trust-contacts-col-1 {
+    width: 100%;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  [data-theme="dark"] .trust-contacts-col-1 {
+    color: #ffffff;
+  }
+
+  .trust-contacts-col-2 {
+    width: 100%;
+    padding-left: 15px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .trust-contacts-col-3 {
+    width: 100%;
+    padding-left: 15px;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    color: #000000;
+  }
+
+  [data-theme="dark"] .trust-contacts-col-3 {
+    color: #ffffff;
+  }
+
+  .trust-contacts-email {
+    color: #ff0000;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .nexgn-hero-ribbon {
+    display: none !important;
+  }
+
+  .trust-footer-wrapper {
+    order: 18;
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+
+/* ============================================
+   TABLET VIEW (769px – 1179px)
+   Same absolute layout as desktop, scaled continuously
+   to fit the viewport width — no overflow, no cutoff
+   ============================================ */
+@media (min-width: 769px) and (max-width: 1179px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .trust-page-wrapper {
+    --tp-scale: calc(100vw / 1440px);
+    width: 1440px;
+    height: calc(4200px * var(--tp-scale));
+    min-height: 0;
+    transform: scale(var(--tp-scale));
+    transform-origin: top left;
+    overflow: visible;
+  }
 }

@@ -1225,21 +1225,21 @@ function FooterSection({ dark }) {
         <div className="footer__links">
           <div className="footer__col">
             <h4>Company</h4>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Blog</a>
+            <a href="/about">About Us</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/blog">Blog</a>
           </div>
           <div className="footer__col">
             <h4>Resources</h4>
-            <a href="#">Help center</a>
+            <a href="/help">Help center</a>
             <a href="#">System Status</a>
-            <a href="#">Security</a>
+            <a href="/security">Security</a>
           </div>
           <div className="footer__col">
             <h4>Legal &amp; Trust</h4>
-            <a href="#">Trust &amp; Compliance</a>
+            <a href="/security">Trust &amp; Compliance</a>
             <a href="/privacy">Privacy Policy</a>
-            <a href="#">Terms &amp; Services</a>
+            <a href="/term">Terms &amp; Services</a>
           </div>
         </div>
       </div>

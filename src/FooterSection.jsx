@@ -100,7 +100,7 @@ export default function FooterSection({ dark }) {
           </div>
           <div className="footer__col">
             <h4>Legal &amp; Trust</h4>
-            <a href="#">Trust &amp; Compliance</a>
+            <a href="/security">Trust &amp; Compliance</a>
             <a href="/privacy">Privacy Policy</a>
             <a href="term">Terms &amp; Services</a>
           </div>

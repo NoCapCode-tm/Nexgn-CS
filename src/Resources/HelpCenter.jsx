@@ -5,7 +5,6 @@ import ribbonBgDark from "../assets/helpcenter-dark-ribbon.png";
 import headsetImg from "../assets/headset.png";
 import heroBannerImg from "../assets/HelpCenter.png";
 import heroBannerDark from "../assets/dark-helpcenter.png";
-import darkBgImg from "../assets/dark-bg-helpcenter.jpg";
 import darkHeadsetImg from "../assets/dark-headset.png";
 import FooterSection from "../FooterSection";
 
@@ -325,67 +324,52 @@ function Navbar({ dark, setDark }) {
           <span className="navbar__logo-sub">Smart Signing</span>
         </div>
       </div>
-      <div className="navbar__links">
-        <a href="#" className="navbar__link">
-          Home
-        </a>
-        <a href="#" className="navbar__link">
-          Product
-        </a>
-        <a href="#" className="navbar__link">
-          Pricing
-        </a>
-      </div>
-      <div className="navbar__actions">
-        <a href="#" className="navbar__login">
-          Log in
-        </a>
-        <button
-          className="navbar__theme-toggle"
-          onClick={() => setDark(!dark)}
-          aria-label="Toggle dark mode"
-        >
-          {dark ? (
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <circle cx="12" cy="12" r="5" />
-              <line x1="12" y1="1" x2="12" y2="3" />
-              <line x1="12" y1="21" x2="12" y2="23" />
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-              <line x1="1" y1="12" x2="3" y2="12" />
-              <line x1="21" y1="12" x2="23" y2="12" />
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-            </svg>
-          ) : (
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-            </svg>
-          )}
-        </button>
-        <button className="navbar__cta">Get Started</button>
-      </div>
+      <button
+        className="navbar__theme-toggle"
+        onClick={() => setDark(!dark)}
+        aria-label="Toggle dark mode"
+      >
+        {dark ? (
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        ) : (
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        )}
+      </button>
     </nav>
   );
 }
 
 export default function HelpCenter() {
   const [dark, setDark] = useState(
-    () => window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+    () =>
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches,
   );
   const [activeCategory, setActiveCategory] = useState(0);
   const [openSection, setOpenSection] = useState(0);
@@ -477,13 +461,6 @@ export default function HelpCenter() {
           </div>
         </div>
       </div>
-
-      {/* ── FAQ + LOWER SECTION BG ── */}
-      {dark && (
-        <div className="nexgn-dark-lower-bg">
-          <img src={darkBgImg} alt="" aria-hidden="true" />
-        </div>
-      )}
 
       {/* ── FAQ SECTION ── */}
       <section className="nexgn-faq">

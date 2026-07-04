@@ -1,11 +1,12 @@
-
 .notfound-page {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #f5f5f7;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
   padding: 24px;
   box-sizing: border-box;
 }
@@ -19,7 +20,6 @@
   align-items: center;
   gap: 0;
 }
-
 
 .notfound-graphic {
   width: 100%;
@@ -36,7 +36,6 @@
   overflow: hidden;
 }
 
-
 .notfound-content {
   display: flex;
   flex-direction: column;
@@ -44,7 +43,6 @@
   gap: 10px;
   text-align: center;
 }
-
 
 .notfound-title {
   font-size: 22px;
@@ -55,7 +53,6 @@
   line-height: 1.3;
 }
 
-
 .notfound-subtitle {
   font-size: 14px;
   color: #666666;
@@ -64,14 +61,12 @@
   font-style: italic;
 }
 
-
 .notfound-spinner {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 6px 0;
 }
-
 
 .spinner-ring {
   width: 36px;
@@ -88,7 +83,6 @@
   }
 }
 
-
 .notfound-btn {
   display: inline-block;
   margin-top: 8px;
@@ -100,7 +94,9 @@
   text-decoration: none;
   border-radius: 8px;
   letter-spacing: 0.2px;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
   cursor: pointer;
 }
 
@@ -119,7 +115,6 @@
   outline-offset: 3px;
 }
 
-
 @media (max-width: 768px) {
   .notfound-container {
     padding: 36px 28px 44px;
@@ -134,7 +129,6 @@
     font-size: 13px;
   }
 }
-
 
 @media (max-width: 480px) {
   .notfound-page {
@@ -161,7 +155,6 @@
     font-size: 14px;
   }
 }
-
 
 @media (prefers-reduced-motion: reduce) {
   .spinner-ring {
