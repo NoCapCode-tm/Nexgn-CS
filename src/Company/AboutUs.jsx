@@ -6,74 +6,81 @@ import globeImage from "../assets/globe-image.png";
 import globeImageDark from "../assets/aboutus-bg-dark.png";
 import promiseShield from "../assets/promise-shield.png";
 import promiseShieldDark from "../assets/aboutus-dark-promise.png";
-import darkBgImg from "../assets/dark-bg-helpcenter.jpg";
 import FooterSection from "../FooterSection";
+
+function Navbar({ dark, setDark }) {
+  return (
+    <nav className="navbar">
+      <div className="navbar__brand">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <path
+            d="M36.499 0C40.3359 0 43.4463 3.11041 43.4463 6.94727V36.499C43.4463 36.6885 43.4358 36.8759 43.4209 37.0615L32.6826 26.5566C31.3112 25.2156 29.0995 25.2276 27.7432 26.584L25.5107 28.8174C24.1546 30.1738 24.1663 32.3607 25.5371 33.7021L35.498 43.4463H7.1543L34.7979 16.4053C36.169 15.0637 36.1807 12.877 34.8242 11.5205L32.5918 9.28711C31.2353 7.93089 29.0237 7.91858 27.6523 9.25977L0 36.3096V7.89941L10.7188 18.3857C12.0901 19.727 14.3017 19.7147 15.6582 18.3584L17.8906 16.125C19.2471 14.7685 19.2355 12.5818 17.8643 11.2402L6.39746 0.0234375C6.57891 0.00922816 6.76217 0 6.94727 0H36.499Z"
+            fill="#E22A2A"
+          />
+        </svg>
+        <div className="navbar__logo-text">
+          <span className="navbar__logo-name">Nexgn</span>
+          <span className="navbar__logo-sub">Smart Signing</span>
+        </div>
+      </div>
+      <button
+        className="navbar__theme-toggle"
+        onClick={() => setDark(!dark)}
+        aria-label="Toggle dark mode"
+      >
+        {dark ? (
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        ) : (
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        )}
+      </button>
+    </nav>
+  );
+}
 
 export default function AboutUs() {
   const [dark, setDark] = useState(
-    () => window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+    () =>
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches,
   );
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    document.documentElement.setAttribute(
+      "data-theme",
+      dark ? "dark" : "light",
+    );
   }, [dark]);
 
   return (
     <div className="nexgn-page-wrapper">
-      <nav className="navbar">
-        <div className="navbar__brand">
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-            <path
-              d="M36.499 0C40.3359 0 43.4463 3.11041 43.4463 6.94727V36.499C43.4463 36.6885 43.4358 36.8759 43.4209 37.0615L32.6826 26.5566C31.3112 25.2156 29.0995 25.2276 27.7432 26.584L25.5107 28.8174C24.1546 30.1738 24.1663 32.3607 25.5371 33.7021L35.498 43.4463H7.1543L34.7979 16.4053C36.169 15.0637 36.1807 12.877 34.8242 11.5205L32.5918 9.28711C31.2353 7.93089 29.0237 7.91858 27.6523 9.25977L0 36.3096V7.89941L10.7188 18.3857C12.0901 19.727 14.3017 19.7147 15.6582 18.3584L17.8906 16.125C19.2471 14.7685 19.2355 12.5818 17.8643 11.2402L6.39746 0.0234375C6.57891 0.00922816 6.76217 0 6.94727 0H36.499Z"
-              fill="#E22A2A"
-            />
-          </svg>
-          <div className="navbar__logo-text">
-            <span className="navbar__logo-name">Nexgn</span>
-            <span className="navbar__logo-sub">Smart Signing</span>
-          </div>
-        </div>
-        <div className="navbar__links">
-          <a href="#" className="navbar__link">
-            Home
-          </a>
-          <a href="#" className="navbar__link">
-            Product
-          </a>
-          <a href="#" className="navbar__link">
-            Pricing
-          </a>
-        </div>
-        <div className="navbar__actions">
-          <a href="#" className="navbar__login">
-            Log in
-          </a>
-          <button
-            className="navbar__theme-toggle"
-            onClick={() => setDark(!dark)}
-            aria-label="Toggle dark mode"
-          >
-            {dark ? (
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="5" />
-                <line x1="12" y1="1" x2="12" y2="3" />
-                <line x1="12" y1="21" x2="12" y2="23" />
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                <line x1="1" y1="12" x2="3" y2="12" />
-                <line x1="21" y1="12" x2="23" y2="12" />
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-              </svg>
-            ) : (
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-            )}
-          </button>
-          <button className="navbar__cta">Get Started</button>
-        </div>
-      </nav>
+      <Navbar dark={dark} setDark={setDark} />
 
       {/* ── RIBBON ── */}
       <img
@@ -120,18 +127,11 @@ export default function AboutUs() {
       </p>
 
       {/* ── HERO GLOBE IMAGE ── */}
-     <img
+      <img
         src={dark ? globeImageDark : globeImage}
         alt="Nexgn global security globe"
         className="nexgn-hero-globe"
       />
-
-  {/* ── CORE VALUES BG ── */}
-      {dark && (
-        <div className="nexgn-core-values-bg-section">
-          <img src={darkBgImg} alt="" aria-hidden="true" />
-        </div>
-      )}
 
       {/* ── CORE VALUES LABEL ── */}
       <span className="nexgn-core-values-label">Our Core Values</span>
@@ -245,11 +245,9 @@ export default function AboutUs() {
         </p>
       </div>
 
-      
-
-     {/* ── OUR PROMISE BANNER ── */}
+      {/* ── OUR PROMISE BANNER ── */}
       <div className="nexgn-promise-banner">
-       <img
+        <img
           src={dark ? promiseShieldDark : promiseShield}
           alt="Our Promise shield"
           className="nexgn-promise-image"
@@ -262,7 +260,7 @@ export default function AboutUs() {
             digital world.
           </p>
         </div>
-</div>
+      </div>
 
       {/* ── CORE VALUES CARD 3 ── */}
       <div className="nexgn-core-card nexgn-core-card--3">
@@ -305,16 +303,11 @@ export default function AboutUs() {
           your business takes you.
         </p>
       </div>
+      {/* ── CONTENT HEIGHT SPACER ── */}
+      <div className="nexgn-content-spacer" />
+
       {/* ── FOOTER ── */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          zIndex: 2,
-        }}
-      >
+      <div style={{ position: "relative", zIndex: 2 }}>
         <FooterSection dark={dark} />
       </div>
     </div>

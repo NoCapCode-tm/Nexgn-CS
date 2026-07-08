@@ -16,10 +16,18 @@
   box-sizing: border-box;
 }
 
-/* ── PAGE WRAPPER ── */
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .privacy-page-wrapper {
   position: relative;
-  min-height: 3480px;
+  min-height: 2900px;
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
+  padding-bottom: 1px;
 }
 
 /* ── HEADER ── */
@@ -55,6 +63,11 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 20;
+}
+
+.nexgn-body-text-mobile-below {
+  display: none;
+  position: absolute;
 }
 
 .nexgn-header-svg {
@@ -101,39 +114,6 @@
     rgba(249, 245, 247, 0.85) 0%,
     rgba(249, 245, 247, 0) 100%
   );
-}
-
-@media (min-width: 768px) and (max-width: 1100px) {
-  .navbar {
-    height: 42px;
-    padding: 0 32px;
-  }
-  .navbar__brand svg {
-    width: 29px;
-    height: 29px;
-  }
-  .navbar__logo-name {
-    font-size: 23px;
-  }
-  .navbar__logo-sub {
-    font-size: 7px;
-  }
-  .navbar__links {
-    gap: 24px;
-  }
-  .navbar__link {
-    font-size: 12px;
-  }
-  .navbar__login {
-    font-size: 12px;
-  }
-  .navbar__cta {
-    width: 90px;
-    height: 34px;
-    font-size: 11px;
-    border-radius: 6px;
-    padding: 7px;
-  }
 }
 
 .navbar__brand {
@@ -237,6 +217,7 @@
   left: 600px;
   top: 0;
   object-fit: contain;
+  object-position: center;
   z-index: 2;
 }
 
@@ -487,39 +468,6 @@
   z-index: 2;
 }
 
-@media (min-width: 768px) and (max-width: 1100px) {
-  .privacy-page-wrapper {
-    min-height: 3480px;
-    padding-bottom: 0;
-    overflow-x: hidden;
-  }
-
-  .nexgn-eyebrow {
-    left: 52px !important;
-    top: 154px !important;
-    font-size: 10px !important;
-    width: 93px !important;
-    line-height: 12px !important;
-  }
-
-  .privacy-hero-title {
-    left: 52px !important;
-    top: 179px !important;
-    font-size: 26px !important;
-    line-height: 31px !important;
-    width: 275px !important;
-    height: auto !important;
-  }
-
-  .nexgn-body-text {
-    left: 52px !important;
-    top: 256px !important;
-    width: 355px !important;
-    font-size: 14px !important;
-    line-height: 17px !important;
-  }
-}
-
 /* ── DATA SHARING LIST ── */
 .nexgn-sharing-list {
   position: absolute;
@@ -612,4 +560,535 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #dc2626;
+}
+
+.navbar__theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.navbar__theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+[data-theme="dark"] .navbar {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+[data-theme="dark"] .navbar__logo-name {
+  color: #fff;
+}
+[data-theme="dark"] .navbar__logo-sub {
+  color: #aaa;
+}
+[data-theme="dark"] .navbar__link {
+  color: #ccc;
+}
+[data-theme="dark"] .navbar__login {
+  color: #ccc;
+}
+[data-theme="dark"] .navbar__theme-toggle {
+  color: #fff;
+}
+[data-theme="dark"] .navbar__theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+[data-theme="dark"] .privacy-page-wrapper {
+  background: #000;
+}
+[data-theme="dark"] body {
+  background: #000 !important;
+}
+
+[data-theme="dark"] .nexgn-hero-ribbon {
+  opacity: 1;
+  z-index: 1;
+}
+
+[data-theme="dark"] .privacy-hero-title {
+  color: #ffffff;
+  z-index: 3;
+}
+
+[data-theme="dark"] .nexgn-body-text {
+  color: #999999;
+}
+
+[data-theme="dark"] .nexgn-eyebrow {
+  color: #e8334a;
+  z-index: 3;
+}
+
+[data-theme="dark"] .nexgn-hero-illustration {
+  opacity: 0.8;
+  z-index: 3;
+  transform: scale(0.55) translateY(-15px);
+  transform-origin: center;
+}
+
+[data-theme="dark"] .nexgn-info-title,
+[data-theme="dark"] .nexgn-info-desc,
+[data-theme="dark"] .nexgn-data-text,
+[data-theme="dark"] .nexgn-sharing-title,
+[data-theme="dark"] .nexgn-sharing-desc,
+[data-theme="dark"] .nexgn-retention-text,
+[data-theme="dark"] .nexgn-privacy-rights-title,
+[data-theme="dark"] .nexgn-privacy-rights-desc,
+[data-theme="dark"] .nexgn-right-card-title,
+[data-theme="dark"] .nexgn-right-card-desc,
+[data-theme="dark"] .nexgn-contact-label,
+[data-theme="dark"] .nexgn-contact-email {
+  color: #999999;
+}
+[data-theme="dark"] .nexgn-sharing-item svg path,
+[data-theme="dark"] .nexgn-sharing-item svg circle {
+  stroke: #d70506;
+}
+
+.nexgn-info-icon-wrap svg path {
+  stroke: #000000 !important;
+}
+[data-theme="dark"] .nexgn-info-icon-wrap svg path {
+  stroke: #ffffff !important;
+}
+[data-theme="dark"] .nexgn-info-icon-wrap {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(185, 39, 39, 0.08);
+}
+
+[data-theme="dark"] .nexgn-right-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+[data-theme="dark"] .nexgn-right-card-title,
+[data-theme="dark"] .nexgn-right-card-desc {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .nexgn-contact-banner {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+[data-theme="dark"] .nexgn-contact-banner svg path {
+  stroke: #ffffff;
+}
+
+.footer {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 60px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 60px);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MEDIA QUERIES (all responsive overrides below)
+   ══════════════════════════════════════════════════════════════ */
+
+@media (min-width: 1180px) {
+  body {
+    min-width: 1440px;
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .navbar {
+    height: 42px;
+    padding: 0 32px;
+  }
+  .navbar__brand svg {
+    width: 29px;
+    height: 29px;
+  }
+  .navbar__logo-name {
+    font-size: 23px;
+  }
+  .navbar__logo-sub {
+    font-size: 7px;
+  }
+  .navbar__links {
+    gap: 24px;
+  }
+  .navbar__link {
+    font-size: 12px;
+  }
+  .navbar__login {
+    font-size: 12px;
+  }
+  .navbar__cta {
+    width: 90px;
+    height: 34px;
+    font-size: 11px;
+    border-radius: 6px;
+    padding: 7px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1179px) {
+  html,
+  body {
+    min-width: 769px;
+    background: white;
+    overflow-x: hidden;
+  }
+
+  .privacy-page-wrapper {
+    width: 1440px;
+    min-width: 1440px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: none;
+    overflow: hidden;
+    zoom: var(--page-zoom, 1);
+  }
+
+  .nexgn-hero-ribbon {
+    zoom: var(--page-zoom, 1);
+    transform-origin: top left;
+  }
+}
+
+@media (max-width: 767px) {
+  html,
+  body {
+    background: white;
+    min-width: unset;
+    overflow-x: hidden;
+  }
+
+  .privacy-page-wrapper {
+    width: 390px;
+    min-width: 390px;
+    min-height: unset;
+    height: auto;
+    margin: 0 auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    overflow: hidden;
+    zoom: var(--page-zoom, 1);
+  }
+
+  .navbar {
+    padding: 0 14px;
+    height: 64px;
+    background: linear-gradient(
+      to bottom,
+      rgba(249, 245, 247, 0.95) 0%,
+      rgba(249, 245, 247, 0.95) 100%
+    );
+  }
+
+  .navbar__links {
+    display: none !important;
+  }
+
+  .navbar__actions {
+    display: flex !important;
+    gap: 0;
+  }
+
+  .navbar__login {
+    display: none !important;
+  }
+
+  .navbar__cta {
+    display: none !important;
+  }
+
+  .navbar__logo-name {
+    font-size: 32px;
+  }
+
+  .navbar__logo-sub {
+    font-size: 9px;
+  }
+
+  /* ── HERO ── */
+  .nexgn-eyebrow {
+    position: static !important;
+    font-size: 11px !important;
+    line-height: 13px !important;
+    letter-spacing: 0.15em !important;
+    width: auto !important;
+    white-space: nowrap !important;
+    margin: 90px 22px 0 !important;
+    order: -4;
+  }
+
+  .privacy-hero-title {
+    position: static !important;
+    font-size: 20px !important;
+    line-height: 24px !important;
+    font-weight: 700 !important;
+    width: calc(100% - 44px) !important;
+    height: auto !important;
+    white-space: normal !important;
+    margin: 8px 22px 0 !important;
+    order: -3;
+  }
+
+  .nexgn-body-text {
+    display: none !important;
+  }
+
+  .nexgn-hero-illustration {
+    position: static !important;
+    width: calc(100% - 32px) !important;
+    height: 245px !important;
+    object-fit: contain !important;
+    z-index: 10 !important;
+    margin: 16px 16px 0 !important;
+    order: -2;
+  }
+
+  .nexgn-body-text-mobile-below {
+    display: block !important;
+    position: static !important;
+    width: calc(100% - 44px) !important;
+    margin: 16px 22px 0 !important;
+    font-size: 11px !important;
+    line-height: 13px !important;
+    font-weight: 500 !important;
+    color: #666666 !important;
+    order: -1;
+  }
+
+  .nexgn-hero-ribbon {
+    display: none !important;
+  }
+
+  /* ══ MOBILE FLUID FLOW — order controls visual sequence, not DOM order ══ */
+
+  .nexgn-info-section,
+  .nexgn-privacy-rights-section,
+  .nexgn-data-list,
+  .nexgn-usage-list,
+  .nexgn-sharing-list,
+  .nexgn-retention-body,
+  .nexgn-right-card,
+  .nexgn-right-card--erasure,
+  .nexgn-right-card--rectification,
+  .nexgn-contact-banner {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  .nexgn-info-section,
+  .nexgn-privacy-rights-section {
+    width: 345px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 22px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+  }
+
+  .nexgn-info-icon-wrap {
+    position: static !important;
+    width: 41.19px !important;
+    height: 40px !important;
+    flex-shrink: 0 !important;
+    border-radius: 5.15625px !important;
+  }
+
+  .nexgn-info-icon-wrap svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .nexgn-info-content {
+    position: static !important;
+    width: auto !important;
+    flex: 1 !important;
+  }
+
+  .nexgn-info-title,
+  .nexgn-privacy-rights-title {
+    width: auto !important;
+    font-size: 14px !important;
+    line-height: 17px !important;
+  }
+
+  .nexgn-info-desc,
+  .nexgn-privacy-rights-desc {
+    width: 100% !important;
+    font-size: 12px !important;
+    line-height: 15px !important;
+    font-weight: 500 !important;
+    margin-top: 4px !important;
+  }
+  .nexgn-info-section .nexgn-info-desc {
+    font-size: 11px !important;
+    line-height: 13px !important;
+  }
+
+  .nexgn-data-list,
+  .nexgn-usage-list,
+  .nexgn-sharing-list,
+  .nexgn-retention-body {
+    width: calc(100% - 44px) !important;
+    max-width: 309px !important;
+    margin: 12px 22px 0 78px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .nexgn-data-list .nexgn-data-text,
+  .nexgn-usage-list .nexgn-data-text {
+    width: 100% !important;
+    font-size: 10px !important;
+    line-height: 14px !important;
+  }
+  .nexgn-data-list .nexgn-data-text {
+    font-weight: 600 !important;
+  }
+  .nexgn-usage-list .nexgn-data-text {
+    font-weight: 500 !important;
+  }
+
+  .nexgn-sharing-list {
+    margin: 12px 22px 0 78px !important;
+    gap: 16px !important;
+  }
+  .nexgn-sharing-list .nexgn-sharing-item svg {
+    width: 16.12px !important;
+    height: 16.12px !important;
+    min-width: 16.12px !important;
+  }
+  .nexgn-sharing-list .nexgn-sharing-title {
+    font-size: 11px !important;
+    line-height: 13px !important;
+  }
+  .nexgn-sharing-list .nexgn-sharing-desc {
+    width: 100% !important;
+    font-size: 10px !important;
+    line-height: 14px !important;
+    font-weight: 500 !important;
+  }
+
+  .nexgn-retention-body .nexgn-retention-text {
+    width: 100% !important;
+    margin-left: 0 !important;
+    font-size: 10px !important;
+    line-height: 14px !important;
+    font-weight: 500 !important;
+  }
+
+  .nexgn-right-card,
+  .nexgn-right-card--erasure,
+  .nexgn-right-card--rectification {
+    width: calc(100% - 44px) !important;
+    max-width: 345px !important;
+    height: auto !important;
+    margin: 0 auto 12px !important;
+    padding: 14px !important;
+    gap: 10px !important;
+    border-radius: 10px !important;
+  }
+  .nexgn-right-card svg,
+  .nexgn-right-card--erasure svg,
+  .nexgn-right-card--rectification svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .nexgn-right-card-title {
+    width: 100% !important;
+    font-size: 13px !important;
+    line-height: 16px !important;
+  }
+  .nexgn-right-card-desc {
+    width: 100% !important;
+    font-size: 11px !important;
+    line-height: 14px !important;
+    color: #666666 !important;
+  }
+
+  .nexgn-contact-banner {
+    width: calc(100% - 44px) !important;
+    max-width: 345px !important;
+    height: auto !important;
+    margin: 12px auto 0 !important;
+    padding: 14px !important;
+    gap: 12px !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+
+  .nexgn-contact-banner svg {
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .nexgn-contact-label {
+    font-size: 10px !important;
+    line-height: 13px !important;
+  }
+
+  .nexgn-contact-email {
+    font-size: 13px !important;
+    line-height: 16px !important;
+  }
+
+  /* ── VISUAL ORDER (overrides DOM order, since this is now flex flow) ── */
+  .nexgn-info-section {
+    order: 1;
+    margin-top: 32px !important;
+  }
+  .nexgn-data-list {
+    order: 2;
+  }
+  .nexgn-info-section--how-we-use {
+    order: 3;
+    margin-top: 32px !important;
+  }
+  .nexgn-usage-list {
+    order: 4;
+  }
+  .nexgn-info-section--data-sharing {
+    order: 5;
+    margin-top: 32px !important;
+  }
+  .nexgn-sharing-list {
+    order: 6;
+  }
+  .nexgn-info-section--data-retention {
+    order: 7;
+    margin-top: 32px !important;
+  }
+  .nexgn-retention-body {
+    order: 8;
+  }
+  .nexgn-privacy-rights-section {
+    order: 9;
+    margin-top: 32px !important;
+  }
+  .nexgn-right-card {
+    order: 10;
+    margin-top: 16px !important;
+  }
+  .nexgn-right-card--erasure {
+    order: 11;
+  }
+  .nexgn-right-card--rectification {
+    order: 12;
+  }
+  .nexgn-contact-banner {
+    order: 13;
+  }
 }

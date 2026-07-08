@@ -3,7 +3,17 @@
 /* ── PAGE WRAPPER ── */
 .terms-page-wrapper {
   position: relative;
-  min-height: 3950px;
+  height: 3300px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 :root {
@@ -22,6 +32,17 @@
 }
 
 /* ── RIBBON ── */
+.nexgn-hero-ribbon-clip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1120px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .nexgn-hero-ribbon {
   position: absolute;
   width: 1100px;
@@ -59,6 +80,10 @@
   left: 123px;
   top: 280px;
   z-index: 2;
+}
+
+.nexgn-terms-title-text {
+  display: none;
 }
 
 .nexgn-terms-subtitle {
@@ -545,4 +570,694 @@
 }
 .navbar__cta:hover {
   opacity: 0.9;
+}
+
+.nexgn-terms-title-text {
+  display: none;
+}
+
+.navbar__theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.navbar__theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+[data-theme="dark"] .navbar {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+[data-theme="dark"] .navbar__logo-name {
+  color: #fff;
+}
+[data-theme="dark"] .navbar__logo-sub {
+  color: #aaa;
+}
+[data-theme="dark"] .navbar__link {
+  color: #ccc;
+}
+[data-theme="dark"] .navbar__login {
+  color: #ccc;
+}
+[data-theme="dark"] .navbar__theme-toggle {
+  color: #fff;
+}
+[data-theme="dark"] .navbar__theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+[data-theme="dark"] .terms-page-wrapper {
+  background: #000;
+}
+[data-theme="dark"] .nexgn-terms-heading {
+  color: #e8334a;
+}
+[data-theme="dark"] .nexgn-terms-title path {
+  fill: #fff;
+}
+[data-theme="dark"] .nexgn-terms-subtitle {
+  color: #aaa;
+}
+[data-theme="dark"] .nexgn-terms-content-text {
+  color: #ccc;
+}
+[data-theme="dark"] .nexgn-terms-section-label {
+  color: #fff;
+}
+[data-theme="dark"] .nexgn-terms-section-icon {
+  background: #1a1a1a;
+}
+[data-theme="dark"] .nexgn-terms-hero-img {
+  -webkit-mask-image: radial-gradient(
+    ellipse 75% 75% at center,
+    black 40%,
+    transparent 75%
+  );
+  mask-image: radial-gradient(
+    ellipse 75% 75% at center,
+    black 40%,
+    transparent 75%
+  );
+}
+
+[data-theme="dark"] .nexgn-terms-section-icon {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .nexgn-terms-aup-warning {
+  background: rgba(201, 50, 50, 0.12);
+  border: 1px solid rgba(215, 5, 6, 0.3);
+  border-radius: 12px;
+}
+
+[data-theme="dark"] .nexgn-terms-content-text,
+[data-theme="dark"] .nexgn-terms-sla-text,
+[data-theme="dark"] .nexgn-terms-disclaimer-text {
+  color: #999999;
+}
+
+[data-theme="dark"] .nexgn-terms-contact-label {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .nexgn-terms-contact-item svg path {
+  stroke: #ffffff;
+}
+[data-theme="dark"] .terms-page-wrapper {
+  background: #000 !important;
+}
+
+[data-theme="dark"] html,
+[data-theme="dark"] body {
+  background: #000 !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+[data-theme="dark"] body {
+  background: #000 !important;
+}
+
+.footer {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 60px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 60px);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MEDIA QUERIES (all responsive overrides below)
+   ══════════════════════════════════════════════════════════════ */
+
+@media (min-width: 1180px) {
+  .terms-page-wrapper {
+    min-width: 1440px;
+    width: 1440px;
+    zoom: var(--page-zoom, 1);
+  }
+}
+
+@media (min-width: 1180px) {
+  body {
+    min-width: 1440px;
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1179px) {
+  html,
+  body {
+    min-width: 769px;
+    background: white;
+    overflow-x: hidden;
+  }
+
+  .terms-page-wrapper {
+    width: 832px;
+    min-width: 832px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: none;
+    overflow: hidden;
+    zoom: var(--page-zoom, 1);
+  }
+
+  /* ── NAVBAR ── */
+  .navbar {
+    padding: 0 40px;
+    height: 56px;
+  }
+  .navbar__logo-name {
+    font-size: 24px;
+  }
+  .navbar__logo-sub {
+    font-size: 7px;
+  }
+  .navbar__brand svg {
+    width: 32px;
+    height: 32px;
+  }
+  .navbar__cta {
+    width: 100px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  /* ── HERO ── */
+  .nexgn-terms-heading {
+    left: 40px !important;
+    top: 116px !important;
+    font-size: 10px !important;
+  }
+
+  .nexgn-terms-title {
+    left: 40px !important;
+    top: 162px !important;
+    width: 295px !important;
+    height: auto !important;
+  }
+
+  .nexgn-terms-subtitle {
+    left: 40px !important;
+    top: 272px !important;
+    width: 268px !important;
+    font-size: 11px !important;
+    line-height: 13px !important;
+  }
+
+  .nexgn-terms-hero-img {
+    width: 278px !important;
+    height: 243px !important;
+    left: 458px !important;
+    top: 91px !important;
+  }
+
+  /* ── SECTION ITEMS (left column) ── */
+  .nexgn-terms-section-item {
+    left: 40px !important;
+    top: 376px !important;
+    width: 220px !important;
+    height: 37px !important;
+    gap: 10px !important;
+  }
+
+  .nexgn-terms-section-icon {
+    width: 37px !important;
+    height: 37px !important;
+  }
+
+  .nexgn-terms-section-label {
+    font-size: 11px !important;
+    line-height: 13px !important;
+  }
+
+  .nexgn-terms-section-item--definitions {
+    top: 600px !important;
+  }
+  .nexgn-terms-section-item--account-reg {
+    top: 900px !important;
+  }
+  .nexgn-terms-section-item--aup {
+    top: 1200px !important;
+  }
+  .nexgn-terms-section-item--ip {
+    top: 1650px !important;
+  }
+  .nexgn-terms-section-item--sla {
+    top: 2000px !important;
+  }
+  .nexgn-terms-section-item--disclaimer {
+    top: 2200px !important;
+  }
+  .nexgn-terms-section-item--liability {
+    top: 2450px !important;
+  }
+  .nexgn-terms-section-item--suspension {
+    top: 2900px !important;
+  }
+  .nexgn-terms-section-item--modifications {
+    top: 3200px !important;
+  }
+  .nexgn-terms-section-item--contact {
+    top: 3450px !important;
+  }
+  /* ── CONTENT BLOCKS (right column) ── */
+  .nexgn-terms-content-block {
+    left: 310px !important;
+    top: 376px !important;
+    width: 490px !important;
+    height: auto !important;
+  }
+  .nexgn-terms-definitions-block {
+    left: 310px !important;
+    top: 600px !important;
+    width: 492px !important;
+  }
+
+  .nexgn-terms-account-block {
+    left: 310px !important;
+    top: 900px !important;
+    width: 492px !important;
+  }
+
+  .nexgn-terms-aup-block {
+    left: 310px !important;
+    top: 1200px !important;
+    width: 492px !important;
+  }
+
+  .nexgn-terms-aup-warning {
+    left: 310px !important;
+    top: 1500px !important;
+    width: 492px !important;
+  }
+
+  .nexgn-terms-ip-block {
+    left: 310px !important;
+    top: 1650px !important;
+    width: 492px !important;
+  }
+
+  .nexgn-terms-sla-block {
+    left: 310px !important;
+    top: 2000px !important;
+    width: 492px !important;
+  }
+
+  .nexgn-terms-disclaimer-block {
+    left: 310px !important;
+    top: 2200px !important;
+    width: 492px !important;
+  }
+
+  .nexgn-terms-liability-block {
+    left: 310px !important;
+    top: 2450px !important;
+    width: 492px !important;
+  }
+
+  .nexgn-terms-suspension-block {
+    left: 310px !important;
+    top: 2900px !important;
+    width: 492px !important;
+  }
+
+  .nexgn-terms-modifications-block {
+    left: 310px !important;
+    top: 3200px !important;
+    width: 492px !important;
+  }
+
+  .nexgn-terms-contact-block {
+    left: 310px !important;
+    top: 3450px !important;
+    width: 492px !important;
+  }
+  .nexgn-terms-content-text {
+    font-size: 12px !important;
+    line-height: 15px !important;
+  }
+
+  .nexgn-hero-ribbon {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html,
+  body {
+    background: white;
+    min-width: unset;
+    overflow-x: hidden;
+  }
+
+  .terms-page-wrapper {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    min-height: unset;
+    margin: 0 auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 22px 60px;
+  }
+
+  .nexgn-terms-heading {
+    position: static;
+    width: auto;
+    height: auto;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.15em;
+    color: #ea293a;
+    white-space: normal;
+    margin: 24px 0 0;
+    order: 1;
+  }
+
+  .nexgn-terms-title {
+    display: none !important;
+  }
+
+  .nexgn-terms-title-text {
+    display: block;
+    position: static;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 12px 0 0;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+    white-space: normal;
+    z-index: 2;
+    order: 2;
+  }
+
+  .nexgn-terms-subtitle {
+    position: static;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+    color: #000000;
+    margin: 12px 0 0;
+    z-index: 2;
+    order: 3;
+  }
+
+  .nexgn-terms-hero-img {
+    position: static;
+    width: 100%;
+    max-width: 274px;
+    height: auto;
+    margin: 24px auto 0;
+    object-fit: contain;
+    z-index: 2;
+    display: block;
+    order: 4;
+  }
+
+  .nexgn-terms-section-item {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 15.41px;
+    margin: 32px 0 0;
+    order: 5;
+  }
+
+  .nexgn-terms-section-icon {
+    width: 41.07px;
+    height: 40px;
+    border-radius: 5.15625px;
+    flex-shrink: 0;
+  }
+
+  .nexgn-terms-section-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .nexgn-terms-section-icon svg path {
+    stroke: #000000 !important;
+  }
+
+  [data-theme="dark"] .nexgn-terms-section-icon svg path {
+    stroke: #ffffff !important;
+  }
+
+  [data-theme="dark"] .nexgn-terms-section-icon {
+    border: 1px solid #ffffff05;
+  }
+
+  .nexgn-terms-section-label {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 600;
+    white-space: normal;
+  }
+
+  .nexgn-terms-content-block,
+  .nexgn-terms-definitions-block,
+  .nexgn-terms-account-block,
+  .nexgn-terms-aup-block,
+  .nexgn-terms-ip-block,
+  .nexgn-terms-sla-block,
+  .nexgn-terms-disclaimer-block,
+  .nexgn-terms-liability-block,
+  .nexgn-terms-suspension-block,
+  .nexgn-terms-modifications-block,
+  .nexgn-terms-contact-block {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding-left: 56px;
+    margin: 12px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 2;
+  }
+
+  .nexgn-terms-content-block .nexgn-terms-bullet,
+  .nexgn-terms-bullet {
+    display: none;
+  }
+
+  .nexgn-terms-content-text,
+  .nexgn-terms-sla-text,
+  .nexgn-terms-disclaimer-text,
+  .nexgn-terms-definitions-block .nexgn-terms-content-text,
+  .nexgn-terms-account-block .nexgn-terms-content-text,
+  .nexgn-terms-aup-block .nexgn-terms-content-text,
+  .nexgn-terms-ip-block .nexgn-terms-content-text,
+  .nexgn-terms-liability-block .nexgn-terms-content-text,
+  .nexgn-terms-suspension-block .nexgn-terms-content-text,
+  .nexgn-terms-modifications-block .nexgn-terms-content-text,
+  .nexgn-terms-contact-block .nexgn-terms-content-text {
+    font-size: 10px !important;
+    line-height: 14px !important;
+  }
+
+  .nexgn-terms-content-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .nexgn-terms-content-block {
+    order: 6;
+  }
+
+  /* ── DEFINITIONS ── */
+  .nexgn-terms-section-item--definitions {
+    order: 7;
+  }
+  .nexgn-terms-definitions-block {
+    order: 8;
+  }
+
+  /* ── ACCOUNT REGISTRATION ── */
+  .nexgn-terms-section-item--account-reg {
+    order: 9;
+  }
+  .nexgn-terms-account-block {
+    order: 10;
+  }
+
+  /* ── AUP ── */
+  .nexgn-terms-section-item--aup {
+    order: 11;
+  }
+  .nexgn-terms-aup-block {
+    order: 12;
+  }
+
+  .nexgn-terms-aup-warning {
+    position: static;
+    transform: none;
+    width: calc(100% - 56px);
+    margin: 16px 0 0 56px;
+    padding: 10px;
+    gap: 12px;
+    z-index: 2;
+    order: 13;
+  }
+  .nexgn-terms-aup-warning-text {
+    width: auto;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  /* ── INTELLECTUAL PROPERTY ── */
+  .nexgn-terms-section-item--ip {
+    order: 14;
+  }
+  .nexgn-terms-ip-block {
+    order: 15;
+  }
+
+  /* ── SERVICE AVAILABILITY / SLA ── */
+  .nexgn-terms-section-item--sla {
+    order: 16;
+  }
+  .nexgn-terms-sla-block {
+    left: auto;
+    top: auto;
+    width: 100%;
+    order: 17;
+  }
+  .nexgn-terms-sla-text {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  /* ── DISCLAIMER OF WARRANTIES ── */
+  .nexgn-terms-section-item--disclaimer {
+    order: 18;
+  }
+  .nexgn-terms-disclaimer-block {
+    left: auto;
+    top: auto;
+    width: 100%;
+    order: 19;
+  }
+  .nexgn-terms-disclaimer-text {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  /* ── LIMITATION OF LIABILITY ── */
+  .nexgn-terms-section-item--liability {
+    order: 20;
+  }
+  .nexgn-terms-liability-block {
+    left: auto;
+    top: auto;
+    width: 100%;
+    order: 21;
+  }
+
+  /* ── SUSPENSION AND TERMINATION ── */
+  .nexgn-terms-section-item--suspension {
+    order: 22;
+  }
+  .nexgn-terms-suspension-block {
+    order: 23;
+  }
+
+  /* ── MODIFICATIONS TO THE TERMS ── */
+  .nexgn-terms-section-item--modifications {
+    order: 24;
+  }
+  .nexgn-terms-modifications-block {
+    left: auto;
+    top: auto;
+    width: 100%;
+    order: 25;
+  }
+
+  /* ── CONTACT INFORMATION ── */
+  .nexgn-terms-section-item--contact {
+    order: 26;
+  }
+  .nexgn-terms-contact-block {
+    left: auto;
+    top: auto;
+    width: 100%;
+    position: static;
+    order: 27;
+  }
+  .nexgn-terms-contact-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nexgn-terms-contact-item {
+    width: 100%;
+  }
+  .nexgn-terms-contact-label,
+  .nexgn-terms-contact-link {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .navbar {
+    padding: 0 14px;
+    height: 64px;
+    background: linear-gradient(
+      to bottom,
+      rgba(249, 245, 247, 0.95) 0%,
+      rgba(249, 245, 247, 0.95) 100%
+    );
+  }
+
+  .navbar__links {
+    display: none !important;
+  }
+
+  .navbar__actions {
+    display: flex !important;
+    gap: 0;
+  }
+
+  .navbar__login {
+    display: none !important;
+  }
+
+  .navbar__cta {
+    display: none !important;
+  }
+
+  .nexgn-hero-ribbon {
+    display: none !important;
+  }
+
+  .footer {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 40px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40px);
+  }
 }
