@@ -6,7 +6,10 @@ import headsetImg from "../assets/headset.png";
 import heroBannerImg from "../assets/HelpCenter.png";
 import heroBannerDark from "../assets/dark-helpcenter.png";
 import darkHeadsetImg from "../assets/dark-headset.png";
-import FooterSection from "../FooterSection";
+
+/* ══════════════════════════════════════════════════════════════
+   DATA — sidebar categories + FAQ content
+   ══════════════════════════════════════════════════════════════ */
 
 const categories = [
   {
@@ -259,7 +262,6 @@ const faqs = [
       },
     ],
   },
-
   {
     title: "Enterprise, API & Customization",
     questions: [
@@ -308,6 +310,10 @@ const faqs = [
     ],
   },
 ];
+
+/* ══════════════════════════════════════════════════════════════
+   NAVBAR
+   ══════════════════════════════════════════════════════════════ */
 
 function Navbar({ dark, setDark }) {
   return (
@@ -365,27 +371,13 @@ function Navbar({ dark, setDark }) {
   );
 }
 
-export default function HelpCenter() {
-  const [dark, setDark] = useState(
-    () =>
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches,
-  );
-  const [activeCategory, setActiveCategory] = useState(0);
-  const [openSection, setOpenSection] = useState(0);
-  const [openQuestion, setOpenQuestion] = useState("0-0");
+/* ══════════════════════════════════════════════════════════════
+   HERO SECTION — ribbon bg, headline, search bar
+   ══════════════════════════════════════════════════════════════ */
 
-  useEffect(() => {
-    document.documentElement.setAttribute(
-      "data-theme",
-      dark ? "dark" : "light",
-    );
-  }, [dark]);
-
+function HeroSection({ dark }) {
   return (
-    <div className="nexgn-root">
-      <Navbar dark={dark} setDark={setDark} />
-      {/* ── RIBBON ── */}
+    <>
       <img
         src={dark ? ribbonBgDark : ribbonBg}
         alt=""
@@ -393,7 +385,6 @@ export default function HelpCenter() {
         aria-hidden="true"
       />
 
-      {/* ── HERO ── */}
       <div className="nexgn-hero-section">
         <img
           src={dark ? heroBannerDark : heroBannerImg}
@@ -420,11 +411,13 @@ export default function HelpCenter() {
           ) : (
             <span className="nexgn-hero-label">Help Center</span>
           )}
+
           <h1 className="nexgn-hero-title">
             Find answers.
             <br />
             Get things done.
           </h1>
+
           <p className="nexgn-hero-subtitle">
             Everything you need to know about Nexgn's platform, features,
             security, billing, and more.
@@ -461,137 +454,330 @@ export default function HelpCenter() {
           </div>
         </div>
       </div>
+    </>
+  );
+}
 
-      {/* ── FAQ SECTION ── */}
-      <section className="nexgn-faq">
-        <aside className="nexgn-faq__sidebar">
-          <p className="nexgn-faq__sidebar-label">Categories</p>
-          {categories.map((cat, i) => (
-            <div
-              key={i}
-              className={`nexgn-cat-item${activeCategory === i ? " nexgn-cat-item--active" : ""}`}
-              onClick={() => setActiveCategory(i)}
-            >
-              <div className="nexgn-cat-icon">{cat.icon}</div>
-              <span className="nexgn-cat-name">
-                {i + 1}. {cat.name}
-              </span>
-            </div>
-          ))}
-        </aside>
+/* ══════════════════════════════════════════════════════════════
+   FAQ SECTION — category sidebar + accordion
+   ══════════════════════════════════════════════════════════════ */
 
-        <div className="nexgn-faq__content">
-          {faqs.map((section, si) => (
-            <div
-              key={si}
-              className={`nexgn-acc-section${openSection === si ? " nexgn-acc-section--open" : ""}`}
-            >
-              <div
-                className="nexgn-acc-header"
-                onClick={() => setOpenSection(openSection === si ? null : si)}
-              >
-                <div className="nexgn-acc-header-left">
-                  <span className="nexgn-acc-num">{si + 1}</span>
-                  <span className="nexgn-acc-title">{section.title}</span>
-                </div>
-                <svg
-                  className="nexgn-acc-chevron"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <polyline points="18 15 12 9 6 15" />
-                </svg>
-              </div>
-              {openSection === si && (
-                <div className="nexgn-acc-body">
-                  {section.questions.map((qa, qi) => {
-                    const key = `${si}-${qi}`;
-                    return (
-                      <div
-                        key={qi}
-                        className={`nexgn-acc-qa${openQuestion === key ? " nexgn-acc-qa--open" : ""}`}
-                      >
-                        <div
-                          className="nexgn-acc-q"
-                          onClick={() =>
-                            setOpenQuestion(openQuestion === key ? null : key)
-                          }
-                        >
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                          >
-                            <polyline points="9 18 15 12 9 6" />
-                          </svg>
-                          <span className="nexgn-acc-q-text">{qa.q}</span>
-                        </div>
-                        {openQuestion === key && (
-                          <p className="nexgn-acc-answer">{qa.a}</p>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          ))}
+function FAQSidebar({ activeCategory, setActiveCategory }) {
+  return (
+    <aside className="nexgn-faq__sidebar">
+      <p className="nexgn-faq__sidebar-label">Categories</p>
+      {categories.map((cat, i) => (
+        <div
+          key={i}
+          className={`nexgn-cat-item${activeCategory === i ? " nexgn-cat-item--active" : ""}`}
+          onClick={() => setActiveCategory(i)}
+        >
+          <div className="nexgn-cat-icon">{cat.icon}</div>
+          <span className="nexgn-cat-name">
+            {i + 1}. {cat.name}
+          </span>
         </div>
-      </section>
+      ))}
+    </aside>
+  );
+}
 
-      {/* ── STILL NEED HELP BANNER ── */}
-      <section className="nexgn-help-banner">
-        <div className="nexgn-help-banner__image">
-          <img src={dark ? darkHeadsetImg : headsetImg} alt="Support headset" />
-        </div>
-        <div className="nexgn-help-banner__body">
-          <h2 className="nexgn-help-banner__title">Still need help?</h2>
-          <p className="nexgn-help-banner__desc">
-            Our team is here for you. Reach out and we'll get back to you as
-            soon as possible.
-          </p>
-          <div className="nexgn-help-banner__actions">
-            <button className="nexgn-help-btn nexgn-help-btn--primary">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-              Contact Support
-            </button>
-            <button className="nexgn-help-btn nexgn-help-btn--secondary">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-              </svg>
-              Visit Help Center
-            </button>
+function FAQAccordion({
+  openSection,
+  setOpenSection,
+  openQuestion,
+  setOpenQuestion,
+}) {
+  return (
+    <div className="nexgn-faq__content">
+      {faqs.map((section, si) => (
+        <div
+          key={si}
+          className={`nexgn-acc-section${openSection === si ? " nexgn-acc-section--open" : ""}`}
+        >
+          <div
+            className="nexgn-acc-header"
+            onClick={() => setOpenSection(openSection === si ? null : si)}
+          >
+            <div className="nexgn-acc-header-left">
+              <span className="nexgn-acc-num">{si + 1}</span>
+              <span className="nexgn-acc-title">{section.title}</span>
+            </div>
+            <svg
+              className="nexgn-acc-chevron"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <polyline points="18 15 12 9 6 15" />
+            </svg>
           </div>
-        </div>
-      </section>
 
-      {/* ── FOOTER ── */}
-      <div style={{ position: "relative", zIndex: 2 }}>
-        <FooterSection dark={dark} />
+          {openSection === si && (
+            <div className="nexgn-acc-body">
+              {section.questions.map((qa, qi) => {
+                const key = `${si}-${qi}`;
+                return (
+                  <div
+                    key={qi}
+                    className={`nexgn-acc-qa${openQuestion === key ? " nexgn-acc-qa--open" : ""}`}
+                  >
+                    <div
+                      className="nexgn-acc-q"
+                      onClick={() =>
+                        setOpenQuestion(openQuestion === key ? null : key)
+                      }
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
+                      <span className="nexgn-acc-q-text">{qa.q}</span>
+                    </div>
+                    {openQuestion === key && (
+                      <p className="nexgn-acc-answer">{qa.a}</p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function FAQSection({
+  activeCategory,
+  setActiveCategory,
+  openSection,
+  setOpenSection,
+  openQuestion,
+  setOpenQuestion,
+}) {
+  return (
+    <section className="nexgn-faq">
+      <FAQSidebar
+        activeCategory={activeCategory}
+        setActiveCategory={setActiveCategory}
+      />
+      <FAQAccordion
+        openSection={openSection}
+        setOpenSection={setOpenSection}
+        openQuestion={openQuestion}
+        setOpenQuestion={setOpenQuestion}
+      />
+    </section>
+  );
+}
+
+/* ══════════════════════════════════════════════════════════════
+   "STILL NEED HELP" BANNER
+   ══════════════════════════════════════════════════════════════ */
+
+function HelpBanner({ dark }) {
+  return (
+    <section className="nexgn-help-banner">
+      <div className="nexgn-help-banner__image">
+        <img src={dark ? darkHeadsetImg : headsetImg} alt="Support headset" />
       </div>
+      <div className="nexgn-help-banner__body">
+        <h2 className="nexgn-help-banner__title">Still need help?</h2>
+        <p className="nexgn-help-banner__desc">
+          Our team is here for you. Reach out and we'll get back to you as soon
+          as possible.
+        </p>
+        <div className="nexgn-help-banner__actions">
+          <button className="nexgn-help-btn nexgn-help-btn--primary">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            Contact Support
+          </button>
+          <button className="nexgn-help-btn nexgn-help-btn--secondary">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+            </svg>
+            Visit Help Center
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════════════════════════ */
+
+function FooterBrand({ dark }) {
+  return (
+    <div className="footer-brand">
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+          marginBottom: "17.78px",
+        }}
+      >
+        <svg width="36" height="36" viewBox="0 0 44 44" fill="none">
+          <path
+            d="M36.499 0C40.3359 0 43.4463 3.11041 43.4463 6.94727V36.499C43.4463 36.6885 43.4358 36.8759 43.4209 37.0615L32.6826 26.5566C31.3112 25.2156 29.0995 25.2276 27.7432 26.584L25.5107 28.8174C24.1546 30.1738 24.1663 32.3607 25.5371 33.7021L35.498 43.4463H7.1543L34.7979 16.4053C36.169 15.0637 36.1807 12.877 34.8242 11.5205L32.5918 9.28711C31.2353 7.93089 29.0237 7.91858 27.6523 9.25977L0 36.3096V7.89941L10.7188 18.3857C12.0901 19.727 14.3017 19.7147 15.6582 18.3584L17.8906 16.125C19.2471 14.7685 19.2355 12.5818 17.8643 11.2402L6.39746 0.0234375C6.57891 0.00922816 6.76217 0 6.94727 0H36.499Z"
+            fill="#E22A2A"
+          />
+        </svg>
+        <span
+          style={{
+            fontFamily: "MuseoModerno, sans-serif",
+            fontSize: "22px",
+            color: dark ? "#ffffff" : "#111111",
+          }}
+        >
+          Nexgn
+        </span>
+      </div>
+      <p className="footer-tagline">
+        The Next Generation of Document
+        <br />
+        Signature
+      </p>
+      <p className="footer-email">gateway@nexgn.cloud</p>
+      <div className="footer-socials">
+        <a href="#" className="social-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+        </a>
+        <a href="#" className="social-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+      </div>
+      <div className="footer-copyright">
+        ©️ 2026 Nexgn. All rights reserved.
+      </div>
+    </div>
+  );
+}
+
+function FooterLinks() {
+  return (
+    <div className="footer-links-container">
+      <div className="footer-link-column">
+        <h4>COMPANY</h4>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Blog</a>
+      </div>
+      <div className="footer-link-column">
+        <h4>RESOURCES</h4>
+        <a href="#">Help center</a>
+        <a href="#">System Status</a>
+        <a href="#">Security</a>
+      </div>
+      <div className="footer-link-column">
+        <h4>LEGAL &amp; TRUST</h4>
+        <a href="#">Trust &amp; Compliance</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Services</a>
+      </div>
+    </div>
+  );
+}
+
+function FooterWordmark() {
+  return (
+    <div className="footer-huge-text-wrapper">
+      <div className="footer-blurry-bg-container">
+        <div className="footer-blurry-bg"></div>
+      </div>
+      <div className="footer-huge-text-overlay">NEXGN</div>
+    </div>
+  );
+}
+
+function SiteFooter({ dark }) {
+  return (
+    <footer className="landing-footer">
+      <div className="footer-content">
+        <div className="footer-top">
+          <FooterBrand dark={dark} />
+          <FooterLinks />
+        </div>
+      </div>
+      <FooterWordmark />
+    </footer>
+  );
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PAGE — composes all sections
+   ══════════════════════════════════════════════════════════════ */
+
+export default function HelpCenter() {
+  // theme
+  const [dark, setDark] = useState(
+    () =>
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches,
+  );
+
+  // FAQ interaction state
+  const [activeCategory, setActiveCategory] = useState(0);
+  const [openSection, setOpenSection] = useState(0);
+  const [openQuestion, setOpenQuestion] = useState("0-0");
+
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      dark ? "dark" : "light",
+    );
+  }, [dark]);
+
+  return (
+    <div className="nexgn-root">
+      <Navbar dark={dark} setDark={setDark} />
+
+      <HeroSection dark={dark} />
+
+      <FAQSection
+        activeCategory={activeCategory}
+        setActiveCategory={setActiveCategory}
+        openSection={openSection}
+        setOpenSection={setOpenSection}
+        openQuestion={openQuestion}
+        setOpenQuestion={setOpenQuestion}
+      />
+
+      <HelpBanner dark={dark} />
+
+      <SiteFooter dark={dark} />
     </div>
   );
 }
