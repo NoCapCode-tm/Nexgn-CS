@@ -2,13 +2,13 @@
 
 :root {
   /* Layout Variables */
-  --hero-title-size: 2.7rem;
-  --hero-body-size: 1rem;
-  --hero-gap: 4rem;
-  --hero-content-margin: 3rem;
-  --hero-content-width: 35rem;
-  --hero-image-width: 34rem;
-  --hero-container-max: none; /* Hero naturally scales without container limit here since 1180px+ is fixed */
+  --about-hero-title-size: 2.7rem;
+  --about-hero-body-size: 1rem;
+  --about-hero-gap: 4rem;
+  --about-hero-content-margin: 3rem;
+  --about-hero-content-width: 35rem;
+  --about-hero-image-width: 34rem;
+  --about-hero-container-max: none; /* Hero naturally scales without container limit here since 1180px+ is fixed */
   
   --core-header-mb: 0.75rem;
   --core-label-size: 1rem;
@@ -470,13 +470,13 @@
 
 @media (min-width: 1464px) {
   :root {
-    --hero-title-size: 2.95vw;
-    --hero-body-size: 1.09vw;
-    --hero-gap: 4.37vw;
-    --hero-content-margin: 3.27vw;
-    --hero-content-width: 38.25vw;
-    --hero-image-width: 37.15vw;
-    --hero-container-max: none;
+    --about-hero-title-size: 2.95vw;
+    --about-hero-body-size: 1.09vw;
+    --about-hero-gap: 4.37vw;
+    --about-hero-content-margin: 3.27vw;
+    --about-hero-content-width: 38.25vw;
+    --about-hero-image-width: 37.15vw;
+    --about-hero-container-max: none;
     
     --core-header-mb: 0.82vw;
     --core-label-size: 1.09vw;
@@ -514,7 +514,7 @@
 
 @media (min-width: 769px) {
   .nexgn-container--hero {
-    max-width: var(--hero-container-max);
+    max-width: var(--about-hero-container-max);
   }
   .nexgn-container--core {
     max-width: var(--core-container-max);
@@ -524,22 +524,22 @@
   }
   
   .nexgn-hero-section {
-    gap: var(--hero-gap);
+    gap: var(--about-hero-gap);
     justify-content: space-between;
   }
   .aboutus-hero-title {
-    font-size: var(--hero-title-size);
+    font-size: var(--about-hero-title-size);
   }
   .nexgn-hero-body,
   .nexgn-hero-tagline,
   .nexgn-hero-description,
   .nexgn-hero-subtext {
-    font-size: var(--hero-body-size);
+    font-size: var(--about-hero-body-size);
   }
   .nexgn-hero-content {
     flex: 0 1 52%;
-    max-width: var(--hero-content-width);
-    margin-top: var(--hero-content-margin);
+    max-width: var(--about-hero-content-width);
+    margin-top: var(--about-hero-content-margin);
     margin-left: 0;
   }
   .nexgn-hero-image-wrapper {
@@ -672,6 +672,13 @@
   top: 0 !important;
   transform: none !important;
   object-fit: contain !important;
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+[data-theme="dark"] .nexgn-aboutus-divider-bg {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%);
 }
 
 
@@ -736,12 +743,12 @@
 @media (min-width: 769px) and (max-width: 1179.98px) {
   :root {
     --fluid-ratio: 1.3559vw;
-    --hero-title-size: calc(2.0 * var(--fluid-ratio));
-    --hero-body-size: calc(0.8 * var(--fluid-ratio));
-    --hero-gap: calc(4 * var(--fluid-ratio));
-    --hero-content-margin: calc(3 * var(--fluid-ratio));
-    --hero-content-width: calc(35 * var(--fluid-ratio));
-    --hero-image-width: calc(34 * var(--fluid-ratio));
+    --about-hero-title-size: calc(2.0 * var(--fluid-ratio));
+    --about-hero-body-size: calc(0.8 * var(--fluid-ratio));
+    --about-hero-gap: calc(4 * var(--fluid-ratio));
+    --about-hero-content-margin: calc(3 * var(--fluid-ratio));
+    --about-hero-content-width: calc(35 * var(--fluid-ratio));
+    --about-hero-image-width: calc(34 * var(--fluid-ratio));
     --core-header-mb: calc(0.75 * var(--fluid-ratio));
     --core-label-size: calc(1 * var(--fluid-ratio));
     --core-label-mb: calc(1 * var(--fluid-ratio));
@@ -797,9 +804,9 @@
 @media (max-width: 768px) {
   :root {
     --mobile-scale: min(2.9vw, 21px);
-    --hero-title-size: calc(2.0 * var(--mobile-scale));
-    --hero-body-size: calc(0.9 * var(--mobile-scale));
-    --hero-content-width: calc(29 * var(--mobile-scale));
+    --about-hero-title-size: calc(2.0 * var(--mobile-scale));
+    --about-hero-body-size: calc(0.9 * var(--mobile-scale));
+    --about-hero-content-width: calc(29 * var(--mobile-scale));
     
     /* Core Values mobile-specific scale factor (15% larger) */
     --core-mobile-scale: calc(1.15 * var(--mobile-scale));
@@ -860,6 +867,7 @@
     text-align: left;
     align-items: flex-start;
     gap: 0;
+    width: 100%;
   }
   
   .nexgn-hero-content {
@@ -868,17 +876,14 @@
 
   .nexgn-about-label {
     order: 1;
-    width: var(--hero-content-width);
-    max-width: 100%;
     font-size: calc(0.8 * var(--mobile-scale));
     margin-bottom: calc(1 * var(--mobile-scale));
   }
 
   .aboutus-hero-title {
     order: 2;
-    width: var(--hero-content-width);
-    max-width: 100%;
-    font-size: var(--hero-title-size);
+    width: min(100%, var(--about-hero-content-width));
+    font-size: var(--about-hero-title-size);
     line-height: 1.19;
     letter-spacing: 0.005em;
     word-spacing: 0.15em;
@@ -887,9 +892,8 @@
 
   .nexgn-hero-body {
     order: 3;
-    width: var(--hero-content-width);
-    max-width: 100%;
-    font-size: var(--hero-body-size);
+    width: min(100%, var(--about-hero-content-width));
+    font-size: var(--about-hero-body-size);
     line-height: 1.57;
     letter-spacing: 0.005em;
     word-spacing: 0.15em;
@@ -907,11 +911,16 @@
     margin-bottom: calc(2 * var(--mobile-scale)); /* Spacing after the globe */
   }
 
+  .nexgn-hero-globe {
+    width: calc(27 * var(--mobile-scale));
+    max-width: none;
+    height: auto;
+  }
+
   .nexgn-hero-tagline {
     order: 5;
-    width: var(--hero-content-width);
-    max-width: 100%;
-    font-size: var(--hero-body-size);
+    width: min(100%, var(--about-hero-content-width));
+    font-size: var(--about-hero-body-size);
     line-height: 1.57;
     letter-spacing: 0.005em;
     word-spacing: 0.15em;
@@ -921,9 +930,8 @@
 
   .nexgn-hero-description {
     order: 6;
-    width: var(--hero-content-width);
-    max-width: 100%;
-    font-size: var(--hero-body-size);
+    width: min(100%, var(--about-hero-content-width));
+    font-size: var(--about-hero-body-size);
     line-height: 1.57;
     letter-spacing: 0.005em;
     word-spacing: 0.15em;
@@ -933,9 +941,8 @@
 
   .nexgn-hero-subtext {
     order: 7;
-    width: var(--hero-content-width);
-    max-width: 100%;
-    font-size: var(--hero-body-size);
+    width: min(100%, var(--about-hero-content-width));
+    font-size: var(--about-hero-body-size);
     line-height: 1.57;
     letter-spacing: 0.005em;
     word-spacing: 0.15em;
