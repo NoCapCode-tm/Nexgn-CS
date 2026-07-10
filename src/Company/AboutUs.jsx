@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./AboutUs.css";
 import ribbonBg from "../assets/privacy-bg-ribbon.png";
-import ribbonBgDark from "../assets/helpcenter-dark-ribbon.png";
+import ribbonBgDark from "../assets/dark-bg.png";
 import globeImage from "../assets/globe-image.png";
 import globeImageDark from "../assets/aboutus-bg-dark.png";
 import promiseShield from "../assets/promise-shield.png";
 import promiseShieldDark from "../assets/aboutus-dark-promise.png";
+import dividerBg from "../assets/aboutus-divider.png";
+import dividerBgDark from "../assets/aboutus-dark-divider.png";
 import FooterSection from "../FooterSection";
 
 function Navbar({ dark, setDark }) {
@@ -91,59 +93,66 @@ export default function AboutUs() {
       />
 
       {/* ── ABOUT NEXGN LABEL ── */}
-      <span className="nexgn-about-label">About Nexgn</span>
-
-      {/* ── HERO TITLE ── */}
-      <h1 className="aboutus-hero-title">
-        Designed for Trust Engineered for the World
-      </h1>
-
-      {/* ── HERO BODY ── */}
-      <p className="nexgn-hero-body">
-        The modern business moves at the speed of the internet, yet the tools we
-        use to sign, secure, and manage our most critical agreements have been
-        left in the past. They are slow, bloated, and needlessly complex.
-      </p>
-
-      {/* ── HERO TAGLINE ── */}
-      <p className="nexgn-hero-tagline">We built Nexgn to change that.</p>
-
-      {/* ── HERO DESCRIPTION ── */}
-      <p className="nexgn-hero-description">
-        What began as a vision for better security in New Mexico has rapidly
-        evolved into a global infrastructure for digital trust. We believe that
-        securing your documents shouldn't be complicated, and compliance
-        shouldn't slow you down. By combining enterprise-grade encryption with
-        an aggressively optimized, user-first interface, we are building the
-        intelligent backbone for a faster, smarter, and more connected future.
-      </p>
-
-      {/* ── HERO SUBTEXT ── */}
-      <p className="nexgn-hero-subtext">
-        Whether you are a fast-growing startup or an established multinational,
-        Nexgn provides the uncompromised security and lightning-fast workflows
-        you need to close deals, manage agreements, and scale seamlessly across
-        borders.
-      </p>
-
-      {/* ── HERO GLOBE IMAGE ── */}
-      <img
+      
+      {/* ── HERO SECTION ── */}
+      <section className="nexgn-hero-section nexgn-container nexgn-container--hero">
+        <div className="nexgn-hero-content">
+          <span className="section-label nexgn-about-label">About Nexgn</span>
+          <h1 className="section-title aboutus-hero-title desktop-exact-wrap">
+            Designed for Trust <br className="desktop-break" /> Engineered for the World
+          </h1>
+          <p className="section-body nexgn-hero-body desktop-exact-wrap">
+            The modern business moves at the speed of the internet, yet the <br className="desktop-break" />
+            tools we use to sign, secure, and manage our most critical <br className="desktop-break" />
+            agreements have been left in the past. They are slow, bloated, <br className="desktop-break" />
+            and needlessly complex.
+          </p>
+          <p className="section-body nexgn-hero-tagline desktop-exact-wrap">We built Nexgn to change that.</p>
+          <p className="section-body nexgn-hero-description desktop-exact-wrap">
+            What began as a vision for better security in New Mexico has <br className="desktop-break" />
+            rapidly evolved into a global infrastructure for digital trust. We <br className="desktop-break" />
+            believe that securing your documents shouldn't be complicated, <br className="desktop-break" />
+            and compliance shouldn't slow you down. By combining <br className="desktop-break" />
+            enterprise-grade encryption with an aggressively optimized, <br className="desktop-break" />
+            user-first interface, we are building the intelligent backbone for <br className="desktop-break" />
+            a faster, smarter, and more connected future.
+          </p>
+          <p className="section-body nexgn-hero-subtext desktop-exact-wrap">
+            Whether you are a fast-growing startup or an established <br className="desktop-break" />
+            multinational, Nexgn provides the uncompromised security and <br className="desktop-break" />
+            lightning-fast workflows you need to close deals, manage <br className="desktop-break" />
+            agreements, and scale seamlessly across borders.
+          </p>
+        </div>
+        <div className="nexgn-hero-image-wrapper">
+          <img
         src={dark ? globeImageDark : globeImage}
         alt="Nexgn global security globe"
         className="nexgn-hero-globe"
       />
+        </div>
+      </section>
 
-      {/* ── CORE VALUES LABEL ── */}
-      <span className="nexgn-core-values-label">Our Core Values</span>
+      {/* ── LOWER CONTENT WRAPPER ── */}
+      <div className="nexgn-lower-sections-wrapper">
+        <img
+          src={dark ? dividerBgDark : dividerBg}
+          alt=""
+          className="nexgn-aboutus-divider-bg"
+          aria-hidden="true"
+        />
 
-      {/* ── CORE VALUES TITLE ── */}
-      <h2 className="nexgn-core-values-title">
+        {/* ── CORE VALUES SECTION ── */}
+        <section className="nexgn-core-values-section nexgn-container nexgn-container--core">
+        <div className="nexgn-core-values-header">
+          <span className="section-label nexgn-core-values-label">Our Core Values</span>
+          <h2 className="section-title nexgn-core-values-title">
         Built on Principles. Driven by Purpose.
       </h2>
-
-      {/* ── CORE VALUES CARD 1 ── */}
-      <div className="nexgn-core-card nexgn-core-card--1">
-        <div className="nexgn-core-card-icon">
+        </div>
+        <div className="nexgn-core-values-grid">
+          <div className="nexgn-core-card nexgn-core-card--1">
+        <div className="flex-center nexgn-core-card-icon">
           <svg
             width="70"
             height="70"
@@ -209,18 +218,17 @@ export default function AboutUs() {
             />
           </svg>
         </div>
-        <h3 className="nexgn-core-card-title">Security by Design</h3>
+        <h3 className="section-title nexgn-core-card-title">Security by Design</h3>
         <div className="nexgn-core-card-divider"></div>
-        <p className="nexgn-core-card-text">
-          We don't bolt security on at the end. It is the invisible foundation
-          of every line of code we write, protecting your data before you even
-          click send
+        <p className="section-body nexgn-core-card-text desktop-exact-wrap">
+          We don't bolt security on at the end.<br className="desktop-break" />
+          It is the invisible foundation of every<br className="desktop-break" />
+          line of code we write, protecting<br className="desktop-break" />
+          your data before you even click send
         </p>
       </div>
-
-      {/* ── CORE VALUES CARD 2 ── */}
-      <div className="nexgn-core-card nexgn-core-card--2">
-        <div className="nexgn-core-card-icon">
+          <div className="nexgn-core-card nexgn-core-card--2">
+        <div className="flex-center nexgn-core-card-icon">
           <svg
             width="70"
             height="70"
@@ -237,34 +245,17 @@ export default function AboutUs() {
             />
           </svg>
         </div>
-        <h3 className="nexgn-core-card-title">Frictionless Velocity</h3>
+        <h3 className="section-title nexgn-core-card-title">Frictionless Velocity</h3>
         <div className="nexgn-core-card-divider"></div>
-        <p className="nexgn-core-card-text">
-          Time is your most valuable asset. We engineer our workflows to remove
-          barriers, saving you critical seconds on every signature.
+        <p className="section-body nexgn-core-card-text desktop-exact-wrap">
+          Time is your most valuable asset.<br className="desktop-break" />
+          We engineer our workflows to<br className="desktop-break" />
+          remove barriers, saving you critical<br className="desktop-break" />
+          seconds on every signature.
         </p>
       </div>
-
-      {/* ── OUR PROMISE BANNER ── */}
-      <div className="nexgn-promise-banner">
-        <img
-          src={dark ? promiseShieldDark : promiseShield}
-          alt="Our Promise shield"
-          className="nexgn-promise-image"
-        />
-        <div className="nexgn-promise-content">
-          <h3 className="nexgn-promise-title">Our Promise</h3>
-          <p className="nexgn-promise-text">
-            We are more than just a digital signature platform. We are your
-            partner in building a more secure, efficient, and trustworthy
-            digital world.
-          </p>
-        </div>
-      </div>
-
-      {/* ── CORE VALUES CARD 3 ── */}
-      <div className="nexgn-core-card nexgn-core-card--3">
-        <div className="nexgn-core-card-icon">
+          <div className="nexgn-core-card nexgn-core-card--3">
+        <div className="flex-center nexgn-core-card-icon">
           <svg
             width="90"
             height="90"
@@ -295,19 +286,41 @@ export default function AboutUs() {
             />
           </svg>
         </div>
-        <h3 className="nexgn-core-card-title">Global Sovereignty</h3>
+        <h3 className="section-title nexgn-core-card-title">Global Sovereignty</h3>
         <div className="nexgn-core-card-divider"></div>
-        <p className="nexgn-core-card-text">
-          We respect the privacy of your data with strict international
-          compliance, ensuring you remain in absolute control, no matter where
-          your business takes you.
+        <p className="section-body nexgn-core-card-text desktop-exact-wrap">
+          We respect the privacy of your data<br className="desktop-break" />
+          with strict international compliance,<br className="desktop-break" />
+          ensuring you remain in absolute<br className="desktop-break" />
+          control, no matter where your<br className="desktop-break" />
+          business takes you.
         </p>
       </div>
-      {/* ── CONTENT HEIGHT SPACER ── */}
-      <div className="nexgn-content-spacer" />
+        </div>
+      </section>
+
+      {/* ── OUR PROMISE SECTION ── */}
+      <section className="nexgn-promise-section nexgn-container nexgn-container--promise">
+        <div className="nexgn-promise-banner">
+        <img
+          src={dark ? promiseShieldDark : promiseShield}
+          alt="Our Promise shield"
+          className="nexgn-promise-image"
+        />
+        <div className="nexgn-promise-content">
+          <h3 className="section-title nexgn-promise-title">Our Promise</h3>
+          <p className="section-body nexgn-promise-text desktop-exact-wrap">
+            We are more than just a digital signature platform.<br className="desktop-break" />
+            We are your partner in building a more secure,<br className="desktop-break" />
+            efficient, and trustworthy digital world.
+          </p>
+        </div>
+        </div>
+      </section>
+      </div>
 
       {/* ── FOOTER ── */}
-      <div style={{ position: "relative", zIndex: 2 }}>
+      <div className="footer-wrapper">
         <FooterSection dark={dark} />
       </div>
     </div>
