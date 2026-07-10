@@ -5,7 +5,107 @@ import ribbonBgDark from "../assets/helpcenter-dark-ribbon.png";
 import heroImage from "../assets/trust-hero.png";
 import heroImageDark from "../assets/security-dark.png";
 
-import FooterSection from "../FooterSection";
+function FooterBrand({ dark }) {
+  return (
+    <div className="security__footer-brand">
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+          marginBottom: "17.78px",
+        }}
+      >
+        <svg width="36" height="36" viewBox="0 0 44 44" fill="none">
+          <path
+            d="M36.499 0C40.3359 0 43.4463 3.11041 43.4463 6.94727V36.499C43.4463 36.6885 43.4358 36.8759 43.4209 37.0615L32.6826 26.5566C31.3112 25.2156 29.0995 25.2276 27.7432 26.584L25.5107 28.8174C24.1546 30.1738 24.1663 32.3607 25.5371 33.7021L35.498 43.4463H7.1543L34.7979 16.4053C36.169 15.0637 36.1807 12.877 34.8242 11.5205L32.5918 9.28711C31.2353 7.93089 29.0237 7.91858 27.6523 9.25977L0 36.3096V7.89941L10.7188 18.3857C12.0901 19.727 14.3017 19.7147 15.6582 18.3584L17.8906 16.125C19.2471 14.7685 19.2355 12.5818 17.8643 11.2402L6.39746 0.0234375C6.57891 0.00922816 6.76217 0 6.94727 0H36.499Z"
+            fill="#E22A2A"
+          />
+        </svg>
+        <span
+          style={{
+            fontFamily: "MuseoModerno, sans-serif",
+            fontSize: "22px",
+            color: dark ? "#ffffff" : "#111111",
+          }}
+        >
+          Nexgn
+        </span>
+      </div>
+      <p className="security__footer-tagline">
+        The Next Generation of Document
+        <br />
+        Signature
+      </p>
+      <p className="security__footer-email">gateway@nexgn.cloud</p>
+      <div className="security__footer-socials">
+        <a href="#" className="security__footer-social-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+        </a>
+        <a href="#" className="security__footer-social-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+      </div>
+      <div className="security__footer-copyright">
+        ©️ 2026 Nexgn. All rights reserved.
+      </div>
+    </div>
+  );
+}
+
+function FooterLinks() {
+  return (
+    <div className="security__footer-links">
+      <div className="security__footer-link-column">
+        <h4>COMPANY</h4>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Blog</a>
+      </div>
+      <div className="security__footer-link-column">
+        <h4>RESOURCES</h4>
+        <a href="#">Help center</a>
+        <a href="#">System Status</a>
+        <a href="#">Security</a>
+      </div>
+      <div className="security__footer-link-column">
+        <h4>LEGAL &amp; TRUST</h4>
+        <a href="#">Trust &amp; Compliance</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Services</a>
+      </div>
+    </div>
+  );
+}
+
+function FooterWordmark() {
+  return (
+    <div className="security__footer-wordmark-wrapper">
+      <div className="security__footer-blurry-bg-container">
+        <div className="security__footer-blurry-bg"></div>
+      </div>
+      <div className="security__footer-wordmark-overlay">NEXGN</div>
+    </div>
+  );
+}
+
+function SiteFooter({ dark }) {
+  return (
+    <footer className="security__footer">
+      <div className="security__footer-content">
+        <div className="security__footer-top">
+          <FooterBrand dark={dark} />
+          <FooterLinks />
+        </div>
+      </div>
+      <FooterWordmark />
+    </footer>
+  );
+}
 
 export default function Security() {
   const [dark, setDark] = useState(
@@ -20,34 +120,38 @@ export default function Security() {
       dark ? "dark" : "light",
     );
   }, [dark]);
+
   return (
-    <div className="trust-page-wrapper">
-      <nav className="navbar">
-        <div className="navbar__brand">
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-            <path
-              d="M36.499 0C40.3359 0 43.4463 3.11041 43.4463 6.94727V36.499C43.4463 36.6885 43.4358 36.8759 43.4209 37.0615L32.6826 26.5566C31.3112 25.2156 29.0995 25.2276 27.7432 26.584L25.5107 28.8174C24.1546 30.1738 24.1663 32.3607 25.5371 33.7021L35.498 43.4463H7.1543L34.7979 16.4053C36.169 15.0637 36.1807 12.877 34.8242 11.5205L32.5918 9.28711C31.2353 7.93089 29.0237 7.91858 27.6523 9.25977L0 36.3096V7.89941L10.7188 18.3857C12.0901 19.727 14.3017 19.7147 15.6582 18.3584L17.8906 16.125C19.2471 14.7685 19.2355 12.5818 17.8643 11.2402L6.39746 0.0234375C6.57891 0.00922816 6.76217 0 6.94727 0H36.499Z"
-              fill="#E22A2A"
-            />
-          </svg>
-          <div className="navbar__logo-text">
-            <span className="navbar__logo-name">Nexgn</span>
-            <span className="navbar__logo-sub">Smart Signing</span>
+    <>
+    <div className="security">
+      <nav className="security__navbar">
+        <div className="security__navbar-brand">
+          <div className="security__navbar-logo-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none">
+              <path
+                d="M36.499 0C40.3359 0 43.4463 3.11041 43.4463 6.94727V36.499C43.4463 36.6885 43.4358 36.8759 43.4209 37.0615L32.6826 26.5566C31.3112 25.2156 29.0995 25.2276 27.7432 26.584L25.5107 28.8174C24.1546 30.1738 24.1663 32.3607 25.5371 33.7021L35.498 43.4463H7.1543L34.7979 16.4053C36.169 15.0637 36.1807 12.877 34.8242 11.5205L32.5918 9.28711C31.2353 7.93089 29.0237 7.91858 27.6523 9.25977L0 36.3096V7.89941L10.7188 18.3857C12.0901 19.727 14.3017 19.7147 15.6582 18.3584L17.8906 16.125C19.2471 14.7685 19.2355 12.5818 17.8643 11.2402L6.39746 0.0234375C6.57891 0.00922816 6.76217 0 6.94727 0H36.499Z"
+                fill="#E22A2A"
+              />
+            </svg>
+          </div>
+          <div className="security__navbar-logo-text">
+            <span className="security__navbar-logo-name">Nexgn</span>
+            <span className="security__navbar-logo-sub">Smart Signing</span>
           </div>
         </div>
         <button
-          className="navbar__theme-toggle"
+          type="button"
+          className="security__navbar-theme-toggle"
           onClick={() => setDark(!dark)}
           aria-label="Toggle dark mode"
         >
           {dark ? (
             <svg
-              width="20"
-              height="20"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
+              aria-hidden="true"
             >
               <circle cx="12" cy="12" r="5" />
               <line x1="12" y1="1" x2="12" y2="3" />
@@ -61,44 +165,45 @@ export default function Security() {
             </svg>
           ) : (
             <svg
-              width="20"
-              height="20"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
+              aria-hidden="true"
             >
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
             </svg>
           )}
         </button>
       </nav>
+
       {/* ── RIBBON ── */}
       <img
         src={dark ? ribbonBgDark : ribbonBg}
         alt=""
-        className="nexgn-hero-ribbon"
+        className="security__hero-ribbon"
         aria-hidden="true"
       />
 
-      {/* ── HELP CENTER LABEL ── */}
-      <span className="trust-help-center-label">Security</span>
+      {/* ── LABEL ── */}
+      <span className="security__label">Security</span>
+
       {/* ── MAIN HEADING ── */}
-      <h1 className="trust-main-heading">Nexgn Trust &amp; Security Centre</h1>
+      <h1 className="security__heading">Nexgn Trust &amp; Security Centre</h1>
 
       {/* ── HERO IMAGE ── */}
       <img
         src={dark ? heroImageDark : heroImage}
         alt="Nexgn Trust and Security"
-        className="trust-hero-image"
+        className="security__hero-image"
       />
 
-      {/* ── INFRA CARD GROUP (beside Infrastructure section at top: 800px) ── */}
-      <div className="trust-infra-card-group">
-        <div className="trust-card-row">
-          <div className="trust-card-dot"></div>
-          <p className="trust-card-text">
-            <span className="trust-card-bold">
+      {/* ── INFRA CARD GROUP (beside Infrastructure section) ── */}
+      <div className="security__infra-card-group">
+        <div className="security__card-row">
+          <div className="security__card-dot"></div>
+          <p className="security__card-text">
+            <span className="security__card-bold">
               Edge Defence &amp; DDoS Mitigation :
             </span>{" "}
             Our network periphery is continuously monitored and protected by an
@@ -108,20 +213,20 @@ export default function Security() {
             impacting core signing services.
           </p>
         </div>
-        <div className="trust-card-row">
-          <div className="trust-card-dot"></div>
-          <p className="trust-card-text">
-            <span className="trust-card-bold">Zero-Trust Architecture :</span>{" "}
+        <div className="security__card-row">
+          <div className="security__card-dot"></div>
+          <p className="security__card-text">
+            <span className="security__card-bold">Zero-Trust Architecture :</span>{" "}
             Network access inside Nexgn boundaries is strictly governed by the
             Principle of Least Privilege. Mutual Transport Layer Security (mTLS)
             and cryptographically enforced client certificates protect
             server-to-server and client-to-API integrations.
           </p>
         </div>
-        <div className="trust-card-row">
-          <div className="trust-card-dot"></div>
-          <p className="trust-card-text">
-            <span className="trust-card-bold">
+        <div className="security__card-row">
+          <div className="security__card-dot"></div>
+          <p className="security__card-text">
+            <span className="security__card-bold">
               Automated Threat &amp; Bot Intelligence :
             </span>{" "}
             Automated web assets and scrapers are analyzed via advanced Bot
@@ -132,12 +237,12 @@ export default function Security() {
         </div>
       </div>
 
-      {/* ── APP SECURITY CARD GROUP (beside Application and Product Security at top: 1827px) ── */}
-      <div className="trust-app-card-group">
-        <div className="trust-card-row">
-          <div className="trust-card-dot"></div>
-          <p className="trust-card-text">
-            <span className="trust-card-bold">
+      {/* ── APP SECURITY CARD GROUP (beside Application and Product Security) ── */}
+      <div className="security__app-card-group">
+        <div className="security__card-row">
+          <div className="security__card-dot"></div>
+          <p className="security__card-text">
+            <span className="security__card-bold">
               Continuous Script Monitoring:
             </span>{" "}
             All production scripts and payloads are continuously scanned for
@@ -145,19 +250,19 @@ export default function Security() {
             client-side injection during the signing process.
           </p>
         </div>
-        <div className="trust-card-row">
-          <div className="trust-card-dot"></div>
-          <p className="trust-card-text">
-            <span className="trust-card-bold">Secure Dependencies:</span>{" "}
+        <div className="security__card-row">
+          <div className="security__card-dot"></div>
+          <p className="security__card-text">
+            <span className="security__card-bold">Secure Dependencies:</span>{" "}
             External elements are automatically checked against global databases
             of known exploits. Any insecure library is intercepted and swapped
             out for fully patched counterparts.
           </p>
         </div>
-        <div className="trust-card-row">
-          <div className="trust-card-dot"></div>
-          <p className="trust-card-text">
-            <span className="trust-card-bold">Credential Integrity:</span>{" "}
+        <div className="security__card-row">
+          <div className="security__card-dot"></div>
+          <p className="security__card-text">
+            <span className="security__card-bold">Credential Integrity:</span>{" "}
             Automated credential stuffing protections cross-reference
             authentication payloads with globally leaked credential registries
             to prevent account takeovers.
@@ -165,12 +270,12 @@ export default function Security() {
         </div>
       </div>
 
-      {/* ── DOC INTEGRITY CARD GROUP (beside Document Integrity section at top: 1349px) ── */}
-      <div className="trust-doc-card-group">
-        <div className="trust-card-row">
-          <div className="trust-card-dot"></div>
-          <p className="trust-card-text">
-            <span className="trust-card-bold">
+      {/* ── DOC INTEGRITY CARD GROUP (beside Document Integrity section) ── */}
+      <div className="security__doc-card-group">
+        <div className="security__card-row">
+          <div className="security__card-dot"></div>
+          <p className="security__card-text">
+            <span className="security__card-bold">
               Cryptographic Document Hashing:
             </span>{" "}
             Every document executed on Nexgn is secured with cryptographic
@@ -179,10 +284,10 @@ export default function Security() {
             the digital signature was applied.
           </p>
         </div>
-        <div className="trust-card-row">
-          <div className="trust-card-dot"></div>
-          <p className="trust-card-text">
-            <span className="trust-card-bold">
+        <div className="security__card-row">
+          <div className="security__card-dot"></div>
+          <p className="security__card-text">
+            <span className="security__card-bold">
               Encryption in Transit &amp; At Rest:
             </span>{" "}
             All communication with nexgn.cloud endpoints is strictly enforced
@@ -191,10 +296,10 @@ export default function Security() {
             standards to prevent interception.
           </p>
         </div>
-        <div className="trust-card-row">
-          <div className="trust-card-dot"></div>
-          <p className="trust-card-text">
-            <span className="trust-card-bold">
+        <div className="security__card-row">
+          <div className="security__card-dot"></div>
+          <p className="security__card-text">
+            <span className="security__card-bold">
               Global E-Signature Compliance:
             </span>{" "}
             Our architecture is designed to support global regulatory
@@ -202,10 +307,10 @@ export default function Security() {
             carry legal weight and compliance across international borders.
           </p>
         </div>
-        <div className="trust-card-row">
-          <div className="trust-card-dot"></div>
-          <p className="trust-card-text">
-            <span className="trust-card-bold">
+        <div className="security__card-row">
+          <div className="security__card-dot"></div>
+          <p className="security__card-text">
+            <span className="security__card-bold">
               DNS &amp; Email Security Frameworks:
             </span>{" "}
             We strictly enforce domain spoofing protections using SPF, DKIM,
@@ -217,9 +322,9 @@ export default function Security() {
       </div>
 
       {/* ── OUR COMMITMENT TO YOU CARD ── */}
-      <div className="trust-commitment-card">
-        <div className="trust-commitment-left">
-          <div className="trust-commitment-icon-box">
+      <div className="security__commitment-card">
+        <div className="security__commitment-left">
+          <div className="security__commitment-icon-box">
             <svg
               width="24"
               height="24"
@@ -243,9 +348,9 @@ export default function Security() {
               />
             </svg>
           </div>
-          <div className="trust-commitment-text">
-            <h3 className="trust-commitment-title">Our Commitment to You</h3>
-            <p className="trust-commitment-body">
+          <div className="security__commitment-text">
+            <h3 className="security__commitment-title">Our Commitment to You</h3>
+            <p className="security__commitment-body">
               If you operate in good faith, adhere to responsible disclosure
               principles, and allow us a reasonable window to remediate the
               vulnerability before publishing details externally, Nexgn commits
@@ -253,8 +358,8 @@ export default function Security() {
             </p>
           </div>
         </div>
-        <div className="trust-commitment-columns">
-          <div className="trust-commitment-col">
+        <div className="security__commitment-columns">
+          <div className="security__commitment-col">
             <svg
               width="24"
               height="24"
@@ -270,13 +375,13 @@ export default function Security() {
                 strokeLinejoin="round"
               />
             </svg>
-            <p className="trust-commitment-col-title">Safe Harbor</p>
-            <p className="trust-commitment-col-body">
+            <p className="security__commitment-col-title">Safe Harbor</p>
+            <p className="security__commitment-col-body">
               We will not initiate legal action or request law enforcement
               investigations against you.
             </p>
           </div>
-          <div className="trust-commitment-col">
+          <div className="security__commitment-col">
             <svg
               width="24"
               height="24"
@@ -306,13 +411,13 @@ export default function Security() {
                 strokeLinejoin="round"
               />
             </svg>
-            <p className="trust-commitment-col-title">Timely Response</p>
-            <p className="trust-commitment-col-body">
+            <p className="security__commitment-col-title">Timely Response</p>
+            <p className="security__commitment-col-body">
               Acknowledge your submission within 48 business hours and provide
               ongoing updates until remediation is complete.
             </p>
           </div>
-          <div className="trust-commitment-col">
+          <div className="security__commitment-col">
             <svg
               width="24"
               height="24"
@@ -335,8 +440,8 @@ export default function Security() {
                 strokeLinejoin="round"
               />
             </svg>
-            <p className="trust-commitment-col-title">Recognition</p>
-            <p className="trust-commitment-col-body">
+            <p className="security__commitment-col-title">Recognition</p>
+            <p className="security__commitment-col-body">
               Document your contribution in our security researcher
               acknowledgements archive (if requested).
             </p>
@@ -345,97 +450,100 @@ export default function Security() {
       </div>
 
       {/* ── PRIVACY, COMPLIANCE, AND TECHNICAL CONTACTS SECTION ── */}
-      <h3 className="trust-privacy-title">
+      <h3 className="security__privacy-title">
         Privacy, Compliance, and Technical Contacts
       </h3>
-      <p className="trust-privacy-desc">
+      <p className="security__privacy-desc">
         Nexgn operates under strict data minimization standards, ensuring
         structural transparency across all borders.
       </p>
 
       {/* ── CONTACTS TABLE ── */}
-      <div className="trust-contacts-table">
-        <div className="trust-contacts-row trust-contacts-header">
-          <div className="trust-contacts-col trust-contacts-col-1">
+      <div className="security__contacts-table">
+        <div className="security__contacts-row security__contacts-header">
+          <div className="security__contacts-col security__contacts-col-1">
             Target Resource
           </div>
-          <div className="trust-contacts-col trust-contacts-col-2">
+          <div className="security__contacts-col security__contacts-col-2">
             Designated System / Contact Alias
           </div>
-          <div className="trust-contacts-col trust-contacts-col-3">
+          <div className="security__contacts-col security__contacts-col-3">
             Compliance Focus
           </div>
         </div>
-        <div className="trust-contacts-row">
-          <div className="trust-contacts-col trust-contacts-col-1">
+        <div className="security__contacts-row">
+          <div className="security__contacts-col security__contacts-col-1">
             Data Privacy &amp; GDPR
           </div>
-          <div className="trust-contacts-col trust-contacts-col-2">
+          <div className="security__contacts-col security__contacts-col-2">
             <a
               href="mailto:privacy@nexgn.cloud"
-              className="trust-contacts-email"
+              className="security__contacts-email"
             >
               privacy@nexgn.cloud
             </a>
           </div>
-          <div className="trust-contacts-col trust-contacts-col-3">
+          <div className="security__contacts-col security__contacts-col-3">
             Data subject access requests, encryption audits, compliance
             inquiries.
           </div>
         </div>
-        <div className="trust-contacts-row">
-          <div className="trust-contacts-col trust-contacts-col-1">
+        <div className="security__contacts-row">
+          <div className="security__contacts-col security__contacts-col-1">
             System Security Operations
           </div>
-          <div className="trust-contacts-col trust-contacts-col-2">
+          <div className="security__contacts-col security__contacts-col-2">
             <a
               href="mailto:security@nexgn.cloud"
-              className="trust-contacts-email"
+              className="security__contacts-email"
             >
               security@nexgn.cloud
             </a>
           </div>
-          <div className="trust-contacts-col trust-contacts-col-3">
+          <div className="security__contacts-col security__contacts-col-3">
             Active threat intelligence, breach reports, vulnerability
             disclosures
           </div>
         </div>
-        <div className="trust-contacts-row">
-          <div className="trust-contacts-col trust-contacts-col-1">
+        <div className="security__contacts-row">
+          <div className="security__contacts-col security__contacts-col-1">
             System Infrastructure
           </div>
-          <div className="trust-contacts-col trust-contacts-col-2">
+          <div className="security__contacts-col security__contacts-col-2">
             <a
               href="mailto:postmaster@nexgn.cloud"
-              className="trust-contacts-email"
+              className="security__contacts-email"
             >
               postmaster@nexgn.cloud
             </a>
           </div>
-          <div className="trust-contacts-col trust-contacts-col-3">
+          <div className="security__contacts-col security__contacts-col-3">
             Core SMTP relay configuration, delivery issues, network handshakes
           </div>
         </div>
-        <div className="trust-contacts-row trust-contacts-row-last">
-          <div className="trust-contacts-col trust-contacts-col-1">
+        <div className="security__contacts-row security__contacts-row-last">
+          <div className="security__contacts-col security__contacts-col-1">
             Abuse &amp; Spam Mitigation
           </div>
-          <div className="trust-contacts-col trust-contacts-col-2">
-            <a href="mailto:abuse@nexgn.cloud" className="trust-contacts-email">
+          <div className="security__contacts-col security__contacts-col-2">
+            <a
+              href="mailto:abuse@nexgn.cloud"
+              className="security__contacts-email"
+            >
               abuse@nexgn.cloud
             </a>
           </div>
-          <div className="trust-contacts-col trust-contacts-col-3">
+          <div className="security__contacts-col security__contacts-col-3">
             Domain reputation management, spoof reporting, network compliance
           </div>
         </div>
-        <div className="trust-contacts-divider trust-contacts-divider-1"></div>
-        <div className="trust-contacts-divider trust-contacts-divider-2"></div>
+        <div className="security__contacts-divider security__contacts-divider-1"></div>
+        <div className="security__contacts-divider security__contacts-divider-2"></div>
       </div>
 
-      {/* ── VDP REPORTING CARD (beside VDP section at top: 2142px) ── */}
-      <div className="trust-vdp-reporting-card">
-        <div className="trust-vdp-card-icon">
+      {/* ── VDP REPORTING CARD (beside VDP section) ── */}
+      <div className="security__vdp-reporting-card">
+        <div className="security__vdp-card-icon">
           <svg
             width="35"
             height="35"
@@ -466,17 +574,17 @@ export default function Security() {
             />
           </svg>
         </div>
-        <div className="trust-vdp-card-content">
-          <p className="trust-vdp-card-title">Reporting Guidelines</p>
-          <p className="trust-vdp-card-body">
+        <div className="security__vdp-card-content">
+          <p className="security__vdp-card-title">Reporting Guidelines</p>
+          <p className="security__vdp-card-body">
             If you believe you have discovered a vulnerability, configuration
             flaw, or exposed system within the Nexgn domain ecosystem, please
             report it immediately through our prioritized channel.
           </p>
-          <p className="trust-vdp-card-email">
+          <p className="security__vdp-card-email">
             Primary Security Inbox: security@nexgn.cloud
           </p>
-          <p className="trust-vdp-card-note">
+          <p className="security__vdp-card-note">
             When reporting, please include clear, reproducible steps,
             proof-of-concept material, and the potential impact of the flaw.
           </p>
@@ -484,8 +592,8 @@ export default function Security() {
       </div>
 
       {/* ── VULNERABILITY DISCLOSURE POLICY SECTION ── */}
-      <div className="trust-vdp-group">
-        <div className="trust-icon-box">
+      <div className="security__vdp-group">
+        <div className="security__icon-box">
           <svg
             width="24"
             height="24"
@@ -572,11 +680,11 @@ export default function Security() {
             />
           </svg>
         </div>
-        <div className="trust-section-text">
-          <h3 className="trust-section-title">
+        <div className="security__section-text">
+          <h3 className="security__section-title">
             Vulnerability Disclosure Policy (VDP)
           </h3>
-          <p className="trust-section-desc">
+          <p className="security__section-desc">
             Nexgn recognizes the vital role independent security researchers
             play in keeping the internet ecosystem secure. We welcome
             responsible disclosures regarding any security flaws found within
@@ -586,8 +694,8 @@ export default function Security() {
       </div>
 
       {/* ── APPLICATION AND PRODUCT SECURITY SECTION ── */}
-      <div className="trust-app-security-group">
-        <div className="trust-icon-box">
+      <div className="security__app-security-group">
+        <div className="security__icon-box">
           <svg
             width="24"
             height="24"
@@ -653,11 +761,11 @@ export default function Security() {
             />
           </svg>
         </div>
-        <div className="trust-section-text">
-          <h3 className="trust-section-title">
+        <div className="security__section-text">
+          <h3 className="security__section-title">
             Application and Product Security
           </h3>
-          <p className="trust-section-desc">
+          <p className="security__section-desc">
             We employ a continuous security lifecycle to catch vulnerabilities
             long before code reaches a production environment.
           </p>
@@ -665,8 +773,8 @@ export default function Security() {
       </div>
 
       {/* ── DOCUMENT INTEGRITY SECTION ── */}
-      <div className="trust-doc-integrity-group">
-        <div className="trust-icon-box">
+      <div className="security__doc-integrity-group">
+        <div className="security__icon-box">
           <svg
             width="24"
             height="24"
@@ -690,11 +798,11 @@ export default function Security() {
             />
           </svg>
         </div>
-        <div className="trust-section-text">
-          <h3 className="trust-section-title">
+        <div className="security__section-text">
+          <h3 className="security__section-title">
             Document Integrity, Data Protection, and Encryption
           </h3>
-          <p className="trust-section-desc">
+          <p className="security__section-desc">
             Data privacy and contract integrity are absolute priorities. Nexgn
             enforces strict cryptographic protocols to ensure that every signed
             document is legally binding, private, and tamper-evident.
@@ -703,8 +811,8 @@ export default function Security() {
       </div>
 
       {/* ── INFRA SECTION ── */}
-      <div className="trust-infra-group">
-        <div className="trust-infra-icon-box">
+      <div className="security__infra-group">
+        <div className="security__infra-icon-box">
           <svg
             width="24"
             height="24"
@@ -735,11 +843,11 @@ export default function Security() {
             />
           </svg>
         </div>
-        <div className="trust-infra-text-group">
-          <h3 className="trust-infra-title">
+        <div className="security__infra-text-group">
+          <h3 className="security__infra-title">
             Infrastructure and Network Security
           </h3>
-          <p className="trust-infra-desc">
+          <p className="security__infra-desc">
             Nexgn infrastructure relies on isolated, zero-trust network
             architectures designed to withstand sophisticated modern threats
             while maintaining globally optimized performance for seamless
@@ -749,25 +857,24 @@ export default function Security() {
       </div>
 
       {/* ── BODY TEXT ── */}
-      <p className="trust-body-text">
+      <p className="security__body-text">
         At Nexgn, trust is our foundational infrastructure. As a next-generation
         cloud infrastructure provider engineered specifically for digital
         document signing and secure workflow automation, security is not an
         afterthought or an isolated feature. It is architected into every line
         of code, network configuration, and system deployment.
       </p>
-      <p className="trust-body-text-2">
+      <p className="security__body-text-secondary">
         This document outlines our comprehensive defense-in-depth posture,
         safeguarding your legal documents, corporate data, and operational
         integrity across the globe.
       </p>
-      {/* ── FOOTER ── */}
-      <div
-        className="trust-footer-wrapper"
-        style={{ position: "relative", zIndex: 2 }}
-      >
-        <FooterSection dark={dark} />
+
       </div>
+
+    <div className="security__footer-wrapper">
+      <SiteFooter dark={dark} />
     </div>
+    </>
   );
 }
