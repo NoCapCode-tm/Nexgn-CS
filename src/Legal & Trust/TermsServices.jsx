@@ -183,16 +183,12 @@ export default function TermsServices() {
       <div className="terms-services">
         <Navbar dark={dark} setDark={setDark} />
 
-        {/* ── RIBBON — TEMPORARILY DISABLED ──
-        <div className="terms-services__hero-ribbon-clip">
-          <img
-            src={dark ? ribbonBgDark : ribbonBg}
-            alt=""
-            className="terms-services__hero-ribbon"
-            aria-hidden="true"
-          />
-        </div>
-        */}
+        <img
+          src={dark ? ribbonBgDark : ribbonBg}
+          alt=""
+          className="terms-services__hero-ribbon"
+          aria-hidden="true"
+        />
         <span className="terms-services__heading">Terms of Service</span>
         <h1 className="terms-services__title-text">
           Terms that keep things clear
