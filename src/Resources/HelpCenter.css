@@ -228,7 +228,7 @@
   margin-bottom: clamp(48px, 5.56vw, 80px);
   margin-left: auto;
   margin-right: auto;
-  padding: 0 clamp(20px, 5.56vw, 80px);
+  
   display: flex;
   gap: clamp(16px, 1.67vw, 24px);
   align-items: flex-start;
@@ -1014,11 +1014,7 @@
     min-height: 480px;
   }
   .nexgn-hero-ribbon {
-    width: 70vw;
-    max-width: 800px;
-    height: auto;
-    left: -180px;
-    top: -140px;
+    display: none;
   }
   .nexgn-hero-label {
     margin-top: 90px;
