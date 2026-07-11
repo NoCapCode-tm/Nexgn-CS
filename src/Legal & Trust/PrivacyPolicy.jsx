@@ -119,21 +119,21 @@ function PrivacyFooterLinks() {
     <div className="privacy-footer-links">
       <div className="privacy-footer-link-column">
         <h4>COMPANY</h4>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Blog</a>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/blog">Blog</a>
       </div>
       <div className="privacy-footer-link-column">
         <h4>RESOURCES</h4>
-        <a href="#">Help center</a>
+        <a href="/help">Help center</a>
         <a href="#">System Status</a>
-        <a href="#">Security</a>
+        <a href="/security">Security</a>
       </div>
       <div className="privacy-footer-link-column">
         <h4>LEGAL &amp; TRUST</h4>
-        <a href="#">Trust &amp; Compliance</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms &amp; Services</a>
+        <a href="/security">Trust &amp; Compliance</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/term">Terms &amp; Services</a>
       </div>
     </div>
   );

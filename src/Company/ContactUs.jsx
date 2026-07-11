@@ -6,7 +6,6 @@ import ribbonBg from "../assets/privacy-bg-ribbon.png";
 import ribbonBgDark from "../assets/helpcenter-dark-ribbon.png";
 import dividerBg from "../assets/aboutus-divider.png";
 import dividerBgDark from "../assets/aboutus-dark-divider.png";
-import FooterSection from "../FooterSection";
 
 function Navbar({ dark, setDark }) {
   return (
@@ -64,6 +63,108 @@ function Navbar({ dark, setDark }) {
   );
 }
 
+function ContactFooterBrand({ dark }) {
+  return (
+    <div className="contact-footer-brand">
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+          marginBottom: "17.78px",
+        }}
+      >
+        <svg width="36" height="36" viewBox="0 0 44 44" fill="none">
+          <path
+            d="M36.499 0C40.3359 0 43.4463 3.11041 43.4463 6.94727V36.499C43.4463 36.6885 43.4358 36.8759 43.4209 37.0615L32.6826 26.5566C31.3112 25.2156 29.0995 25.2276 27.7432 26.584L25.5107 28.8174C24.1546 30.1738 24.1663 32.3607 25.5371 33.7021L35.498 43.4463H7.1543L34.7979 16.4053C36.169 15.0637 36.1807 12.877 34.8242 11.5205L32.5918 9.28711C31.2353 7.93089 29.0237 7.91858 27.6523 9.25977L0 36.3096V7.89941L10.7188 18.3857C12.0901 19.727 14.3017 19.7147 15.6582 18.3584L17.8906 16.125C19.2471 14.7685 19.2355 12.5818 17.8643 11.2402L6.39746 0.0234375C6.57891 0.00922816 6.76217 0 6.94727 0H36.499Z"
+            fill="#E22A2A"
+          />
+        </svg>
+        <span
+          style={{
+            fontFamily: "MuseoModerno, sans-serif",
+            fontSize: "22px",
+            color: dark ? "#ffffff" : "#111111",
+          }}
+        >
+          Nexgn
+        </span>
+      </div>
+      <p className="contact-footer-tagline">
+        The Next Generation of Document
+        <br />
+        Signature
+      </p>
+      <p className="contact-footer-email">gateway@nexgn.cloud</p>
+      <div className="contact-footer-socials">
+        <a href="#" className="contact-footer-social-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+        </a>
+        <a href="#" className="contact-footer-social-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+      </div>
+      <div className="contact-footer-copyright">
+        ©️ 2026 Nexgn. All rights reserved.
+      </div>
+    </div>
+  );
+}
+
+function ContactFooterLinks() {
+  return (
+    <div className="contact-footer-links">
+      <div className="contact-footer-link-column">
+        <h4>COMPANY</h4>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/blog">Blog</a>
+      </div>
+      <div className="contact-footer-link-column">
+        <h4>RESOURCES</h4>
+        <a href="/help">Help center</a>
+        <a href="#">System Status</a>
+        <a href="/security">Security</a>
+      </div>
+      <div className="contact-footer-link-column">
+        <h4>LEGAL &amp; TRUST</h4>
+        <a href="/security">Trust &amp; Compliance</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/term">Terms &amp; Services</a>
+      </div>
+    </div>
+  );
+}
+
+function ContactFooterWordmark() {
+  return (
+    <div className="contact-footer-wordmark-wrapper">
+      <div className="contact-footer-blurry-bg-container">
+        <div className="contact-footer-blurry-bg"></div>
+      </div>
+      <div className="contact-footer-wordmark-overlay">NEXGN</div>
+    </div>
+  );
+}
+
+function ContactFooter({ dark }) {
+  return (
+    <footer className="contact-footer">
+      <div className="contact-footer-content">
+        <div className="contact-footer-top">
+          <ContactFooterBrand dark={dark} />
+          <ContactFooterLinks />
+        </div>
+      </div>
+      <ContactFooterWordmark />
+    </footer>
+  );
+}
+
 export default function ContactUs() {
   const [dark, setDark] = useState(
     () =>
@@ -111,7 +212,8 @@ export default function ContactUs() {
               with Nexgn.
             </h1>
             <p className="nexgn-hero-subtitle">
-              Our global support and engineering teams <br />are ready to assist you.
+              Our global support and engineering teams <br />
+              are ready to assist you.
             </p>
           </div>
 
@@ -170,9 +272,11 @@ export default function ContactUs() {
                 Customer Success &amp; Support
               </h3>
               <p className="nexgn-card-desc">
-                Need help with your account,<br /> billing, or a technical issue?
+                Need help with your account,
+                <br /> billing, or a technical issue?
                 <br />
-                Our team is available to keep your<br /> workflows moving.
+                Our team is available to keep your
+                <br /> workflows moving.
               </p>
               <div className="nexgn-card-links">
                 <a
@@ -314,8 +418,9 @@ export default function ContactUs() {
               </div>
               <h3 className="nexgn-card-title">Enterprise &amp; Security</h3>
               <p className="nexgn-card-desc">
-                For vulnerability disclosures, data<br /> privacy requests, or
-                enterprise<br /> SLA compliance:
+                For vulnerability disclosures, data
+                <br /> privacy requests, or enterprise
+                <br /> SLA compliance:
               </p>
               <div className="nexgn-card-links">
                 <a
@@ -449,9 +554,11 @@ export default function ContactUs() {
               </div>
               <h3 className="nexgn-card-title">Corporate Headquarters</h3>
               <p className="nexgn-card-desc">
-                Need help with your account,<br /> billing, or a technical issue?
+                Need help with your account,
+                <br /> billing, or a technical issue?
                 <br />
-                Our team is available to keep your<br /> workflows moving.
+                Our team is available to keep your
+                <br /> workflows moving.
               </p>
               <div className="nexgn-card-links nexgn-card-links--address">
                 <div className="nexgn-card-address">
@@ -546,7 +653,7 @@ export default function ContactUs() {
       {/* end nexgn-sections-bg */}
       {/* ── FOOTER ── */}
       <div className="nexgn-footer-wrapper">
-        <FooterSection dark={dark} />
+        <ContactFooter dark={dark} />
       </div>
     </div>
   );

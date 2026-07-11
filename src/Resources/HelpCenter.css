@@ -114,7 +114,12 @@
   pointer-events: none;
   z-index: -1;
   mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 78%);
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 78%);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 55%,
+    transparent 78%
+  );
 }
 
 /* ── HERO TITLE ── */
@@ -228,7 +233,7 @@
   margin-bottom: clamp(48px, 5.56vw, 80px);
   margin-left: auto;
   margin-right: auto;
-  
+
   display: flex;
   gap: clamp(16px, 1.67vw, 24px);
   align-items: flex-start;

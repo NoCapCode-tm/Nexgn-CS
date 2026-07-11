@@ -211,7 +211,12 @@ body {
   pointer-events: none;
   z-index: -1;
   mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 78%);
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 78%);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 55%,
+    transparent 78%
+  );
 }
 
 /* ── HERO ILLUSTRATION ── */
