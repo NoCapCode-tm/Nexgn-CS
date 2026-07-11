@@ -6,6 +6,7 @@ import blogIllustration from "../assets/Blog.png";
 import blogFeatured from "../assets/Blog-featured.png";
 import blogFeaturedDark from "../assets/dark-featured-blog.png";
 import blogIllustrationDark from "../assets/dark-blog.png";
+import darkBlogDivider from "../assets/dark-blog-divider.png";
 import FooterSection from "../FooterSection";
 
 function Navbar({ dark, setDark }) {
@@ -97,7 +98,7 @@ export default function Blog() {
             <span className="blog-hero__label">BLOG</span>
             <h1 className="blog-hero__title">Nexgn Blog</h1>
             <p className="blog-hero__sub">
-              Insights on digital trust, secure infrastructure, and the future
+              Insights on digital trust, secure infrastructure, and the future <br />
               of document automation.
             </p>
           </div>
@@ -109,7 +110,7 @@ export default function Blog() {
         </div>
 
         {/* ── FILTER TABS ── */}
-        <div className="blog-page-body">
+        <div className="blog-page-body blog-container">
           <div className="blog-filters">
             <button className="blog-filter blog-filter--active">All</button>
             <button className="blog-filter">Security</button>
@@ -137,7 +138,7 @@ export default function Blog() {
                   category: "Security",
                   color: "#FF0000",
                   bg: "#FFE3E4",
-                  title: "Zero-Trust Architecture for E-Signature Platforms",
+                  title: <>Zero-Trust Architecture for E-<br/>Signature Platforms</>,
                   time: "5 min read",
                   date: "May 20, 2026",
                 },
@@ -145,7 +146,7 @@ export default function Blog() {
                   category: "Security",
                   color: "#FF0000",
                   bg: "#FFE3E4",
-                  title: "Building Trust at Scale: The Arcitecture Behind ...",
+                  title: <>"Building Trust at Scale:<br/> The Arcitecture Behind ..."</>,
                   time: "6 min read",
                   date: "May 18, 2026",
                 },
@@ -154,7 +155,7 @@ export default function Blog() {
                   color: "#B45309",
                   bg: "#FEF3C7",
                   title:
-                    "Designing Cryptographic Integrity for High-Volume ...",
+                    <>Designing Cryptographic Integrity for High-<br/>Volume ...</>,
                   time: "7 min read",
                   date: "May 15, 2026",
                 },
@@ -189,51 +190,23 @@ export default function Blog() {
           {/* ── FEATURED + POPULAR ── */}
           <div className="blog-featured-section">
             <div className="blog-featured-row">
-              <div className="blog-featured-card">
-                <span className="blog-featured__label">FEATURED</span>
-                <img
-                  src={dark ? blogFeaturedDark : blogFeatured}
-                  alt="Featured"
-                  className="blog-featured__img"
-                />
-                <span className="blog-featured__tag">Security</span>
-                <h2 className="blog-featured__title">
-                  Building Trust at Scale: The Arcitecture Behind Secure
-                  Document Signing
-                </h2>
-                <div className="blog-featured__meta">
-                  <span>⏱ 6 min read</span>
-                  <span>May 18, 2026</span>
-                </div>
-              </div>
-              <div className="blog-popular-and-newsletter">
-                <div className="blog-popular-card">
-                  <span className="blog-popular__label">POPULAR ARTICLES</span>
-                  {[
-                    {
-                      title:
-                        "Zero-Trust Architecture for E-Signature Platforms",
-                      date: "May 20, 2026",
-                    },
-                    {
-                      title:
-                        "Zero-Trust Architecture for E-Signature Platforms",
-                      date: "May 20, 2026",
-                    },
-                    {
-                      title:
-                        "Zero-Trust Architecture for E-Signature Platforms",
-                      date: "May 20, 2026",
-                    },
-                  ].map((item, i) => (
-                    <div className="blog-popular__item" key={i}>
-                      <div className="blog-popular__thumb"></div>
-                      <div className="blog-popular__info">
-                        <h3 className="blog-popular__title">{item.title}</h3>
-                        <p className="blog-popular__date">{item.date}</p>
-                      </div>
-                    </div>
-                  ))}
+              <div className="blog-featured-column">
+                <div className="blog-featured-card">
+                  <span className="blog-featured__label">FEATURED</span>
+                  <img
+                    src={dark ? blogFeaturedDark : blogFeatured}
+                    alt="Featured"
+                    className="blog-featured__img"
+                  />
+                  <span className="blog-featured__tag">Security</span>
+                  <h2 className="blog-featured__title">
+                    Building Trust at Scale: <br /> The Arcitecture Behind Secure 
+                    Document <br />Signing
+                  </h2>
+                  <div className="blog-featured__meta">
+                    <span>⏱ 6 min read</span>
+                    <span>May 18, 2026</span>
+                  </div>
                 </div>
                 <div className="blog-newsletter-wrapper">
                   <div className="blog-newsletter-card">
@@ -254,6 +227,36 @@ export default function Blog() {
                       We respect your privacy. Unsubscribe anytime
                     </p>
                   </div>
+                </div>
+              </div>
+              <div className="blog-popular-and-newsletter">
+                <div className="blog-popular-card">
+                  <span className="blog-popular__label">POPULAR ARTICLES</span>
+                  {[
+                    {
+                      title:
+                       <> "Zero-Trust Architecture for E-<br/>Signature Platforms"</>,
+                      date: "May 20, 2026",
+                    },
+                    {
+                      title:
+                        <>"Zero-Trust Architecture for E-<br/>Signature Platforms"</>,
+                      date: "May 20, 2026",
+                    },
+                    {
+                      title:
+                        <>"Zero-Trust Architecture for E-<br/>Signature Platforms"</>,
+                      date: "May 20, 2026",
+                    },
+                  ].map((item, i) => (
+                    <div className="blog-popular__item" key={i}>
+                      <div className="blog-popular__thumb"></div>
+                      <div className="blog-popular__info">
+                        <h3 className="blog-popular__title">{item.title}</h3>
+                        <p className="blog-popular__date">{item.date}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -279,11 +282,19 @@ export default function Blog() {
             </div>
           </div>
         </div>
-        {/* ── FOOTER ── */}
+        {/* ── DARK DIVIDER OVERLAY (desktop dark mode only) ── */}
+        {dark && (
+          <img
+            src={darkBlogDivider}
+            alt=""
+            className="blog-dark-divider"
+            aria-hidden="true"
+          />
+        )}
       </div>
       {/* end blog-page-wrapper */}
       {/* ── FOOTER ── */}
-      <div style={{ position: "relative", zIndex: 2 }}>
+      <div className="nexgn-footer-wrapper">
         <FooterSection dark={dark} />
       </div>
     </>

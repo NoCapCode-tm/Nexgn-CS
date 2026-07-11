@@ -4,6 +4,8 @@ import heroIllustration from "../assets/contact.png";
 import heroIllustrationDark from "../assets/dark-contact.png";
 import ribbonBg from "../assets/privacy-bg-ribbon.png";
 import ribbonBgDark from "../assets/helpcenter-dark-ribbon.png";
+import dividerBg from "../assets/aboutus-divider.png";
+import dividerBgDark from "../assets/aboutus-dark-divider.png";
 import FooterSection from "../FooterSection";
 
 function Navbar({ dark, setDark }) {
@@ -80,7 +82,7 @@ export default function ContactUs() {
     <div className="nexgn-page" lang="en">
       <Navbar dark={dark} setDark={setDark} />
       {/* ── HERO SECTION ── */}
-      <section className="nexgn-hero" style={{ overflow: "hidden" }}>
+      <section className="nexgn-hero">
         {/* ── RIBBON ── */}
         <img
           src={dark ? ribbonBgDark : ribbonBg}
@@ -89,7 +91,7 @@ export default function ContactUs() {
           aria-hidden="true"
         />
         <div className="nexgn-hero-inner">
-          <div className="nexgn-hero-text" style={{ flexShrink: 0, zIndex: 3 }}>
+          <div className="nexgn-hero-text">
             <svg
               className="nexgn-hero-eyebrow-svg"
               width="114"
@@ -109,7 +111,7 @@ export default function ContactUs() {
               with Nexgn.
             </h1>
             <p className="nexgn-hero-subtitle">
-              Our global support and engineering teams are ready to assist you.
+              Our global support and engineering teams <br />are ready to assist you.
             </p>
           </div>
 
@@ -129,6 +131,12 @@ export default function ContactUs() {
       </section>
       {/* ── CARDS + FORM BACKGROUND WRAPPER ── */}
       <div className="nexgn-sections-bg">
+        <img
+          src={dark ? dividerBgDark : dividerBg}
+          alt=""
+          className="nexgn-contactus-divider-bg"
+          aria-hidden="true"
+        />
         {/* ── CONTACT CARDS SECTION ── */}
         <section className="nexgn-cards">
           <div className="nexgn-cards-inner">
@@ -162,9 +170,9 @@ export default function ContactUs() {
                 Customer Success &amp; Support
               </h3>
               <p className="nexgn-card-desc">
-                Need help with your account, billing, or a technical issue?
+                Need help with your account,<br /> billing, or a technical issue?
                 <br />
-                Our team is available to keep your workflows moving.
+                Our team is available to keep your<br /> workflows moving.
               </p>
               <div className="nexgn-card-links">
                 <a
@@ -306,8 +314,8 @@ export default function ContactUs() {
               </div>
               <h3 className="nexgn-card-title">Enterprise &amp; Security</h3>
               <p className="nexgn-card-desc">
-                For vulnerability disclosures, data privacy requests, or
-                enterprise SLA compliance:
+                For vulnerability disclosures, data<br /> privacy requests, or
+                enterprise<br /> SLA compliance:
               </p>
               <div className="nexgn-card-links">
                 <a
@@ -441,9 +449,9 @@ export default function ContactUs() {
               </div>
               <h3 className="nexgn-card-title">Corporate Headquarters</h3>
               <p className="nexgn-card-desc">
-                Need help with your account, billing, or a technical issue?
+                Need help with your account,<br /> billing, or a technical issue?
                 <br />
-                Our team is available to keep your workflows moving.
+                Our team is available to keep your<br /> workflows moving.
               </p>
               <div className="nexgn-card-links nexgn-card-links--address">
                 <div className="nexgn-card-address">
@@ -537,7 +545,7 @@ export default function ContactUs() {
       </div>{" "}
       {/* end nexgn-sections-bg */}
       {/* ── FOOTER ── */}
-      <div style={{ position: "relative", zIndex: 2 }}>
+      <div className="nexgn-footer-wrapper">
         <FooterSection dark={dark} />
       </div>
     </div>
