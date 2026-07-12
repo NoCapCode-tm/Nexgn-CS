@@ -34,6 +34,7 @@
     rgba(249, 245, 247, 0) 100%
   );
 }
+
 .navbar__theme-toggle {
   background: none;
   border: none;
@@ -45,6 +46,7 @@
   border-radius: 8px;
   transition: background 0.2s;
 }
+
 .navbar__theme-toggle:hover {
   background: rgba(0, 0, 0, 0.06);
 }
@@ -52,20 +54,21 @@
 [data-theme="dark"] .navbar__theme-toggle {
   color: #fff;
 }
+
 [data-theme="dark"] .navbar__theme-toggle:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] .navbar {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0) 100%);
 }
+
 [data-theme="dark"] .navbar__logo-name {
   color: #fff;
 }
+
 [data-theme="dark"] .navbar__logo-sub {
   color: #aaa;
 }
@@ -75,11 +78,13 @@
   align-items: center;
   gap: 8px;
 }
+
 .navbar__logo-text {
   display: flex;
   flex-direction: column;
   line-height: 1;
 }
+
 .navbar__logo-name {
   font-family: "MuseoModerno", sans-serif;
   font-weight: 400;
@@ -87,6 +92,7 @@
   color: #1a0a0d;
   line-height: 1;
 }
+
 .navbar__logo-sub {
   font-family: "MuseoModerno", sans-serif;
   font-weight: 350;
@@ -101,6 +107,12 @@
   position: relative;
   overflow-x: hidden;
   min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .nexgn-root {
+    min-height: auto;
+  }
 }
 
 /* ── RIBBON ── */
@@ -192,6 +204,16 @@
 }
 
 /* ── HERO SEARCH ── */
+.nexgn-search-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nexgn-filter-btn {
+  display: none;
+}
+
 .nexgn-hero-search {
   display: flex;
   flex-direction: row;
@@ -565,9 +587,11 @@
 [data-theme="dark"] .nexgn-hero-label {
   color: #e8334a;
 }
+
 [data-theme="dark"] .nexgn-hero-title {
   color: #fff;
 }
+
 [data-theme="dark"] .nexgn-hero-subtitle {
   color: #aaa;
 }
@@ -577,19 +601,24 @@
   background: #000000;
   border-color: rgba(87, 87, 87, 0.3);
 }
+
 [data-theme="dark"] .nexgn-faq__sidebar-label {
   color: #fff;
 }
+
 [data-theme="dark"] .nexgn-cat-item:hover {
   background: #1a1a1a;
 }
+
 [data-theme="dark"] .nexgn-cat-item--active {
   background: #1a0a0a;
   border-left-color: #e20108;
 }
+
 [data-theme="dark"] .nexgn-cat-name {
   color: #ccc;
 }
+
 [data-theme="dark"] .nexgn-cat-item--active .nexgn-cat-name {
   color: #e20108;
 }
@@ -599,41 +628,53 @@
   background: #000000;
   border-color: rgba(87, 87, 87, 0.3);
 }
+
 [data-theme="dark"] .nexgn-acc-header {
   background: #000000;
 }
+
 [data-theme="dark"] .nexgn-acc-header:hover {
   background: #1a1a1a;
 }
+
 [data-theme="dark"] .nexgn-acc-num {
   background: #1a0a0a;
   color: #f81314;
 }
+
 [data-theme="dark"] .nexgn-acc-section--open .nexgn-acc-num {
   background: #2a0a0a;
   color: #e6362b;
 }
+
 [data-theme="dark"] .nexgn-acc-title {
   color: #fff;
 }
+
 [data-theme="dark"] .nexgn-acc-chevron {
   color: #aaa;
 }
+
 [data-theme="dark"] .nexgn-acc-qa {
   border-top-color: rgba(87, 87, 87, 0.3);
 }
+
 [data-theme="dark"] .nexgn-acc-q svg {
   color: #555;
 }
+
 [data-theme="dark"] .nexgn-acc-qa--open .nexgn-acc-q svg {
   color: #fff;
 }
+
 [data-theme="dark"] .nexgn-acc-q-text {
   color: #ccc;
 }
+
 [data-theme="dark"] .nexgn-acc-qa--open .nexgn-acc-q-text {
   color: #fff;
 }
+
 [data-theme="dark"] .nexgn-acc-answer {
   color: #888;
 }
@@ -655,19 +696,16 @@
     transparent 65%
   );
 }
+
 [data-theme="dark"] .nexgn-hero-banner {
   display: block;
   mix-blend-mode: screen;
-  mask-image: radial-gradient(
-    ellipse 80% 80% at 60% 50%,
-    black 40%,
-    transparent 100%
-  );
-  -webkit-mask-image: radial-gradient(
-    ellipse 80% 80% at 60% 50%,
-    black 40%,
-    transparent 100%
-  );
+  mask-image: radial-gradient(ellipse 80% 80% at 60% 50%,
+      black 40%,
+      transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 60% 50%,
+      black 40%,
+      transparent 100%);
 }
 
 /* Help banner */
@@ -675,9 +713,11 @@
   background: transparent;
   border-color: rgba(87, 87, 87, 0.3);
 }
+
 [data-theme="dark"] .nexgn-help-banner__title {
   color: #fff;
 }
+
 [data-theme="dark"] .nexgn-help-banner__desc {
   color: #888;
 }
@@ -686,6 +726,7 @@
   color: #ccc;
   border-color: rgba(87, 87, 87, 0.3);
 }
+
 [data-theme="dark"] .nexgn-help-btn--secondary:hover {
   background: #1a1a1a;
 }
@@ -698,6 +739,7 @@
    MOBILE VIEW (0 – 768px)
    ============================================ */
 @media (max-width: 768px) {
+
   /* ── NAVBAR ── */
   .navbar {
     padding: 0 clamp(10px, 3.65vw, 14px);
@@ -1008,6 +1050,7 @@
    TABLET VIEW (769px – 1179px)
    ============================================ */
 @media (min-width: 769px) and (max-width: 1179px) {
+
   /* Navbar */
   .navbar {
     padding: 0 clamp(20px, 4.16vw, 32px);
@@ -1018,12 +1061,15 @@
     padding: 0 clamp(20px, 4.16vw, 32px);
     min-height: 480px;
   }
+
   .nexgn-hero-ribbon {
     display: none;
   }
+
   .nexgn-hero-label {
     margin-top: 90px;
   }
+
   .nexgn-hero-title {
     width: 100%;
     max-width: 420px;
@@ -1031,21 +1077,25 @@
     line-height: 1.23;
     margin-top: 28px;
   }
+
   .nexgn-hero-subtitle {
     width: 100%;
     max-width: 420px;
     font-size: clamp(14px, 2.08vw, 16px);
     margin-top: 24px;
   }
+
   .nexgn-hero-search {
     width: 100%;
     max-width: 420px;
     height: clamp(42px, 5.99vw, 46px);
     margin-top: 24px;
   }
+
   .nexgn-hero-search__text {
     font-size: clamp(13px, 1.82vw, 14px);
   }
+
   .nexgn-hero-banner {
     width: 48vw;
     max-width: 420px;
@@ -1059,24 +1109,30 @@
     padding: 0 clamp(20px, 4.16vw, 32px);
     gap: 16px;
   }
+
   .nexgn-faq__sidebar {
     width: 230px;
   }
+
   .nexgn-faq__sidebar-label {
     padding: 20px 18px 12px;
     font-size: 14px;
   }
+
   .nexgn-cat-item {
     gap: 16px;
     padding: 10px 16px;
     min-height: 60px;
   }
+
   .nexgn-cat-name {
     font-size: 13px;
   }
+
   .nexgn-acc-title {
     font-size: 15px;
   }
+
   .nexgn-acc-body {
     padding: 0 18px 16px 46px;
   }
@@ -1089,15 +1145,19 @@
     padding: 32px;
     gap: 24px;
   }
+
   .nexgn-help-banner__image {
     width: 200px;
   }
+
   .nexgn-help-banner__image img {
     width: 180px;
   }
+
   .nexgn-help-banner__title {
     font-size: clamp(22px, 3.13vw, 26px);
   }
+
   .nexgn-help-banner__desc {
     font-size: 14px;
     max-width: 300px;

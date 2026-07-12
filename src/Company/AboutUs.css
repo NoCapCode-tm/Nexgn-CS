@@ -847,6 +847,50 @@
   mix-blend-mode: screen;
 }
 
+@media (min-width: 769px) {
+  .navbar {
+    padding-inline: calc(50% - min(46%, 40rem));
+  }
+}
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.navbar__logo-name {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #1a0a0d;
+  line-height: 1;
+}
+.navbar__logo-sub {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.6875rem;
+  color: #888;
+  margin-top: 0.125rem;
+}
+.navbar__theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1a0a0d;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+}
+.navbar__theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
 /* ── FOOTER: dark mode ── */
 [data-theme="dark"] .about-footer {
   background: #000000;
@@ -955,6 +999,7 @@
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%);
 }
 
+
 [data-theme="dark"] .aboutus-hero-title {
   color: #ffffff;
 }
@@ -1011,6 +1056,7 @@
 }
 
 /* ═══════════════════════════════════════
+   TABLET: 769px – 1179px (Proportional Desktop Scale)
    TABLET: 769px – 1179px (Proportional Desktop Scale)
    ═══════════════════════════════════════ */
 @media (min-width: 769px) and (max-width: 1179.98px) {
@@ -1280,12 +1326,12 @@
     margin-bottom: var(--core-header-mb);
     text-align: center;
   }
-
+  
   .nexgn-core-values-label {
     font-size: var(--core-label-size);
     margin-bottom: var(--core-label-mb);
   }
-
+  
   .nexgn-core-values-title {
     font-size: var(--core-title-size);
     text-align: center;
@@ -1349,14 +1395,14 @@
     gap: var(--promise-gap);
     border-radius: var(--promise-rad);
   }
-
+  
   .nexgn-promise-image {
     width: var(--promise-image-width);
     height: auto;
     margin-left: calc(2.5 * var(--mobile-scale));
     object-fit: contain;
   }
-
+  
   .nexgn-promise-content {
     display: flex;
     flex-direction: column;
@@ -1387,7 +1433,7 @@
   .nexgn-aboutus-divider-bg {
     display: none;
   }
-
+  
   .footer {
     mask-image: linear-gradient(to bottom, transparent 0%, black 2.5rem);
     -webkit-mask-image: linear-gradient(
