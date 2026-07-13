@@ -4,36 +4,37 @@ import ribbonBg from "../assets/privacy-bg-ribbon.png";
 import ribbonBgDark from "../assets/helpcenter-dark-ribbon.png";
 import termsHero from "../assets/terms-hero.png";
 import termsHeroDark from "../assets/terms-dark.png";
-import FooterSection from "../FooterSection";
 
 function Navbar({ dark, setDark }) {
   return (
-    <nav className="navbar">
-      <div className="navbar__brand">
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-          <path
-            d="M36.499 0C40.3359 0 43.4463 3.11041 43.4463 6.94727V36.499C43.4463 36.6885 43.4358 36.8759 43.4209 37.0615L32.6826 26.5566C31.3112 25.2156 29.0995 25.2276 27.7432 26.584L25.5107 28.8174C24.1546 30.1738 24.1663 32.3607 25.5371 33.7021L35.498 43.4463H7.1543L34.7979 16.4053C36.169 15.0637 36.1807 12.877 34.8242 11.5205L32.5918 9.28711C31.2353 7.93089 29.0237 7.91858 27.6523 9.25977L0 36.3096V7.89941L10.7188 18.3857C12.0901 19.727 14.3017 19.7147 15.6582 18.3584L17.8906 16.125C19.2471 14.7685 19.2355 12.5818 17.8643 11.2402L6.39746 0.0234375C6.57891 0.00922816 6.76217 0 6.94727 0H36.499Z"
-            fill="#E22A2A"
-          />
-        </svg>
-        <div className="navbar__logo-text">
-          <span className="navbar__logo-name">Nexgn</span>
-          <span className="navbar__logo-sub">Smart Signing</span>
+    <header className="terms-services__navbar">
+      <div className="terms-services__navbar-brand">
+        <div className="terms-services__navbar-logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <path
+              d="M36.499 0C40.3359 0 43.4463 3.11041 43.4463 6.94727V36.499C43.4463 36.6885 43.4358 36.8759 43.4209 37.0615L32.6826 26.5566C31.3112 25.2156 29.0995 25.2276 27.7432 26.584L25.5107 28.8174C24.1546 30.1738 24.1663 32.3607 25.5371 33.7021L35.498 43.4463H7.1543L34.7979 16.4053C36.169 15.0637 36.1807 12.877 34.8242 11.5205L32.5918 9.28711C31.2353 7.93089 29.0237 7.91858 27.6523 9.25977L0 36.3096V7.89941L10.7188 18.3857C12.0901 19.727 14.3017 19.7147 15.6582 18.3584L17.8906 16.125C19.2471 14.7685 19.2355 12.5818 17.8643 11.2402L6.39746 0.0234375C6.57891 0.00922816 6.76217 0 6.94727 0H36.499Z"
+              fill="#E22A2A"
+            />
+          </svg>
+        </div>
+        <div className="terms-services__navbar-logo-text">
+          <span className="terms-services__navbar-logo-name">Nexgn</span>
+          <span className="terms-services__navbar-logo-sub">Smart Signing</span>
         </div>
       </div>
       <button
-        className="navbar__theme-toggle"
+        type="button"
+        className="terms-services__navbar-theme-toggle"
         onClick={() => setDark(!dark)}
         aria-label="Toggle dark mode"
       >
         {dark ? (
           <svg
-            width="20"
-            height="20"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
+            aria-hidden="true"
           >
             <circle cx="12" cy="12" r="5" />
             <line x1="12" y1="1" x2="12" y2="3" />
@@ -47,20 +48,122 @@ function Navbar({ dark, setDark }) {
           </svg>
         ) : (
           <svg
-            width="20"
-            height="20"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
+            aria-hidden="true"
           >
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
           </svg>
         )}
       </button>
-    </nav>
+    </header>
   );
 }
+
+function FooterBrand({ dark }) {
+  return (
+    <div className="terms-services__footer-brand">
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+          marginBottom: "17.78px",
+        }}
+      >
+        <svg width="36" height="36" viewBox="0 0 44 44" fill="none">
+          <path
+            d="M36.499 0C40.3359 0 43.4463 3.11041 43.4463 6.94727V36.499C43.4463 36.6885 43.4358 36.8759 43.4209 37.0615L32.6826 26.5566C31.3112 25.2156 29.0995 25.2276 27.7432 26.584L25.5107 28.8174C24.1546 30.1738 24.1663 32.3607 25.5371 33.7021L35.498 43.4463H7.1543L34.7979 16.4053C36.169 15.0637 36.1807 12.877 34.8242 11.5205L32.5918 9.28711C31.2353 7.93089 29.0237 7.91858 27.6523 9.25977L0 36.3096V7.89941L10.7188 18.3857C12.0901 19.727 14.3017 19.7147 15.6582 18.3584L17.8906 16.125C19.2471 14.7685 19.2355 12.5818 17.8643 11.2402L6.39746 0.0234375C6.57891 0.00922816 6.76217 0 6.94727 0H36.499Z"
+            fill="#E22A2A"
+          />
+        </svg>
+        <span
+          style={{
+            fontFamily: "MuseoModerno, sans-serif",
+            fontSize: "22px",
+            color: dark ? "#ffffff" : "#111111",
+          }}
+        >
+          Nexgn
+        </span>
+      </div>
+      <p className="terms-services__footer-tagline">
+        The Next Generation of Document
+        <br />
+        Signature
+      </p>
+      <p className="terms-services__footer-email">gateway@nexgn.cloud</p>
+      <div className="terms-services__footer-socials">
+        <a href="#" className="terms-services__footer-social-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+        </a>
+        <a href="#" className="terms-services__footer-social-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#666666">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+      </div>
+      <div className="terms-services__footer-copyright">
+        ©️ 2026 Nexgn. All rights reserved.
+      </div>
+    </div>
+  );
+}
+
+function FooterLinks() {
+  return (
+    <div className="terms-services__footer-links">
+      <div className="terms-services__footer-link-column">
+        <h4>COMPANY</h4>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/blog">Blog</a>
+      </div>
+      <div className="terms-services__footer-link-column">
+        <h4>RESOURCES</h4>
+        <a href="/help">Help center</a>
+        <a href="#">System Status</a>
+        <a href="/security">Security</a>
+      </div>
+      <div className="terms-services__footer-link-column">
+        <h4>LEGAL &amp; TRUST</h4>
+        <a href="/security">Trust &amp; Compliance</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/term">Terms &amp; Services</a>
+      </div>
+    </div>
+  );
+}
+
+function FooterWordmark() {
+  return (
+    <div className="terms-services__footer-wordmark-wrapper">
+      <div className="terms-services__footer-blurry-bg-container">
+        <div className="terms-services__footer-blurry-bg"></div>
+      </div>
+      <div className="terms-services__footer-wordmark-overlay">NEXGN</div>
+    </div>
+  );
+}
+
+function SiteFooter({ dark }) {
+  return (
+    <footer className="terms-services__footer">
+      <div className="terms-services__footer-content">
+        <div className="terms-services__footer-top">
+          <FooterBrand dark={dark} />
+          <FooterLinks />
+        </div>
+      </div>
+      <FooterWordmark />
+    </footer>
+  );
+}
+
 export default function TermsServices() {
   const [dark, setDark] = useState(
     () =>
@@ -75,44 +178,27 @@ export default function TermsServices() {
     );
   }, [dark]);
 
-  useEffect(() => {
-    function updateZoom() {
-      const w = window.innerWidth;
-      let z = 1;
-      if (w >= 1440) {
-        z = w / 1440;
-      } else if (w >= 769 && w < 1180) {
-        z = w / 832;
-      }
-      document.documentElement.style.setProperty("--page-zoom", z);
-    }
-    updateZoom();
-    window.addEventListener("resize", updateZoom);
-    return () => window.removeEventListener("resize", updateZoom);
-  }, []);
-
   return (
     <>
-      <div className="terms-page-wrapper">
+      <div className="terms-services">
         <Navbar dark={dark} setDark={setDark} />
 
-        {/* ── RIBBON ── */}
-        <div className="nexgn-hero-ribbon-clip">
-          <img
-            src={dark ? ribbonBgDark : ribbonBg}
-            alt=""
-            className="nexgn-hero-ribbon"
-            aria-hidden="true"
-          />
-        </div>
-        <span className="nexgn-terms-heading">Terms of Service</span>
-        <h1 className="nexgn-terms-title-text">Terms that keep things clear</h1>
+        <img
+          src={dark ? ribbonBgDark : ribbonBg}
+          alt=""
+          className="terms-services__hero-ribbon"
+          aria-hidden="true"
+        />
+        <span className="terms-services__heading">Terms of Service</span>
+        <h1 className="terms-services__title-text">
+          Terms that keep things clear
+        </h1>
         <svg
-          className="nexgn-terms-title"
-          width="451"
-          height="125"
+          className="terms-services__title"
           viewBox="0 0 451 125"
           fill="none"
+          role="img"
+          aria-label="Terms that keep things clear"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -120,751 +206,727 @@ export default function TermsServices() {
             fill="black"
           />
         </svg>
-        <p className="nexgn-terms-subtitle">
+        <p className="terms-services__subtitle">
           Our Terms of Service outline the rules and guidelines for using
           Nexgn's platform, APIs, edge networks, and cloud infrastructure.
         </p>
         <img
           src={dark ? termsHeroDark : termsHero}
           alt="Terms of Service illustration"
-          className="nexgn-terms-hero-img"
+          className="terms-services__hero-img"
         />
 
-        {/* ── GROUP 941 - Acceptance of the Terms ── */}
-        <div className="nexgn-terms-section-item">
-          <div className="nexgn-terms-section-icon">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11 17L13 19C13.197 19.197 13.4308 19.3532 13.6882 19.4598C13.9456 19.5665 14.2214 19.6213 14.5 19.6213C14.7786 19.6213 15.0544 19.5665 15.3118 19.4598C15.5692 19.3532 15.803 19.197 16 19C16.197 18.803 16.3532 18.5692 16.4598 18.3118C16.5665 18.0544 16.6213 17.7786 16.6213 17.5C16.6213 17.2214 16.5665 16.9456 16.4598 16.6882C16.3532 16.4308 16.197 16.197 16 16"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M13.9963 14.0005L16.4963 16.5005C16.8941 16.8983 17.4337 17.1218 17.9963 17.1218C18.5589 17.1218 19.0985 16.8983 19.4963 16.5005C19.8941 16.1027 20.1176 15.5631 20.1176 15.0005C20.1176 14.4379 19.8941 13.8983 19.4963 13.5005L15.6163 9.6205C15.0538 9.0587 14.2913 8.7431 13.4963 8.7431C12.7013 8.7431 11.9388 9.0587 11.3763 9.6205L10.4963 10.5005C10.0985 10.8983 9.5589 11.1218 8.9963 11.1218C8.4337 11.1218 7.8941 10.8983 7.4963 10.5005C7.0985 10.1027 6.875 9.5631 6.875 9.0005C6.875 8.4379 7.0985 7.8983 7.4963 7.5005L10.3063 4.6905C11.2186 3.7806 12.4082 3.2011 13.687 3.0435C14.9657 2.8859 16.2605 3.1593 17.3663 3.8205L17.8363 4.1005C18.2621 4.3575 18.7684 4.4466 19.2563 4.3505L20.9963 4.0005"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M21 3L22 14H20"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M3 3L2 14L8.5 20.5C8.8978 20.8978 9.4374 21.1213 10 21.1213C10.5626 21.1213 11.1022 20.8978 11.5 20.5C11.8978 20.1022 12.1213 19.5626 12.1213 19C12.1213 18.4374 11.8978 17.8978 11.5 17.5"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M3 4H11"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <span className="nexgn-terms-section-label">
-            Acceptance of the Terms
-          </span>
-        </div>
-        {/* ── DEFINITIONS CONTENT BLOCK ── */}
-        <div className="nexgn-terms-definitions-block">
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              "Customer Data" refers to any code, data, text, audio, video or
-              images that you transfer to us for processing, storage or hosting
-              in connection with the Services
-            </p>
-          </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              "Infrastructure" refers to the servers, edge nodes, software and
-              APIs operated by Nexgn to deliver the Services
-            </p>
-          </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              "Malicious Code" refers to viruses, worms, time bombs, Trojan
-              horses and other harmful or malicious code, Files, scripts, agents
-              or programs.
-            </p>
-          </div>
-        </div>
-        {/* ── SERVICE AVAILABILITY CONTENT BLOCK ── */}
-        <div className="nexgn-terms-sla-block">
-          <p className="nexgn-terms-sla-text">
-            We strive to provide highly reliable, globally optimized edge
-            services, However the Services are provided on a "best-effort" basis
-            unless you are subscribed to a tier that includes a specific Service
-            Level Agreement (SLA), Nexgn reserves the right to perform scheduled
-            and emergency maintenance, which may result in temporary service
-            interruptions.
-          </p>
-        </div>
-
-        {/* ── GROUP 941 - Service Availability and SLA ── */}
-        <div className="nexgn-terms-section-item nexgn-terms-section-item--sla">
-          <div className="nexgn-terms-section-icon">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M28 32C28 28.2767 29.4322 24.6962 32 22C34.5678 24.6962 36 28.2767 36 32C36 35.7233 34.5678 39.3038 32 42C29.4322 39.3038 28 35.7233 28 32Z"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M2 12H22"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <span className="nexgn-terms-section-label">
-            Service Availability and SLA
-          </span>
-        </div>
-
-        {/* ── DISCLAIMER OF WARRANTIES CONTENT BLOCK ── */}
-        <div className="nexgn-terms-disclaimer-block">
-          <p className="nexgn-terms-disclaimer-text">
-            THE SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS.
-            NEXGN EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER
-            EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
-            WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
-            TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICES
-            WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE, OR THAT DATA
-            WILL NOT BE LOST.
-          </p>
-        </div>
-
-        {/* ── GROUP 941 - Disclaimer of Warranties ── */}
-        <div className="nexgn-terms-section-item nexgn-terms-section-item--disclaimer">
-          <div className="nexgn-terms-section-icon">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M15 9L9 15"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M9 9L15 15"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <span className="nexgn-terms-section-label">
-            Disclaimer of Warranties
-          </span>
-        </div>
-
-        {/* ── LIMITATION OF LIABILITY CONTENT BLOCK ── */}
-        <div className="nexgn-terms-liability-block">
-          <p className="nexgn-terms-content-text">
-            TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL
-            NEXGN, ITS FOUNDERS, EMPLOYEES, OR AFFILIATES BE LIABLE FOR ANY
-            DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY
-            DAMAGES. THIS INCLUDES, BUT IS NOT LIMITED TO, DAMAGES FOR LOSS OF
-            PROFITS, REVENUE, GOODWILL, USE, DATA, OR OTHER INTANGIBLE LOSSES,
-            EVEN IF NEXGN HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-            RESULTING FROM:
-          </p>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              The use or the inability to use the Services.
-            </p>
-          </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Unauthorized access to or alteration of your transmissions or
-              data.
-            </p>
-          </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Any actions or content of any third party on the Services.
-            </p>
-          </div>
-        </div>
-
-        {/* ── GROUP 941 - Limitation of Liability ── */}
-        <div className="nexgn-terms-section-item nexgn-terms-section-item--liability">
-          <div className="nexgn-terms-section-icon">
-            <svg
-              width="24"
-              height="24"
-              viewBox="20 20 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M35 35L41 41M39.8 35H35V39.8"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M24.2 35H29V39.8M29 35L23 41"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M39.8 29H35V24.2M35 29L41 23"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M24.2 29H29V24.2M29 29L23 23"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <span className="nexgn-terms-section-label">
-            Limitation of Liability
-          </span>
-        </div>
-
-        {/* ── SUSPENSION AND TERMINATION CONTENT BLOCK ── */}
-        <div className="nexgn-terms-suspension-block">
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              By You: You may terminate your account at any time via the billing
-              or account settings panel.
-            </p>
-          </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              By Nexgn: We may suspend or terminate your access to the Services
-              at any time, with or without cause, and with or without notice,
-              particularly in the event of an AUP violation or non-payment. Upon
-              termination, your right to use the Services will immediately
-              cease, and Nexgn may permanently delete your Customer Data.
-            </p>
-          </div>
-        </div>
-
-        {/* ── GROUP 941 - Suspension and Termination ── */}
-        <div className="nexgn-terms-section-item nexgn-terms-section-item--suspension">
-          <div className="nexgn-terms-section-icon">
-            <svg
-              width="24"
-              height="24"
-              viewBox="20 20 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M32 42C37.5228 42 42 37.5228 42 32C42 26.4772 37.5228 22 32 22C26.4772 22 22 26.4772 22 32C22 37.5228 26.4772 42 32 42Z"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M24.9297 24.9297L39.0707 39.0717"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <span className="nexgn-terms-section-label">
-            Suspension and Termination
-          </span>
-        </div>
-
-        {/* ── MODIFICATIONS TO THE TERMS CONTENT BLOCK ── */}
-        <div className="nexgn-terms-modifications-block">
-          <p className="nexgn-terms-content-text">
-            Nexgn reserves the right to modify these Terms at any time. We will
-            provide notice of material changes by sending an email to the
-            address associated with your account or by posting a prominent
-            notice on our website. Your continued use of the Services after the
-            effective date of updated Terms constitutes your acceptance.
-          </p>
-        </div>
-
-        {/* ── GROUP 941 - Modifications to the Terms ── */}
-        <div className="nexgn-terms-section-item nexgn-terms-section-item--modifications">
-          <div className="nexgn-terms-section-icon">
-            <svg
-              width="24"
-              height="24"
-              viewBox="20 20 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M33 41H41"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M41.1739 26.8124C41.7026 26.2838 41.9997 25.5668 41.9998 24.8192C41.9999 24.0716 41.703 23.3546 41.1744 22.8259C40.6459 22.2972 39.9289 22.0001 39.1813 22C38.4337 21.9999 37.7166 22.2968 37.1879 22.8254L23.8419 36.1744C23.6098 36.4059 23.438 36.6909 23.3419 37.0044L22.0209 41.3564C21.9951 41.4429 21.9931 41.5347 22.0153 41.6222C22.0374 41.7097 22.0829 41.7896 22.1467 41.8534C22.2106 41.9172 22.2906 41.9624 22.3781 41.9845C22.4656 42.0065 22.5575 42.0044 22.6439 41.9784L26.9969 40.6584C27.3101 40.5631 27.5951 40.3925 27.8269 40.1614L41.1739 26.8124Z"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <span className="nexgn-terms-section-label">
-            Modifications to the Terms
-          </span>
-        </div>
-
-        {/* ── CONTACT INFORMATION CONTENT BLOCK ── */}
-        <div className="nexgn-terms-contact-block">
-          <p className="nexgn-terms-content-text">
-            For any questions, legal notices, or abuse reports concerning these
-            Terms, please contact us;
-          </p>
-          <div className="nexgn-terms-contact-row">
-            <div className="nexgn-terms-contact-item">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
-                  stroke="black"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M22 6L12 13L2 6"
-                  stroke="black"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <div>
-                <p className="nexgn-terms-contact-label">
-                  General &amp; Legal Inquiries
-                </p>
-                <a
-                  className="nexgn-terms-contact-link"
-                  href="mailto:gateway@nexgn.cloud"
+        <div className="terms-services__sections">
+          {/* Acceptance of the Terms */}
+          <div className="terms-services__row">
+            <div className="terms-services__row-label">
+              <div className="terms-services__section-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  gateway@nexgn.cloud
-                </a>
+                  <path
+                    d="M11 17L13 19C13.197 19.197 13.4308 19.3532 13.6882 19.4598C13.9456 19.5665 14.2214 19.6213 14.5 19.6213C14.7786 19.6213 15.0544 19.5665 15.3118 19.4598C15.5692 19.3532 15.803 19.197 16 19C16.197 18.803 16.3532 18.5692 16.4598 18.3118C16.5665 18.0544 16.6213 17.7786 16.6213 17.5C16.6213 17.2214 16.5665 16.9456 16.4598 16.6882C16.3532 16.4308 16.197 16.197 16 16"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M13.9963 14.0005L16.4963 16.5005C16.8941 16.8983 17.4337 17.1218 17.9963 17.1218C18.5589 17.1218 19.0985 16.8983 19.4963 16.5005C19.8941 16.1027 20.1176 15.5631 20.1176 15.0005C20.1176 14.4379 19.8941 13.8983 19.4963 13.5005L15.6163 9.6205C15.0538 9.0587 14.2913 8.7431 13.4963 8.7431C12.7013 8.7431 11.9388 9.0587 11.3763 9.6205L10.4963 10.5005C10.0985 10.8983 9.5589 11.1218 8.9963 11.1218C8.4337 11.1218 7.8941 10.8983 7.4963 10.5005C7.0985 10.1027 6.875 9.5631 6.875 9.0005C6.875 8.4379 7.0985 7.8983 7.4963 7.5005L10.3063 4.6905C11.2186 3.7806 12.4082 3.2011 13.687 3.0435C14.9657 2.8859 16.2605 3.1593 17.3663 3.8205L17.8363 4.1005C18.2621 4.3575 18.7684 4.4466 19.2563 4.3505L20.9963 4.0005"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M21 3L22 14H20"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M3 3L2 14L8.5 20.5C8.8978 20.8978 9.4374 21.1213 10 21.1213C10.5626 21.1213 11.1022 20.8978 11.5 20.5C11.8978 20.1022 12.1213 19.5626 12.1213 19C12.1213 18.4374 11.8978 17.8978 11.5 17.5"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M3 4H11"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </div>
+              <h2 className="terms-services__section-label">
+                Acceptance of the Terms
+              </h2>
             </div>
-            <div className="nexgn-terms-contact-item">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M20 13.0004C20 18.0004 16.5 20.5005 12.34 21.9505C12.1222 22.0243 11.8855 22.0207 11.67 21.9405C7.5 20.5005 4 18.0004 4 13.0004V6.00045C4 5.73523 4.10536 5.48088 4.29289 5.29334C4.48043 5.10581 4.73478 5.00045 5 5.00045C7 5.00045 9.5 3.80045 11.24 2.28045C11.4519 2.09945 11.7214 2 12 2C12.2786 2 12.5481 2.09945 12.76 2.28045C14.51 3.81045 17 5.00045 19 5.00045C19.2652 5.00045 19.5196 5.10581 19.7071 5.29334C19.8946 5.48088 20 5.73523 20 6.00045V13.0004Z"
-                  stroke="black"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <div>
-                <p className="nexgn-terms-contact-label">
-                  Abuse &amp; AUP Violations
+            <div className="terms-services__row-content">
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Welcome to Nexgn. These Terms of Service ("Terms") constitute
+                  a legally binding agreement between you ("Customer," "User,"
+                  or "You") and Nexgn ("Company," "We," "Our," or "Us")
+                  governing your access to and use of the Nexgn website
+                  (nexgn.cloud), APIs, edge networks, and cloud infrastructure
+                  services (collectively, the "Services").
                 </p>
-                <a
-                  className="nexgn-terms-contact-link"
-                  href="mailto:abuse@nexgn.cloud"
-                >
-                  abuse@nexgn.cloud
-                </a>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  By registering for an account, clicking "I Agree," or
+                  continuing to use the Services, you acknowledge that you have
+                  read, understood, and agree to be bound by these Terms.
+                </p>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* ── GROUP 941 - Contact Information ── */}
-        <div className="nexgn-terms-section-item nexgn-terms-section-item--contact">
-          <div className="nexgn-terms-section-icon">
-            <svg
-              width="24"
-              height="24"
-              viewBox="20 20 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M42 27L33.009 32.727C32.7039 32.9042 32.3573 32.9976 32.0045 32.9976C31.6517 32.9976 31.3051 32.9042 31 32.727L22 27"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M40 24H24C22.8954 24 22 24.8954 22 26V38C22 39.1046 22.8954 40 24 40H40C41.1046 40 42 39.1046 42 38V26C42 24.8954 41.1046 24 40 24Z"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+          {/* Definitions */}
+          <div className="terms-services__row">
+            <div className="terms-services__row-label">
+              <div className="terms-services__section-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 7V21"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M3 18C2.73478 18 2.48043 17.8946 2.29289 17.7071C2.10536 17.5196 2 17.2652 2 17V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7C12 5.93913 12.4214 4.92172 13.1716 4.17157C13.9217 3.42143 14.9391 3 16 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V17C22 17.2652 21.8946 17.5196 21.7071 17.7071C21.5196 17.8946 21.2652 18 21 18H15C14.2044 18 13.4413 18.3161 12.8787 18.8787C12.3161 19.4413 12 20.2044 12 21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H3Z"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <h2 className="terms-services__section-label">Definitions</h2>
+            </div>
+            <div className="terms-services__row-content">
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  "Customer Data" refers to any code, data, text, audio, video
+                  or images that you transfer to us for processing, storage or
+                  hosting in connection with the Services
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  "Infrastructure" refers to the servers, edge nodes, software
+                  and APIs operated by Nexgn to deliver the Services
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  "Malicious Code" refers to viruses, worms, time bombs, Trojan
+                  horses and other harmful or malicious code, Files, scripts,
+                  agents or programs.
+                </p>
+              </div>
+            </div>
           </div>
-          <span className="nexgn-terms-section-label">Contact Information</span>
-        </div>
 
-        {/* ── INTELLECTUAL PROPERTY CONTENT BLOCK ── */}
-        <div className="nexgn-terms-ip-block">
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Your Property: You retain all ownership and intellectual property
-              rights in and to your Customer Data. You grant Nexgn a limited,
-              worldwide, non-exclusive, royalty-free license to host, copy,
-              transmit, and display your Customer Data strictly as necessary for
-              us to provide the Services to you.
-            </p>
+          {/* Account Registration and security */}
+          <div className="terms-services__row">
+            <div className="terms-services__row-label">
+              <div className="terms-services__section-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 21V19C19 17.9391 18.5786 16.9217 17.8284 16.1716C17.0783 15.4214 16.0609 15 15 15H9C7.93913 15 6.92172 15.4214 6.17157 16.1716C5.42143 16.9217 5 17.9391 5 19V21"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <h2 className="terms-services__section-label">
+                Account Registration and security
+              </h2>
+            </div>
+            <div className="terms-services__row-content">
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Provide accurate, current and complete information
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Maintain the strict confidentially of your passwords, APIs
+                  keys and authentication tokens
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Be entirely responsible for all activities that occur under
+                  your account, regardless of whether you authorized that
+                  activity
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Notify Nexgn immediately at security@nergn.cloud if you
+                  suspect any unauthorized use of your account or any other
+                  breach of security.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Nexgn's Property: All rights, title, and interest in the Services,
-              including our software, algorithms, UI/UX, and branding remain the
-              exclusive property of Nexgn and its licensors.
-            </p>
-          </div>
-        </div>
 
-        {/* ── GROUP 941 - Intellectual Property ── */}
-        <div className="nexgn-terms-section-item nexgn-terms-section-item--ip">
-          <div className="nexgn-terms-section-icon">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M14.8269 14.83C14.2673 15.389 13.5545 15.7695 12.7787 15.9235C12.0029 16.0774 11.1989 15.998 10.4682 15.6951C9.73759 15.3922 9.11314 14.8795 8.67381 14.2218C8.23448 13.5641 8 12.7909 8 12C8 11.2091 8.23448 10.4359 8.67381 9.77818C9.11314 9.12048 9.73759 8.60779 10.4682 8.30491C11.1989 8.00203 12.0029 7.92256 12.7787 8.07654C13.5545 8.23052 14.2673 8.61104 14.8269 9.17"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+          {/* Acceptable Use Policy (AUP) */}
+          <div className="terms-services__row">
+            <div className="terms-services__row-label">
+              <div className="terms-services__section-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 13.0004C20 18.0004 16.5 20.5005 12.34 21.9505C12.1222 22.0243 11.8855 22.0207 11.67 21.9405C7.5 20.5005 4 18.0004 4 13.0004V6.00045C4 5.73523 4.10536 5.48088 4.29289 5.29334C4.48043 5.10581 4.73478 5.00045 5 5.00045C7 5.00045 9.5 3.80045 11.24 2.28045C11.4519 2.09945 11.7214 2 12 2C12.2786 2 12.5481 2.09945 12.76 2.28045C14.51 3.81045 17 5.00045 19 5.00045C19.2652 5.00045 19.5196 5.10581 19.7071 5.29334C19.8946 5.48088 20 5.73523 20 6.00045V13.0004Z"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <h2 className="terms-services__section-label">
+                Acceptable Use Policy (AUP)
+              </h2>
+            </div>
+            <div className="terms-services__row-content">
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Transmit Malicious Code: Host or distribute malware,
+                  ransomware, spyware, or engage in phishing operations.
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Launch Attacks: Conduct Denial of Service (DoS) attacks,
+                  network floods, port scanning or unauthorized penetration
+                  testing against any third-party networks or Nexgn's own
+                  infrastructure.
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Resource Abuse: Operate cryptocurrency mining scripts,
+                  high-yield proxy networks, or any resource-intensive
+                  applications that degrade the performance of the
+                  Infrastructure for other tenants.
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Violate Rights: Store or transmit content that infringes upon
+                  the intellectual property rights, privacy rights or
+                  fundamental rights of others.
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Bypass Limits: Attempt to circumvent any usage quotas,
+                  security mechanisms or billing metrics put in place by Nexgn.
+                </p>
+              </div>
+              <div className="terms-services__aup-warning" role="note">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M21.7324 17.9983L13.7324 3.99827C13.5579 3.69048 13.305 3.43446 12.9993 3.25634C12.6936 3.07822 12.3462 2.98437 11.9924 2.98438C11.6386 2.98437 11.2911 3.07822 10.9854 3.25634C10.6798 3.43446 10.4268 3.69048 10.2524 3.99827L2.25237 17.9983C2.07605 18.3036 1.9836 18.6502 1.98438 19.0028C1.98516 19.3554 2.07915 19.7015 2.25682 20.0061C2.43449 20.3107 2.68952 20.5629 2.99607 20.7371C3.30261 20.9113 3.64978 21.0014 4.00237 20.9983H20.0024C20.3533 20.9979 20.6979 20.9052 21.0017 20.7296C21.3054 20.5539 21.5576 20.3014 21.7329 19.9974C21.9082 19.6934 22.0004 19.3487 22.0003 18.9978C22.0002 18.6469 21.9078 18.3022 21.7324 17.9983Z"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M12 9V13"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M12 17H12.01"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <p className="terms-services__aup-warning-text">
+                  Nexgn reserves the right to immediately suspend or terminate
+                  your account without notice or liability if we determine, at
+                  our sole discretion, that you have violated this AUP.
+                </p>
+              </div>
+            </div>
           </div>
-          <span className="nexgn-terms-section-label">
-            Intellectual Property
-          </span>
-        </div>
 
-        {/* ── AUP WARNING BANNER ── */}
-        <div className="nexgn-terms-aup-warning">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ flexShrink: 0 }}
-          >
-            <path
-              d="M21.7324 17.9983L13.7324 3.99827C13.5579 3.69048 13.305 3.43446 12.9993 3.25634C12.6936 3.07822 12.3462 2.98437 11.9924 2.98438C11.6386 2.98437 11.2911 3.07822 10.9854 3.25634C10.6798 3.43446 10.4268 3.69048 10.2524 3.99827L2.25237 17.9983C2.07605 18.3036 1.9836 18.6502 1.98438 19.0028C1.98516 19.3554 2.07915 19.7015 2.25682 20.0061C2.43449 20.3107 2.68952 20.5629 2.99607 20.7371C3.30261 20.9113 3.64978 21.0014 4.00237 20.9983H20.0024C20.3533 20.9979 20.6979 20.9052 21.0017 20.7296C21.3054 20.5539 21.5576 20.3014 21.7329 19.9974C21.9082 19.6934 22.0004 19.3487 22.0003 18.9978C22.0002 18.6469 21.9078 18.3022 21.7324 17.9983Z"
-              stroke="#D70506"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M12 9V13"
-              stroke="#D70506"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M12 17H12.01"
-              stroke="#D70506"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <p className="nexgn-terms-aup-warning-text">
-            Nexgn reserves the right to immediately suspend or terminate your
-            account without notice or liability if we determine, at our sole
-            discretion, that you have violated this AUP.
-          </p>
-        </div>
+          {/* Intellectual Property */}
+          <div className="terms-services__row">
+            <div className="terms-services__row-label">
+              <div className="terms-services__section-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M14.8269 14.83C14.2673 15.389 13.5545 15.7695 12.7787 15.9235C12.0029 16.0774 11.1989 15.998 10.4682 15.6951C9.73759 15.3922 9.11314 14.8795 8.67381 14.2218C8.23448 13.5641 8 12.7909 8 12C8 11.2091 8.23448 10.4359 8.67381 9.77818C9.11314 9.12048 9.73759 8.60779 10.4682 8.30491C11.1989 8.00203 12.0029 7.92256 12.7787 8.07654C13.5545 8.23052 14.2673 8.61104 14.8269 9.17"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <h2 className="terms-services__section-label">
+                Intellectual Property
+              </h2>
+            </div>
+            <div className="terms-services__row-content">
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Your Property: You retain all ownership and intellectual
+                  property rights in and to your Customer Data. You grant Nexgn
+                  a limited, worldwide, non-exclusive, royalty-free license to
+                  host, copy, transmit, and display your Customer Data strictly
+                  as necessary for us to provide the Services to you.
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Nexgn's Property: All rights, title, and interest in the
+                  Services, including our software, algorithms, UI/UX, and
+                  branding remain the exclusive property of Nexgn and its
+                  licensors.
+                </p>
+              </div>
+            </div>
+          </div>
 
-        {/* ── AUP CONTENT BLOCK ── */}
-        <div className="nexgn-terms-aup-block">
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Transmit Malicious Code: Host or distribute malware, ransomware,
-              spyware, or engage in phishing operations.
-            </p>
+          {/* Service Availability and SLA */}
+          <div className="terms-services__row">
+            <div className="terms-services__row-label">
+              <div className="terms-services__section-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M28 32C28 28.2767 29.4322 24.6962 32 22C34.5678 24.6962 36 28.2767 36 32C36 35.7233 34.5678 39.3038 32 42C29.4322 39.3038 28 35.7233 28 32Z"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M2 12H22"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <h2 className="terms-services__section-label">
+                Service Availability and SLA
+              </h2>
+            </div>
+            <div className="terms-services__row-content">
+              <p className="terms-services__sla-text">
+                We strive to provide highly reliable, globally optimized edge
+                services, However the Services are provided on a "best-effort"
+                basis unless you are subscribed to a tier that includes a
+                specific Service Level Agreement (SLA), Nexgn reserves the right
+                to perform scheduled and emergency maintenance, which may result
+                in temporary service interruptions.
+              </p>
+            </div>
           </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Launch Attacks: Conduct Denial of Service (DoS) attacks, network
-              floods, port scanning or unauthorized penetration testing against
-              any third-party networks or Nexgn's own infrastructure.
-            </p>
-          </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Resource Abuse: Operate cryptocurrency mining scripts, high-yield
-              proxy networks, or any resource-intensive applications that
-              degrade the performance of the Infrastructure for other tenants.
-            </p>
-          </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Violate Rights: Store or transmit content that infringes upon the
-              intellectual property rights, privacy rights or fundamental rights
-              of others.
-            </p>
-          </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Bypass Limits: Attempt to circumvent any usage quotas, security
-              mechanisms or billing metrics put in place by Nexgn.
-            </p>
-          </div>
-        </div>
 
-        {/* ── GROUP 941 - Acceptable Use Policy (AUP) ── */}
-        <div className="nexgn-terms-section-item nexgn-terms-section-item--aup">
-          <div className="nexgn-terms-section-icon">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M20 13.0004C20 18.0004 16.5 20.5005 12.34 21.9505C12.1222 22.0243 11.8855 22.0207 11.67 21.9405C7.5 20.5005 4 18.0004 4 13.0004V6.00045C4 5.73523 4.10536 5.48088 4.29289 5.29334C4.48043 5.10581 4.73478 5.00045 5 5.00045C7 5.00045 9.5 3.80045 11.24 2.28045C11.4519 2.09945 11.7214 2 12 2C12.2786 2 12.5481 2.09945 12.76 2.28045C14.51 3.81045 17 5.00045 19 5.00045C19.2652 5.00045 19.5196 5.10581 19.7071 5.29334C19.8946 5.48088 20 5.73523 20 6.00045V13.0004Z"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+          {/* Disclaimer of Warranties */}
+          <div className="terms-services__row">
+            <div className="terms-services__row-label">
+              <div className="terms-services__section-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M15 9L9 15"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M9 9L15 15"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <h2 className="terms-services__section-label">
+                Disclaimer of Warranties
+              </h2>
+            </div>
+            <div className="terms-services__row-content">
+              <p className="terms-services__disclaimer-text">
+                THE SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE"
+                BASIS. NEXGN EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND,
+                WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+                IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+                PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE
+                SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE,
+                OR THAT DATA WILL NOT BE LOST.
+              </p>
+            </div>
           </div>
-          <span className="nexgn-terms-section-label">
-            Acceptable Use Policy (AUP)
-          </span>
-        </div>
 
-        {/* ── ACCOUNT REGISTRATION CONTENT BLOCK ── */}
-        <div className="nexgn-terms-account-block">
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Provide accurate, current and complete information
-            </p>
+          {/* Limitation of Liability */}
+          <div className="terms-services__row">
+            <div className="terms-services__row-label">
+              <div className="terms-services__section-icon" aria-hidden="true">
+                <svg
+                  viewBox="20 20 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M35 35L41 41M39.8 35H35V39.8"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M24.2 35H29V39.8M29 35L23 41"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M39.8 29H35V24.2M35 29L41 23"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M24.2 29H29V24.2M29 29L23 23"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <h2 className="terms-services__section-label">
+                Limitation of Liability
+              </h2>
+            </div>
+            <div className="terms-services__row-content">
+              <p className="terms-services__content-text">
+                TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT
+                SHALL NEXGN, ITS FOUNDERS, EMPLOYEES, OR AFFILIATES BE LIABLE
+                FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR
+                EXEMPLARY DAMAGES. THIS INCLUDES, BUT IS NOT LIMITED TO, DAMAGES
+                FOR LOSS OF PROFITS, REVENUE, GOODWILL, USE, DATA, OR OTHER
+                INTANGIBLE LOSSES, EVEN IF NEXGN HAS BEEN ADVISED OF THE
+                POSSIBILITY OF SUCH DAMAGES. RESULTING FROM:
+              </p>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  The use or the inability to use the Services.
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Unauthorized access to or alteration of your transmissions or
+                  data.
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  Any actions or content of any third party on the Services.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Maintain the strict confidentially of your passwords, APIs keys
-              and authentication tokens
-            </p>
-          </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Be entirely responsible for all activities that occur under your
-              account, regardless of whether you authorized that activity
-            </p>
-          </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Notify Nexgn immediately at security@nergn.cloud if you suspect
-              any unauthorized use of your account or any other breach of
-              security.
-            </p>
-          </div>
-        </div>
 
-        {/* ── GROUP 941 - Account Registration and security ── */}
-        <div className="nexgn-terms-section-item nexgn-terms-section-item--account-reg">
-          <div className="nexgn-terms-section-icon">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M19 21V19C19 17.9391 18.5786 16.9217 17.8284 16.1716C17.0783 15.4214 16.0609 15 15 15H9C7.93913 15 6.92172 15.4214 6.17157 16.1716C5.42143 16.9217 5 17.9391 5 19V21"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+          {/* Suspension and Termination */}
+          <div className="terms-services__row">
+            <div className="terms-services__row-label">
+              <div className="terms-services__section-icon" aria-hidden="true">
+                <svg
+                  viewBox="20 20 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M32 42C37.5228 42 42 37.5228 42 32C42 26.4772 37.5228 22 32 22C26.4772 22 22 26.4772 22 32C22 37.5228 26.4772 42 32 42Z"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M24.9297 24.9297L39.0707 39.0717"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <h2 className="terms-services__section-label">
+                Suspension and Termination
+              </h2>
+            </div>
+            <div className="terms-services__row-content">
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  By You: You may terminate your account at any time via the
+                  billing or account settings panel.
+                </p>
+              </div>
+              <div className="terms-services__content-item">
+                <span className="terms-services__bullet"></span>
+                <p className="terms-services__content-text">
+                  By Nexgn: We may suspend or terminate your access to the
+                  Services at any time, with or without cause, and with or
+                  without notice, particularly in the event of an AUP violation
+                  or non-payment. Upon termination, your right to use the
+                  Services will immediately cease, and Nexgn may permanently
+                  delete your Customer Data.
+                </p>
+              </div>
+            </div>
           </div>
-          <span className="nexgn-terms-section-label">
-            Account Registration and security
-          </span>
-        </div>
 
-        {/* ── GROUP 941 - Definitions ── */}
-        <div className="nexgn-terms-section-item nexgn-terms-section-item--definitions">
-          <div className="nexgn-terms-section-icon">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 7V21"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M3 18C2.73478 18 2.48043 17.8946 2.29289 17.7071C2.10536 17.5196 2 17.2652 2 17V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7C12 5.93913 12.4214 4.92172 13.1716 4.17157C13.9217 3.42143 14.9391 3 16 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V17C22 17.2652 21.8946 17.5196 21.7071 17.7071C21.5196 17.8946 21.2652 18 21 18H15C14.2044 18 13.4413 18.3161 12.8787 18.8787C12.3161 19.4413 12 20.2044 12 21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H3Z"
-                stroke="#D70506"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+          {/* Modifications to the Terms */}
+          <div className="terms-services__row">
+            <div className="terms-services__row-label">
+              <div className="terms-services__section-icon" aria-hidden="true">
+                <svg
+                  viewBox="20 20 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M33 41H41"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M41.1739 26.8124C41.7026 26.2838 41.9997 25.5668 41.9998 24.8192C41.9999 24.0716 41.703 23.3546 41.1744 22.8259C40.6459 22.2972 39.9289 22.0001 39.1813 22C38.4337 21.9999 37.7166 22.2968 37.1879 22.8254L23.8419 36.1744C23.6098 36.4059 23.438 36.6909 23.3419 37.0044L22.0209 41.3564C21.9951 41.4429 21.9931 41.5347 22.0153 41.6222C22.0374 41.7097 22.0829 41.7896 22.1467 41.8534C22.2106 41.9172 22.2906 41.9624 22.3781 41.9845C22.4656 42.0065 22.5575 42.0044 22.6439 41.9784L26.9969 40.6584C27.3101 40.5631 27.5951 40.3925 27.8269 40.1614L41.1739 26.8124Z"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <h2 className="terms-services__section-label">
+                Modifications to the Terms
+              </h2>
+            </div>
+            <div className="terms-services__row-content">
+              <p className="terms-services__content-text">
+                Nexgn reserves the right to modify these Terms at any time. We
+                will provide notice of material changes by sending an email to
+                the address associated with your account or by posting a
+                prominent notice on our website. Your continued use of the
+                Services after the effective date of updated Terms constitutes
+                your acceptance.
+              </p>
+            </div>
           </div>
-          <span className="nexgn-terms-section-label">Definitions</span>
-        </div>
 
-        {/* ── GROUP 940 - Terms Content Block ── */}
-        <div className="nexgn-terms-content-block">
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              Welcome to Nexgn. These Terms of Service ("Terms") constitute a
-              legally binding agreement between you ("Customer," "User," or
-              "You") and Nexgn ("Company," "We," "Our," or "Us") governing your
-              access to and use of the Nexgn website (nexgn.cloud), APIs, edge
-              networks, and cloud infrastructure services (collectively, the
-              "Services").
-            </p>
-          </div>
-          <div className="nexgn-terms-content-item">
-            <span className="nexgn-terms-bullet"></span>
-            <p className="nexgn-terms-content-text">
-              By registering for an account, clicking "I Agree," or continuing
-              to use the Services, you acknowledge that you have read,
-              understood, and agree to be bound by these Terms.
-            </p>
+          {/* Contact Information */}
+          <div className="terms-services__row">
+            <div className="terms-services__row-label">
+              <div className="terms-services__section-icon" aria-hidden="true">
+                <svg
+                  viewBox="20 20 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M42 27L33.009 32.727C32.7039 32.9042 32.3573 32.9976 32.0045 32.9976C31.6517 32.9976 31.3051 32.9042 31 32.727L22 27"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M40 24H24C22.8954 24 22 24.8954 22 26V38C22 39.1046 22.8954 40 24 40H40C41.1046 40 42 39.1046 42 38V26C42 24.8954 41.1046 24 40 24Z"
+                    stroke="#D70506"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <h2 className="terms-services__section-label">
+                Contact Information
+              </h2>
+            </div>
+            <div className="terms-services__row-content">
+              <p className="terms-services__content-text">
+                For any questions, legal notices, or abuse reports concerning
+                these Terms, please contact us;
+              </p>
+              <div className="terms-services__contact-row">
+                <div className="terms-services__contact-item">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                      stroke="black"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M22 6L12 13L2 6"
+                      stroke="black"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div>
+                    <p className="terms-services__contact-label">
+                      General &amp; Legal Inquiries
+                    </p>
+                    <a
+                      className="terms-services__contact-link"
+                      href="mailto:gateway@nexgn.cloud"
+                    >
+                      gateway@nexgn.cloud
+                    </a>
+                  </div>
+                </div>
+                <div className="terms-services__contact-item">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20 13.0004C20 18.0004 16.5 20.5005 12.34 21.9505C12.1222 22.0243 11.8855 22.0207 11.67 21.9405C7.5 20.5005 4 18.0004 4 13.0004V6.00045C4 5.73523 4.10536 5.48088 4.29289 5.29334C4.48043 5.10581 4.73478 5.00045 5 5.00045C7 5.00045 9.5 3.80045 11.24 2.28045C11.4519 2.09945 11.7214 2 12 2C12.2786 2 12.5481 2.09945 12.76 2.28045C14.51 3.81045 17 5.00045 19 5.00045C19.2652 5.00045 19.5196 5.10581 19.7071 5.29334C19.8946 5.48088 20 5.73523 20 6.00045V13.0004Z"
+                      stroke="black"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div>
+                    <p className="terms-services__contact-label">
+                      Abuse &amp; AUP Violations
+                    </p>
+                    <a
+                      className="terms-services__contact-link"
+                      href="mailto:abuse@nexgn.cloud"
+                    >
+                      abuse@nexgn.cloud
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* ── FOOTER ── */}
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          overflowX: "hidden",
-          zIndex: 2,
-        }}
-      >
-        <FooterSection dark={dark} />
+      <div className="terms-services__footer-wrapper">
+        <SiteFooter dark={dark} />
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import LandingPage from "./LandingPage";
 import NotFound from "./NotFound";
 import ContactUs from "./Company/ContactUs";
 import HelpCenter from "./Resources/HelpCenter";
-import Security from "./Resources/Security";
+import Security from "./Legal & Trust/Security";
 import AboutUs from "./Company/AboutUs";
 import TermsServices from "./Legal & Trust/TermsServices";
 import PrivacyPolicy from "./Legal & Trust/PrivacyPolicy";
