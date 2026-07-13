@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./AboutUs.css";
 import ribbonBg from "../assets/privacy-bg-ribbon.png";
 import ribbonBgDark from "../assets/dark-bg.png";
-import ribbonBgDark from "../assets/dark-bg.png";
 import globeImage from "../assets/globe-image.png";
 import globeImageDark from "../assets/aboutus-bg-dark.png";
 import promiseShield from "../assets/promise-shield.png";
