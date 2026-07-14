@@ -144,14 +144,23 @@
   z-index: 4;
 }
 
-.nexgn-hero-section {
+.nexgn-root .nexgn-hero-section {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
   padding: 0 clamp(20px, 5.56vw, 80px);
   position: relative;
   z-index: 5;
   min-height: clamp(400px, 38.9vw, 560px);
+}
+
+.nexgn-hero-left-wrap {
+  margin-top: clamp(-70px, -5vw, -40px);
+}
+
+.nexgn-hero-left-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .nexgn-hero-label {
@@ -190,8 +199,8 @@
   z-index: 1;
 }
 
-.nexgn-hero-subtitle {
-  width: clamp(380px, 38.9vw, 560px);
+.nexgn-root .nexgn-hero-subtitle {
+  width: clamp(280px, 20vw, 340px);
   max-width: 100%;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -740,6 +749,10 @@
    ============================================ */
 @media (max-width: 768px) {
 
+  .nexgn-root {
+    padding-top: clamp(38px, 11vw, 44px);
+  }
+
   /* ── NAVBAR ── */
   .navbar {
     padding: 0 clamp(10px, 3.65vw, 14px);
@@ -755,15 +768,25 @@
   }
 
   /* ── HERO ── */
-  .nexgn-hero-section {
+  .nexgn-root .nexgn-hero-section {
     flex-direction: column;
     align-items: flex-start;
-    padding: clamp(20px, 7.8vw, 30px) clamp(16px, 5.7vw, 22px)
-      clamp(24px, 8.3vw, 32px);
+    padding: 0 clamp(16px, 5.7vw, 22px) clamp(24px, 8.3vw, 32px);
     min-height: unset;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .nexgn-hero-left-wrap {
+    margin-top: 0;
   }
 
   .nexgn-hero-left {
+    display: contents;
+  }
+
+  .nexgn-hero-left-wrap {
     display: contents;
   }
 
@@ -798,7 +821,9 @@
 
   .nexgn-hero-subtitle {
     position: static;
+    align-self: stretch;
     width: 100%;
+    max-width: 100%;
     height: auto;
     order: 3;
     margin: 0 0 24px;
@@ -808,6 +833,14 @@
     font-size: clamp(12px, 3.39vw, 13px);
     line-height: 1.38;
     color: #000000;
+    white-space: normal !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    box-sizing: border-box;
+  }
+
+  .subtitle-break {
+    display: none;
   }
 
   .nexgn-hero-banner {
@@ -832,6 +865,11 @@
     );
   }
 
+  .nexgn-search-container {
+    order: 5;
+    width: 100%;
+  }
+
   .nexgn-hero-search {
     display: flex;
     flex-direction: row;
@@ -841,7 +879,6 @@
     position: static;
     width: 100%;
     height: 40px;
-    order: 5;
     background: #ffffff;
     box-shadow: 0px 0px 14.5px 1px rgba(131, 131, 131, 0.1);
     border-radius: 12px;
@@ -874,8 +911,8 @@
   .nexgn-faq {
     flex-direction: column;
     padding: 0 clamp(16px, 5.7vw, 22px);
-    margin-top: 24px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 32px;
     gap: 8px;
     min-height: unset;
   }
@@ -986,7 +1023,8 @@
 
   .nexgn-help-banner__body {
     gap: 8px;
-    flex: none;
+    flex: 1;
+    min-width: 0;
   }
 
   .nexgn-help-banner__title {
@@ -1005,7 +1043,7 @@
     font-size: clamp(9px, 2.6vw, 10px);
     line-height: 160%;
     color: #000000;
-    max-width: 190px;
+    max-width: 100%;
   }
 
   .nexgn-help-banner__actions {
@@ -1078,9 +1116,9 @@
     margin-top: 28px;
   }
 
-  .nexgn-hero-subtitle {
+  .nexgn-root .nexgn-hero-subtitle {
     width: 100%;
-    max-width: 420px;
+    max-width: 300px;
     font-size: clamp(14px, 2.08vw, 16px);
     margin-top: 24px;
   }
@@ -1182,9 +1220,9 @@
     line-height: 1.19;
     margin-top: 32px;
   }
-  .nexgn-hero-subtitle {
+  .nexgn-root .nexgn-hero-subtitle {
     width: 100%;
-    max-width: 460px;
+    max-width: 320px;
     font-size: clamp(16px, 1.41vw, 18px);
   }
   .nexgn-hero-search {
