@@ -819,7 +819,7 @@
     color: #000000;
   }
 
-  .nexgn-hero-subtitle {
+  .nexgn-root .nexgn-hero-subtitle {
     position: static;
     align-self: stretch;
     width: 100%;
@@ -832,7 +832,6 @@
     font-weight: 400;
     font-size: clamp(12px, 3.39vw, 13px);
     line-height: 1.38;
-    color: #000000;
     white-space: normal !important;
     overflow-wrap: break-word;
     word-break: break-word;

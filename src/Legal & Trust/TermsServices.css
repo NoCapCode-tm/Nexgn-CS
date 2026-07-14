@@ -682,6 +682,10 @@ body {
     order: 2;
   }
 
+  [data-theme="dark"] .terms-services__title-text {
+    color: #ffffff;
+  }
+
   .terms-services__subtitle {
     position: static;
     width: 100%;
