@@ -635,12 +635,12 @@ body {
 }
 [data-theme="dark"] .privacy-policy__info-icon-wrap {
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 [data-theme="dark"] .privacy-policy__right-card {
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
 }
 
@@ -651,7 +651,7 @@ body {
 
 [data-theme="dark"] .privacy-policy__contact-banner {
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
 }
 [data-theme="dark"] .privacy-policy__contact-banner svg path {
@@ -1116,7 +1116,7 @@ body {
     display: none !important;
   }
 
- .privacy-policy__hero-illustration {
+  .privacy-policy__hero-illustration {
     position: static !important;
     width: calc(100% - 16px) !important;
     height: auto !important;
