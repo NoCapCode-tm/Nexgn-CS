@@ -121,6 +121,20 @@ export default function Security() {
     );
   }, [dark]);
 
+  useEffect(() => {
+    function updateZoom() {
+      const w = window.innerWidth;
+      let z = 1;
+      if (w >= 768 && w < 1224) {
+        z = w / 1440;
+      }
+      document.documentElement.style.setProperty("--page-zoom", z);
+    }
+    updateZoom();
+    window.addEventListener("resize", updateZoom);
+    return () => window.removeEventListener("resize", updateZoom);
+  }, []);
+
   return (
     <>
       <div className="security">

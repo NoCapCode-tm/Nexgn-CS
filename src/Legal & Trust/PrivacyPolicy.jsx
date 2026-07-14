@@ -8,21 +8,21 @@ import FooterSection from "../FooterSection";
 
 function Navbar({ dark, setDark }) {
   return (
-    <nav className="navbar">
-      <div className="navbar__brand">
+    <nav className="privacy-policy__navbar">
+      <div className="privacy-policy__navbar-brand">
         <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
           <path
             d="M36.499 0C40.3359 0 43.4463 3.11041 43.4463 6.94727V36.499C43.4463 36.6885 43.4358 36.8759 43.4209 37.0615L32.6826 26.5566C31.3112 25.2156 29.0995 25.2276 27.7432 26.584L25.5107 28.8174C24.1546 30.1738 24.1663 32.3607 25.5371 33.7021L35.498 43.4463H7.1543L34.7979 16.4053C36.169 15.0637 36.1807 12.877 34.8242 11.5205L32.5918 9.28711C31.2353 7.93089 29.0237 7.91858 27.6523 9.25977L0 36.3096V7.89941L10.7188 18.3857C12.0901 19.727 14.3017 19.7147 15.6582 18.3584L17.8906 16.125C19.2471 14.7685 19.2355 12.5818 17.8643 11.2402L6.39746 0.0234375C6.57891 0.00922816 6.76217 0 6.94727 0H36.499Z"
             fill="#E22A2A"
           />
         </svg>
-        <div className="navbar__logo-text">
-          <span className="navbar__logo-name">Nexgn</span>
-          <span className="navbar__logo-sub">Smart Signing</span>
+        <div className="privacy-policy__navbar-logo-text">
+          <span className="privacy-policy__navbar-logo-name">Nexgn</span>
+          <span className="privacy-policy__navbar-logo-sub">Smart Signing</span>
         </div>
       </div>
       <button
-        className="navbar__theme-toggle"
+        className="privacy-policy__navbar-theme-toggle"
         onClick={() => setDark(!dark)}
         aria-label="Toggle dark mode"
       >
@@ -64,50 +64,35 @@ function Navbar({ dark, setDark }) {
 
 function PrivacyFooterBrand({ dark }) {
   return (
-    <div className="privacy-footer-brand">
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "8px",
-          marginBottom: "17.78px",
-        }}
-      >
+    <div className="privacy-policy__footer-brand">
+      <div className="privacy-policy__footer-logo-row">
         <svg width="36" height="36" viewBox="0 0 44 44" fill="none">
           <path
             d="M36.499 0C40.3359 0 43.4463 3.11041 43.4463 6.94727V36.499C43.4463 36.6885 43.4358 36.8759 43.4209 37.0615L32.6826 26.5566C31.3112 25.2156 29.0995 25.2276 27.7432 26.584L25.5107 28.8174C24.1546 30.1738 24.1663 32.3607 25.5371 33.7021L35.498 43.4463H7.1543L34.7979 16.4053C36.169 15.0637 36.1807 12.877 34.8242 11.5205L32.5918 9.28711C31.2353 7.93089 29.0237 7.91858 27.6523 9.25977L0 36.3096V7.89941L10.7188 18.3857C12.0901 19.727 14.3017 19.7147 15.6582 18.3584L17.8906 16.125C19.2471 14.7685 19.2355 12.5818 17.8643 11.2402L6.39746 0.0234375C6.57891 0.00922816 6.76217 0 6.94727 0H36.499Z"
             fill="#E22A2A"
           />
         </svg>
-        <span
-          style={{
-            fontFamily: "MuseoModerno, sans-serif",
-            fontSize: "22px",
-            color: dark ? "#ffffff" : "#111111",
-          }}
-        >
-          Nexgn
-        </span>
+        <span className="privacy-policy__footer-logo-text">Nexgn</span>
       </div>
-      <p className="privacy-footer-tagline">
+      <p className="privacy-policy__footer-tagline">
         The Next Generation of Document
         <br />
         Signature
       </p>
-      <p className="privacy-footer-email">gateway@nexgn.cloud</p>
-      <div className="privacy-footer-socials">
-        <a href="#" className="privacy-footer-social-icon">
+      <p className="privacy-policy__footer-email">gateway@nexgn.cloud</p>
+      <div className="privacy-policy__footer-socials">
+        <a href="#" className="privacy-policy__footer-social-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="#666666">
             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
           </svg>
         </a>
-        <a href="#" className="privacy-footer-social-icon">
+        <a href="#" className="privacy-policy__footer-social-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="#666666">
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
           </svg>
         </a>
       </div>
-      <div className="privacy-footer-copyright">
+      <div className="privacy-policy__footer-copyright">
         ©️ 2026 Nexgn. All rights reserved.
       </div>
     </div>
@@ -116,20 +101,20 @@ function PrivacyFooterBrand({ dark }) {
 
 function PrivacyFooterLinks() {
   return (
-    <div className="privacy-footer-links">
-      <div className="privacy-footer-link-column">
+    <div className="privacy-policy__footer-links">
+      <div className="privacy-policy__footer-link-column">
         <h4>COMPANY</h4>
         <a href="/about">About Us</a>
         <a href="/contact">Contact Us</a>
         <a href="/blog">Blog</a>
       </div>
-      <div className="privacy-footer-link-column">
+      <div className="privacy-policy__footer-link-column">
         <h4>RESOURCES</h4>
         <a href="/help">Help center</a>
         <a href="#">System Status</a>
         <a href="/security">Security</a>
       </div>
-      <div className="privacy-footer-link-column">
+      <div className="privacy-policy__footer-link-column">
         <h4>LEGAL &amp; TRUST</h4>
         <a href="/security">Trust &amp; Compliance</a>
         <a href="/privacy">Privacy Policy</a>
@@ -141,20 +126,20 @@ function PrivacyFooterLinks() {
 
 function PrivacyFooterWordmark() {
   return (
-    <div className="privacy-footer-wordmark-wrapper">
-      <div className="privacy-footer-blurry-bg-container">
-        <div className="privacy-footer-blurry-bg"></div>
+    <div className="privacy-policy__footer-wordmark-wrapper">
+      <div className="privacy-policy__footer-blurry-bg-container">
+        <div className="privacy-policy__footer-blurry-bg"></div>
       </div>
-      <div className="privacy-footer-wordmark-overlay">NEXGN</div>
+      <div className="privacy-policy__footer-wordmark-overlay">NEXGN</div>
     </div>
   );
 }
 
 function PrivacyFooter({ dark }) {
   return (
-    <footer className="privacy-footer">
-      <div className="privacy-footer-content">
-        <div className="privacy-footer-top">
+    <footer className="privacy-policy__footer">
+      <div className="privacy-policy__footer-content">
+        <div className="privacy-policy__footer-top">
           <PrivacyFooterBrand dark={dark} />
           <PrivacyFooterLinks />
         </div>
@@ -186,6 +171,13 @@ export default function PrivacyPolicy() {
         z = w / 390;
       } else if (w >= 769 && w < 1180) {
         z = w / 1440;
+      } else if (w >= 1180) {
+        // Desktop / laptop / large-monitor widths: keep scaling the
+        // same fixed 1440px canvas proportionally instead of leaving
+        // it pinned at a fixed size. At exactly 1440px this evaluates
+        // to 1, so appearance at the original design width is
+        // unchanged.
+        z = w / 1440;
       }
       document.documentElement.style.setProperty("--page-zoom", z);
     }
@@ -195,12 +187,12 @@ export default function PrivacyPolicy() {
   }, []);
 
   return (
-    <>
-      <div className="privacy-page-wrapper">
+    <div className="privacy-policy">
+      <div className="privacy-policy__page">
         <img
           src={dark ? ribbonBgDark : ribbonBg}
           alt=""
-          className="privacy-hero-ribbon"
+          className="privacy-policy__hero-ribbon"
           aria-hidden="true"
         />
         <Navbar dark={dark} setDark={setDark} />
@@ -209,37 +201,39 @@ export default function PrivacyPolicy() {
         <img
           src={dark ? heroIllustrationDark : heroIllustration}
           alt="Privacy security illustration"
-          className="nexgn-hero-illustration"
+          className="privacy-policy__hero-illustration"
         />
 
         {/* ── EYEBROW LABEL ── */}
-        <span className="nexgn-eyebrow">Privacy Policy</span>
+        <span className="privacy-policy__eyebrow">Privacy Policy</span>
 
         {/* ── HERO TITLE ── */}
-        <h1 className="privacy-hero-title">Your Privacy Our Priority</h1>
+        <h1 className="privacy-policy__hero-title">
+          Your Privacy Our Priority
+        </h1>
 
         {/* ── DATA COLLECTION LIST ── */}
-        <div className="nexgn-data-list">
-          <div className="nexgn-data-item">
-            <span className="nexgn-data-dot" />
-            <p className="nexgn-data-text">
+        <div className="privacy-policy__data-list">
+          <div className="privacy-policy__data-item">
+            <span className="privacy-policy__data-dot" />
+            <p className="privacy-policy__data-text">
               <strong>Information You Provide Directly:</strong> When you join
               our wait list, register for an account, or contact support, we
               collect your email address, name and communication history.
             </p>
           </div>
-          <div className="nexgn-data-item">
-            <span className="nexgn-data-dot" />
-            <p className="nexgn-data-text">
+          <div className="privacy-policy__data-item">
+            <span className="privacy-policy__data-dot" />
+            <p className="privacy-policy__data-text">
               <strong>Document &amp; Signature Data:</strong> To facilitate
               paperless workflows, we process the documents you upload, the
               names and email addresses of designated signers, and the digital
               signatures applied within the platform.
             </p>
           </div>
-          <div className="nexgn-data-item">
-            <span className="nexgn-data-dot" />
-            <p className="nexgn-data-text">
+          <div className="privacy-policy__data-item">
+            <span className="privacy-policy__data-dot" />
+            <p className="privacy-policy__data-text">
               <strong>Automated Audit Trail &amp; Telemetry Data:</strong> To
               ensure network security and guarantee the legal validity of every
               signature, we automatically collect telemetry data. This includes
@@ -248,9 +242,9 @@ export default function PrivacyPolicy() {
               process to create a tamper-evident audit trail.
             </p>
           </div>
-          <div className="nexgn-data-item">
-            <span className="nexgn-data-dot" />
-            <p className="nexgn-data-text">
+          <div className="privacy-policy__data-item">
+            <span className="privacy-policy__data-dot" />
+            <p className="privacy-policy__data-text">
               <strong>Cookies and Tracking:</strong> We use strictly necessary
               cookies to maintain session states and security tokens. we do not
               use third-party advertising trackers
@@ -259,8 +253,8 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* ── DATA SHARING LIST ── */}
-        <div className="nexgn-sharing-list">
-          <div className="nexgn-sharing-item">
+        <div className="privacy-policy__sharing-list">
+          <div className="privacy-policy__sharing-item">
             <svg
               width="24"
               height="24"
@@ -304,9 +298,11 @@ export default function PrivacyPolicy() {
                 strokeLinejoin="round"
               />
             </svg>
-            <div className="nexgn-sharing-text">
-              <p className="nexgn-sharing-title">Document Participants</p>
-              <p className="nexgn-sharing-desc">
+            <div className="privacy-policy__sharing-text">
+              <p className="privacy-policy__sharing-title">
+                Document Participants
+              </p>
+              <p className="privacy-policy__sharing-desc">
                 When you execute a document workflow, necessary information
                 (such as your name, email, signature, and IP-based audit trail)
                 is shared with the other authorized participants (signers,
@@ -314,7 +310,7 @@ export default function PrivacyPolicy() {
               </p>
             </div>
           </div>
-          <div className="nexgn-sharing-item">
+          <div className="privacy-policy__sharing-item">
             <svg
               width="24"
               height="24"
@@ -344,9 +340,9 @@ export default function PrivacyPolicy() {
                 strokeLinejoin="round"
               />
             </svg>
-            <div className="nexgn-sharing-text">
-              <p className="nexgn-sharing-title">Sub-processors</p>
-              <p className="nexgn-sharing-desc">
+            <div className="privacy-policy__sharing-text">
+              <p className="privacy-policy__sharing-title">Sub-processors</p>
+              <p className="privacy-policy__sharing-desc">
                 We share data with trusted infrastructure partners (such as our
                 global CDN, cryptographic keystores, and secure cloud storage
                 providers) strictly for the purpose of delivering the service.
@@ -354,7 +350,7 @@ export default function PrivacyPolicy() {
               </p>
             </div>
           </div>
-          <div className="nexgn-sharing-item">
+          <div className="privacy-policy__sharing-item">
             <svg
               width="24"
               height="24"
@@ -398,9 +394,9 @@ export default function PrivacyPolicy() {
                 strokeLinejoin="round"
               />
             </svg>
-            <div className="nexgn-sharing-text">
-              <p className="nexgn-sharing-title">Legal Compliance</p>
-              <p className="nexgn-sharing-desc">
+            <div className="privacy-policy__sharing-text">
+              <p className="privacy-policy__sharing-title">Legal Compliance</p>
+              <p className="privacy-policy__sharing-desc">
                 If compelled by a legally binding subpoena, court order, or
                 regulatory mandate, we will disclose necessary data. We commit
                 to notifying you of any such request unless legally prohibited
@@ -411,7 +407,7 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* ── RIGHT TO ERASURE CARD ── */}
-        <div className="nexgn-right-card nexgn-right-card--erasure">
+        <div className="privacy-policy__right-card privacy-policy__right-card--erasure">
           <svg
             width="48"
             height="48"
@@ -441,21 +437,21 @@ export default function PrivacyPolicy() {
               strokeLinejoin="round"
             />
           </svg>
-          <p className="nexgn-right-card-title">
+          <p className="privacy-policy__right-card-title">
             Right to Erasure
             <br />
             (Right to be
             <br />
             Forgotten)
           </p>
-          <p className="nexgn-right-card-desc">
+          <p className="privacy-policy__right-card-desc">
             Request the deletion of your personal data (subject to legal
             retention requirements for executed contracts)
           </p>
         </div>
 
         {/* ── RIGHT TO RECTIFICATION CARD ── */}
-        <div className="nexgn-right-card nexgn-right-card--rectification">
+        <div className="privacy-policy__right-card privacy-policy__right-card--rectification">
           <svg
             width="24"
             height="24"
@@ -478,14 +474,16 @@ export default function PrivacyPolicy() {
               strokeLinejoin="round"
             />
           </svg>
-          <p className="nexgn-right-card-title">Right to Rectification</p>
-          <p className="nexgn-right-card-desc">
+          <p className="privacy-policy__right-card-title">
+            Right to Rectification
+          </p>
+          <p className="privacy-policy__right-card-desc">
             Correct inaccurate or incomplete data.
           </p>
         </div>
 
         {/* ── RIGHT TO ACCESS CARD ── */}
-        <div className="nexgn-right-card">
+        <div className="privacy-policy__right-card">
           <svg
             width="24"
             height="24"
@@ -501,18 +499,18 @@ export default function PrivacyPolicy() {
               strokeLinejoin="round"
             />
           </svg>
-          <p className="nexgn-right-card-title">
+          <p className="privacy-policy__right-card-title">
             Right to Access
             <br />
             &amp; Potability
           </p>
-          <p className="nexgn-right-card-desc">
+          <p className="privacy-policy__right-card-desc">
             Request a copy the data we hold about you.
           </p>
         </div>
 
         {/* ── CONTACT BANNER ── */}
-        <div className="nexgn-contact-banner">
+        <div className="privacy-policy__contact-banner">
           <svg
             width="32"
             height="32"
@@ -535,17 +533,17 @@ export default function PrivacyPolicy() {
               strokeLinejoin="round"
             />
           </svg>
-          <div className="nexgn-contact-text">
-            <p className="nexgn-contact-label">
+          <div className="privacy-policy__contact-text">
+            <p className="privacy-policy__contact-label">
               To exercise these rights, please contact our privacy team at:
             </p>
-            <p className="nexgn-contact-email">privacy@nexgn.cloud</p>
+            <p className="privacy-policy__contact-email">privacy@nexgn.cloud</p>
           </div>
         </div>
 
         {/* ── YOUR PRIVACY RIGHTS ── */}
-        <div className="nexgn-privacy-rights-section">
-          <div className="nexgn-info-icon-wrap">
+        <div className="privacy-policy__rights-section">
+          <div className="privacy-policy__info-icon-wrap">
             <svg
               width="24"
               height="24"
@@ -569,9 +567,9 @@ export default function PrivacyPolicy() {
               />
             </svg>
           </div>
-          <div className="nexgn-info-content">
-            <p className="nexgn-privacy-rights-title">Your Privacy Rights</p>
-            <p className="nexgn-privacy-rights-desc">
+          <div className="privacy-policy__info-content">
+            <p className="privacy-policy__rights-title">Your Privacy Rights</p>
+            <p className="privacy-policy__rights-desc">
               Regardless of your global location, Nexgn grants you the following
               rights concerning your data
             </p>
@@ -579,8 +577,8 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* ── DATA RETENTION — BODY TEXT ── */}
-        <div className="nexgn-retention-body">
-          <p className="nexgn-retention-text">
+        <div className="privacy-policy__retention-body">
+          <p className="privacy-policy__retention-text">
             Your data is encrypted in transit using TLS 1.3 and secured at rest
             using modern cryptographic standards. We retain personal and
             document data only for as long as your account is active or as
@@ -593,8 +591,8 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* ── DATA RETENTION AND SECURITY ── */}
-        <div className="nexgn-info-section nexgn-info-section--data-retention">
-          <div className="nexgn-info-icon-wrap">
+        <div className="privacy-policy__info-section privacy-policy__info-section--data-retention">
+          <div className="privacy-policy__info-icon-wrap">
             <svg
               width="24"
               height="24"
@@ -618,9 +616,11 @@ export default function PrivacyPolicy() {
               />
             </svg>
           </div>
-          <div className="nexgn-info-content">
-            <p className="nexgn-info-title">Data Retention and Security</p>
-            <p className="nexgn-info-desc">
+          <div className="privacy-policy__info-content">
+            <p className="privacy-policy__info-title">
+              Data Retention and Security
+            </p>
+            <p className="privacy-policy__info-desc">
               Your data is encrypted in transit using TLS 1.3 and secured at
               rest
             </p>
@@ -628,8 +628,8 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* ── DATA SHARING AND DISCLOSURE ── */}
-        <div className="nexgn-info-section nexgn-info-section--data-sharing">
-          <div className="nexgn-info-icon-wrap">
+        <div className="privacy-policy__info-section privacy-policy__info-section--data-sharing">
+          <div className="privacy-policy__info-icon-wrap">
             <svg
               width="24"
               height="24"
@@ -667,9 +667,11 @@ export default function PrivacyPolicy() {
               />
             </svg>
           </div>
-          <div className="nexgn-info-content">
-            <p className="nexgn-info-title">Data Sharing and Disclosure</p>
-            <p className="nexgn-info-desc">
+          <div className="privacy-policy__info-content">
+            <p className="privacy-policy__info-title">
+              Data Sharing and Disclosure
+            </p>
+            <p className="privacy-policy__info-desc">
               We do not sell, rent, or trade your personal data. We only share
               information under the following strict conditions
             </p>
@@ -677,8 +679,8 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* ── HOW WE USE YOUR INFORMATION ── */}
-        <div className="nexgn-info-section nexgn-info-section--how-we-use">
-          <div className="nexgn-info-icon-wrap">
+        <div className="privacy-policy__info-section privacy-policy__info-section--how-we-use">
+          <div className="privacy-policy__info-icon-wrap">
             <svg
               width="24"
               height="24"
@@ -702,9 +704,11 @@ export default function PrivacyPolicy() {
               />
             </svg>
           </div>
-          <div className="nexgn-info-content">
-            <p className="nexgn-info-title">How We Use Your Information</p>
-            <p className="nexgn-info-desc">
+          <div className="privacy-policy__info-content">
+            <p className="privacy-policy__info-title">
+              How We Use Your Information
+            </p>
+            <p className="privacy-policy__info-desc">
               We use your data exclusively for operational, legal, and security
               purposes
             </p>
@@ -712,40 +716,40 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* ── HOW WE USE — USAGE LIST ── */}
-        <div className="nexgn-usage-list">
-          <div className="nexgn-data-item">
-            <span className="nexgn-data-dot" />
-            <p className="nexgn-data-text">
+        <div className="privacy-policy__usage-list">
+          <div className="privacy-policy__data-item">
+            <span className="privacy-policy__data-dot" />
+            <p className="privacy-policy__data-text">
               To provision, maintain, and deliver our secure digital signing and
               cloud infrastructure services.
             </p>
           </div>
-          <div className="nexgn-data-item">
-            <span className="nexgn-data-dot" />
-            <p className="nexgn-data-text">
+          <div className="privacy-policy__data-item">
+            <span className="privacy-policy__data-dot" />
+            <p className="privacy-policy__data-text">
               To authenticate user identities, generate cryptographically secure
               audit trails, and ensure all digital signatures are legally
               binding.
             </p>
           </div>
-          <div className="nexgn-data-item">
-            <span className="nexgn-data-dot" />
-            <p className="nexgn-data-text">
+          <div className="privacy-policy__data-item">
+            <span className="privacy-policy__data-dot" />
+            <p className="privacy-policy__data-text">
               To route documents securely between you and your designated
               signers or authorized viewers.
             </p>
           </div>
-          <div className="nexgn-data-item">
-            <span className="nexgn-data-dot" />
-            <p className="nexgn-data-text">
+          <div className="privacy-policy__data-item">
+            <span className="privacy-policy__data-dot" />
+            <p className="privacy-policy__data-text">
               To protect against malicious activity (e.g., DDoS attacks,
               credential stuffing) and analyze aggregated infrastructure load to
               improve performance.
             </p>
           </div>
-          <div className="nexgn-data-item">
-            <span className="nexgn-data-dot" />
-            <p className="nexgn-data-text">
+          <div className="privacy-policy__data-item">
+            <span className="privacy-policy__data-dot" />
+            <p className="privacy-policy__data-text">
               To communicate transactional updates, signature requests, security
               alerts, and support responses.
             </p>
@@ -753,8 +757,8 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* ── INFORMATION WE COLLECT ── */}
-        <div className="nexgn-info-section">
-          <div className="nexgn-info-icon-wrap">
+        <div className="privacy-policy__info-section">
+          <div className="privacy-policy__info-icon-wrap">
             <svg
               width="24"
               height="24"
@@ -778,9 +782,9 @@ export default function PrivacyPolicy() {
               />
             </svg>
           </div>
-          <div className="nexgn-info-content">
-            <p className="nexgn-info-title">Information We Collect</p>
-            <p className="nexgn-info-desc">
+          <div className="privacy-policy__info-content">
+            <p className="privacy-policy__info-title">Information We Collect</p>
+            <p className="privacy-policy__info-desc">
               We only collect information that is strictly necessary to provide,
               secure, and legally validate our services
             </p>
@@ -788,7 +792,7 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* ── BODY TEXT ── */}
-        <p className="nexgn-body-text">
+        <p className="privacy-policy__body-text">
           Welcome to Nexgn. We as a provider of next-generation secure cloud
           infrastructure, we believe that data privacy is a fundamental right.
           This Privacy Policy explains how we collect, use, disclose, and
@@ -798,7 +802,7 @@ export default function PrivacyPolicy() {
           follow strict data minimization principles, collecting only what is
           necessary to operate securely and effectively.
         </p>
-        <p className="nexgn-body-text-mobile-below">
+        <p className="privacy-policy__body-text--mobile">
           This Privacy Policy explains how we collect, use, disclose, and
           safeguard your information when you visit nexgn.cloud, use our
           services, or interact with our platform. We design our systems to
@@ -809,16 +813,9 @@ export default function PrivacyPolicy() {
       </div>
 
       {/* ── FOOTER ── */}
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          overflowX: "hidden",
-          zIndex: 2,
-        }}
-      >
+      <div className="privacy-policy__footer-wrap">
         <PrivacyFooter dark={dark} />
       </div>
-    </>
+    </div>
   );
 }
